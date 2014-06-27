@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario idscenario="12" name="EscenarioGG">
+  <Description>subir documento en forma grupal</Description>
+  <Interaction>
+    <Initialize>
+      <PreConditions>
+        <IF>
+          <Sentence>Arenas:{"Estoy es un grupo2"}::(Arenas);
+Actions:{"Subir documento en forma grupal"}::Arenas:{"Estoy es un grupo2"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence />
+        </IF>
+      </PosConditions>
+    </Initialize>
+    <Finalize>
+      <PreConditions>
+        <IF>
+          <Sentence>Actions:{"Subir documento en forma grupal"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence>Exit</Sentence>
+        </IF>
+      </PosConditions>
+    </Finalize>
+  </Interaction>
+</Scenario>

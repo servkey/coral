@@ -1,0 +1,4 @@
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\corallib\bin\Debug\corallib.dll
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\corallib\bin\Debug\corallib.pdb
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\corallib\obj\Debug\corallib.dll
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\corallib\obj\Debug\corallib.pdb

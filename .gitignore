@@ -1,0 +1,20 @@
+# Compiled Object files
+*.slo
+*.obj
+
+#solución visual studio
+*.suo
+*.tlog
+*.manifest
+*.lastbuildstate
+*.cache
+*.log
+*.pdb
+
+
+#Documentación
+~$*.docx
+
+# Executables
+*.exe
+

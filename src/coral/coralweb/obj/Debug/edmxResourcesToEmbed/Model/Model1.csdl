@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLEDEERModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DBLEDEEREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblActions" EntityType="DBLEDEERModel.TblActions" />
+    <EntitySet Name="TblActors" EntityType="DBLEDEERModel.TblActors" />
+    <EntitySet Name="TblArena_TblAction_TblRoleActancial" EntityType="DBLEDEERModel.TblArena_TblAction_TblRoleActancial" />
+    <EntitySet Name="TblArena_TblActor_TblRole" EntityType="DBLEDEERModel.TblArena_TblActor_TblRole" />
+    <EntitySet Name="TblArena_TblActor_TblRoleActancial" EntityType="DBLEDEERModel.TblArena_TblActor_TblRoleActancial" />
+    <EntitySet Name="TblArenas" EntityType="DBLEDEERModel.TblArenas" />
+    <EntitySet Name="TblObjects" EntityType="DBLEDEERModel.TblObjects" />
+    <EntitySet Name="TblProcessSentences" EntityType="DBLEDEERModel.TblProcessSentences" />
+    <EntitySet Name="TblRoles" EntityType="DBLEDEERModel.TblRoles" />
+    <EntitySet Name="TblRolesActancial" EntityType="DBLEDEERModel.TblRolesActancial" />
+    <EntitySet Name="TblScenarios" EntityType="DBLEDEERModel.TblScenarios" />
+    <EntitySet Name="TblSentences" EntityType="DBLEDEERModel.TblSentences" />
+    <EntitySet Name="TblTypesSentences" EntityType="DBLEDEERModel.TblTypesSentences" />
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblActions1" Association="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblActions1">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblActions1" Association="DBLEDEERModel.FK_TblScenarios_TblActions1">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblActors" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblActors">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblActors" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblActors">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblRolesActancial" Association="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblRolesActancial">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblAction_TblRolesActancial_TblArenas" Association="DBLEDEERModel.FK_TblArena_TblAction_TblRolesActancial_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblArenas" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblRoles" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblRoles">
+      <End Role="TblRoles" EntitySet="TblRoles" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblArenas" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblRolesActancial" Association="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblRolesActancial">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblArenas" Association="DBLEDEERModel.FK_TblScenarios_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblProcessSentences" Association="DBLEDEERModel.FK_TblSentences_TblProcessSentences">
+      <End Role="TblProcessSentences" EntitySet="TblProcessSentences" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblScenarios" Association="DBLEDEERModel.FK_TblScenarios_TblScenarios">
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+      <End Role="TblScenarios1" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblScenarios1" Association="DBLEDEERModel.FK_TblSentences_TblScenarios1">
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblTypesSentences" Association="DBLEDEERModel.FK_TblSentences_TblTypesSentences">
+      <End Role="TblTypesSentences" EntitySet="TblTypesSentences" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+    <AssociationSet Name="TblActions_TblActors" Association="DBLEDEERModel.TblActions_TblActors">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblActors" EntitySet="TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="TblActions_TblRoles" Association="DBLEDEERModel.TblActions_TblRoles">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblRoles" EntitySet="TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="TblActions_TblRolesActancial" Association="DBLEDEERModel.TblActions_TblRolesActancial">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+    </AssociationSet>
+    <AssociationSet Name="TblArena_TblActions" Association="DBLEDEERModel.TblArena_TblActions">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblArenas" EntitySet="TblArenas" />
+    </AssociationSet>
+    <AssociationSet Name="TblArena_TblActors" Association="DBLEDEERModel.TblArena_TblActors">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblActors" EntitySet="TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="TblArena_TblObjects" Association="DBLEDEERModel.TblArena_TblObjects">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblObjects" EntitySet="TblObjects" />
+    </AssociationSet>
+    <AssociationSet Name="TblArena_TblRoles" Association="DBLEDEERModel.TblArena_TblRoles">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblRoles" EntitySet="TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="TblArena_TblRolesActancial" Association="DBLEDEERModel.TblArena_TblRolesActancial">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TblActions">
+    <Key>
+      <PropertyRef Name="idAction" />
+    </Key>
+    <Property Name="idAction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArena_TblAction_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblActions1" FromRole="TblActions" ToRole="TblArena_TblAction_TblRoleActancial" />
+    <NavigationProperty Name="TblScenarios" Relationship="DBLEDEERModel.FK_TblScenarios_TblActions1" FromRole="TblActions" ToRole="TblScenarios" />
+    <NavigationProperty Name="TblActors" Relationship="DBLEDEERModel.TblActions_TblActors" FromRole="TblActions" ToRole="TblActors" />
+    <NavigationProperty Name="TblRoles" Relationship="DBLEDEERModel.TblActions_TblRoles" FromRole="TblActions" ToRole="TblRoles" />
+    <NavigationProperty Name="TblRolesActancial" Relationship="DBLEDEERModel.TblActions_TblRolesActancial" FromRole="TblActions" ToRole="TblRolesActancial" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.TblArena_TblActions" FromRole="TblActions" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblActors">
+    <Key>
+      <PropertyRef Name="idActor" />
+    </Key>
+    <Property Name="idActor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArena_TblActor_TblRole" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblActors" FromRole="TblActors" ToRole="TblArena_TblActor_TblRole" />
+    <NavigationProperty Name="TblArena_TblActor_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblActors" FromRole="TblActors" ToRole="TblArena_TblActor_TblRoleActancial" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.TblActions_TblActors" FromRole="TblActors" ToRole="TblActions" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.TblArena_TblActors" FromRole="TblActors" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblArena_TblAction_TblRoleActancial">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idAction" />
+      <PropertyRef Name="idRoleAct" />
+    </Key>
+    <Property Name="idArena" Type="Int32" Nullable="false" />
+    <Property Name="idAction" Type="Int32" Nullable="false" />
+    <Property Name="idRoleAct" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblActions1" FromRole="TblArena_TblAction_TblRoleActancial" ToRole="TblActions" />
+    <NavigationProperty Name="TblRolesActancial" Relationship="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblRolesActancial" FromRole="TblArena_TblAction_TblRoleActancial" ToRole="TblRolesActancial" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.FK_TblArena_TblAction_TblRolesActancial_TblArenas" FromRole="TblArena_TblAction_TblRoleActancial" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblArena_TblActor_TblRole">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idActor" />
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idArena" Type="Int32" Nullable="false" />
+    <Property Name="idActor" Type="Int32" Nullable="false" />
+    <Property Name="idRole" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TblActors" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblActors" FromRole="TblArena_TblActor_TblRole" ToRole="TblActors" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblArenas" FromRole="TblArena_TblActor_TblRole" ToRole="TblArenas" />
+    <NavigationProperty Name="TblRoles" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblRoles" FromRole="TblArena_TblActor_TblRole" ToRole="TblRoles" />
+  </EntityType>
+  <EntityType Name="TblArena_TblActor_TblRoleActancial">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idActor" />
+      <PropertyRef Name="idRolAct" />
+    </Key>
+    <Property Name="idArena" Type="Int32" Nullable="false" />
+    <Property Name="idActor" Type="Int32" Nullable="false" />
+    <Property Name="idRolAct" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TblActors" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblActors" FromRole="TblArena_TblActor_TblRoleActancial" ToRole="TblActors" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblArenas" FromRole="TblArena_TblActor_TblRoleActancial" ToRole="TblArenas" />
+    <NavigationProperty Name="TblRolesActancial" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblRolesActancial" FromRole="TblArena_TblActor_TblRoleActancial" ToRole="TblRolesActancial" />
+  </EntityType>
+  <EntityType Name="TblArenas">
+    <Key>
+      <PropertyRef Name="idArena" />
+    </Key>
+    <Property Name="idArena" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArena_TblAction_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblArena_TblAction_TblRolesActancial_TblArenas" FromRole="TblArenas" ToRole="TblArena_TblAction_TblRoleActancial" />
+    <NavigationProperty Name="TblArena_TblActor_TblRole" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblArenas" FromRole="TblArenas" ToRole="TblArena_TblActor_TblRole" />
+    <NavigationProperty Name="TblArena_TblActor_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblArenas" FromRole="TblArenas" ToRole="TblArena_TblActor_TblRoleActancial" />
+    <NavigationProperty Name="TblScenarios" Relationship="DBLEDEERModel.FK_TblScenarios_TblArenas" FromRole="TblArenas" ToRole="TblScenarios" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.TblArena_TblActions" FromRole="TblArenas" ToRole="TblActions" />
+    <NavigationProperty Name="TblActors" Relationship="DBLEDEERModel.TblArena_TblActors" FromRole="TblArenas" ToRole="TblActors" />
+    <NavigationProperty Name="TblObjects" Relationship="DBLEDEERModel.TblArena_TblObjects" FromRole="TblArenas" ToRole="TblObjects" />
+    <NavigationProperty Name="TblRoles" Relationship="DBLEDEERModel.TblArena_TblRoles" FromRole="TblArenas" ToRole="TblRoles" />
+    <NavigationProperty Name="TblRolesActancial" Relationship="DBLEDEERModel.TblArena_TblRolesActancial" FromRole="TblArenas" ToRole="TblRolesActancial" />
+  </EntityType>
+  <EntityType Name="TblObjects">
+    <Key>
+      <PropertyRef Name="idObj" />
+    </Key>
+    <Property Name="idObj" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="AtrVal" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.TblArena_TblObjects" FromRole="TblObjects" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblProcessSentences">
+    <Key>
+      <PropertyRef Name="idProcess" />
+    </Key>
+    <Property Name="idProcess" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblSentences" Relationship="DBLEDEERModel.FK_TblSentences_TblProcessSentences" FromRole="TblProcessSentences" ToRole="TblSentences" />
+  </EntityType>
+  <EntityType Name="TblRoles">
+    <Key>
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArena_TblActor_TblRole" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRol_TblRoles" FromRole="TblRoles" ToRole="TblArena_TblActor_TblRole" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.TblActions_TblRoles" FromRole="TblRoles" ToRole="TblActions" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.TblArena_TblRoles" FromRole="TblRoles" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblRolesActancial">
+    <Key>
+      <PropertyRef Name="idRoleAct" />
+    </Key>
+    <Property Name="idRoleAct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblArena_TblAction_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblActions_TblRolesActancial_TblRolesActancial" FromRole="TblRolesActancial" ToRole="TblArena_TblAction_TblRoleActancial" />
+    <NavigationProperty Name="TblArena_TblActor_TblRoleActancial" Relationship="DBLEDEERModel.FK_TblArena_TblActor_TblRolActancial_TblRolesActancial" FromRole="TblRolesActancial" ToRole="TblArena_TblActor_TblRoleActancial" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.TblActions_TblRolesActancial" FromRole="TblRolesActancial" ToRole="TblActions" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.TblArena_TblRolesActancial" FromRole="TblRolesActancial" ToRole="TblArenas" />
+  </EntityType>
+  <EntityType Name="TblScenarios">
+    <Key>
+      <PropertyRef Name="idScenario" />
+    </Key>
+    <Property Name="idScenario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AtrDescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="idAction" Type="Int32" Nullable="false" />
+    <Property Name="idArena" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TblActions" Relationship="DBLEDEERModel.FK_TblScenarios_TblActions1" FromRole="TblScenarios" ToRole="TblActions" />
+    <NavigationProperty Name="TblArenas" Relationship="DBLEDEERModel.FK_TblScenarios_TblArenas" FromRole="TblScenarios" ToRole="TblArenas" />
+    <NavigationProperty Name="TblScenarios1" Relationship="DBLEDEERModel.FK_TblScenarios_TblScenarios" FromRole="TblScenarios" ToRole="TblScenarios1" />
+    <NavigationProperty Name="TblScenarios2" Relationship="DBLEDEERModel.FK_TblScenarios_TblScenarios" FromRole="TblScenarios1" ToRole="TblScenarios" />
+    <NavigationProperty Name="TblSentences" Relationship="DBLEDEERModel.FK_TblSentences_TblScenarios1" FromRole="TblScenarios" ToRole="TblSentences" />
+  </EntityType>
+  <EntityType Name="TblSentences">
+    <Key>
+      <PropertyRef Name="idSentence" />
+    </Key>
+    <Property Name="idSentence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrSentence" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="idType" Type="Int32" Nullable="false" />
+    <Property Name="idProcess" Type="Int32" Nullable="false" />
+    <Property Name="idScenario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TblProcessSentences" Relationship="DBLEDEERModel.FK_TblSentences_TblProcessSentences" FromRole="TblSentences" ToRole="TblProcessSentences" />
+    <NavigationProperty Name="TblScenarios" Relationship="DBLEDEERModel.FK_TblSentences_TblScenarios1" FromRole="TblSentences" ToRole="TblScenarios" />
+    <NavigationProperty Name="TblTypesSentences" Relationship="DBLEDEERModel.FK_TblSentences_TblTypesSentences" FromRole="TblSentences" ToRole="TblTypesSentences" />
+  </EntityType>
+  <EntityType Name="TblTypesSentences">
+    <Key>
+      <PropertyRef Name="IdType" />
+    </Key>
+    <Property Name="IdType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TblSentences" Relationship="DBLEDEERModel.FK_TblSentences_TblTypesSentences" FromRole="TblTypesSentences" ToRole="TblSentences" />
+  </EntityType>
+  <Association Name="FK_TblActions_TblRolesActancial_TblActions1">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblActions1">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblScenarios" Type="DBLEDEERModel.TblScenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblScenarios">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblActors">
+    <End Role="TblActors" Type="DBLEDEERModel.TblActors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblActors">
+    <End Role="TblActors" Type="DBLEDEERModel.TblActors" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRolesActancial_TblRolesActancial">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.TblRolesActancial" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblAction_TblRolesActancial_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblRoles">
+    <End Role="TblRoles" Type="DBLEDEERModel.TblRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoles">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblRolesActancial">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.TblRolesActancial" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idRolAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblScenarios" Type="DBLEDEERModel.TblScenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblScenarios">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblProcessSentences">
+    <End Role="TblProcessSentences" Type="DBLEDEERModel.TblProcessSentences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblProcessSentences">
+        <PropertyRef Name="idProcess" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idProcess" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblScenarios">
+    <End Role="TblScenarios" Type="DBLEDEERModel.TblScenarios" Multiplicity="1" />
+    <End Role="TblScenarios1" Type="DBLEDEERModel.TblScenarios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TblScenarios">
+        <PropertyRef Name="idScenario" />
+      </Principal>
+      <Dependent Role="TblScenarios1">
+        <PropertyRef Name="idScenario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblScenarios1">
+    <End Role="TblScenarios" Type="DBLEDEERModel.TblScenarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblScenarios">
+        <PropertyRef Name="idScenario" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idScenario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblTypesSentences">
+    <End Role="TblTypesSentences" Type="DBLEDEERModel.TblTypesSentences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblTypesSentences">
+        <PropertyRef Name="IdType" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TblActions_TblActors">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="*" />
+    <End Role="TblActors" Type="DBLEDEERModel.TblActors" Multiplicity="*" />
+  </Association>
+  <Association Name="TblActions_TblRoles">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="*" />
+    <End Role="TblRoles" Type="DBLEDEERModel.TblRoles" Multiplicity="*" />
+  </Association>
+  <Association Name="TblActions_TblRolesActancial">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="*" />
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.TblRolesActancial" Multiplicity="*" />
+  </Association>
+  <Association Name="TblArena_TblActions">
+    <End Role="TblActions" Type="DBLEDEERModel.TblActions" Multiplicity="*" />
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="*" />
+  </Association>
+  <Association Name="TblArena_TblActors">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="*" />
+    <End Role="TblActors" Type="DBLEDEERModel.TblActors" Multiplicity="*" />
+  </Association>
+  <Association Name="TblArena_TblObjects">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="*" />
+    <End Role="TblObjects" Type="DBLEDEERModel.TblObjects" Multiplicity="*" />
+  </Association>
+  <Association Name="TblArena_TblRoles">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="*" />
+    <End Role="TblRoles" Type="DBLEDEERModel.TblRoles" Multiplicity="*" />
+  </Association>
+  <Association Name="TblArena_TblRolesActancial">
+    <End Role="TblArenas" Type="DBLEDEERModel.TblArenas" Multiplicity="*" />
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.TblRolesActancial" Multiplicity="*" />
+  </Association>
+</Schema>

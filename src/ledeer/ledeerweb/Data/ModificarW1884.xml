@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario idscenario="13" name="ModificarW">
+  <Description>modificar</Description>
+  <Interaction>
+    <Initialize>
+      <PreConditions>
+        <IF>
+          <Sentence>Arenas:{"Estoy es un grupo2"}::(Arenas);
+Actions:{"Modificar grupo"}::Arenas:{"Estoy es un grupo2"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence>Roles:{"Administrador,Colaborador"}-&gt;Actions:{"Modificar grupo"}</Sentence>
+        </IF>
+      </PosConditions>
+    </Initialize>
+    <Finalize>
+      <PreConditions>
+        <IF>
+          <Sentence>Actions:{"Modificar grupo"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence>Exit</Sentence>
+        </IF>
+      </PosConditions>
+    </Finalize>
+  </Interaction>
+</Scenario>

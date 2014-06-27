@@ -1,0 +1,7 @@
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\obj\Debug\CoRaL.csprojResolveAssemblyReference.cache
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\bin\CoRaL.dll
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\bin\CoRaL.pdb
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\bin\corallib.dll
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\bin\corallib.pdb
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\obj\Debug\CoRaL.dll
+c:\users\servkey\documents\visual studio 2010\Projects\CoRaL\CoRaL\obj\Debug\CoRaL.pdb

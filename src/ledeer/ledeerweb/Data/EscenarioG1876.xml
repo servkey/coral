@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario idscenario="7" name="EscenarioG">
+  <Description>Escenario para subir documento a un grupo</Description>
+  <Interaction>
+    <Initialize>
+      <PreConditions>
+        <IF>
+          <Sentence>Arenas:{"Proyecto LEDEER"}::(Arenas);
+Actions:{"Subir documento en forma grupal"}::Arenas:{"Proyecto LEDEER"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence>/*
+---------------------------------------------------------------------
+Sentencias
+Autor: ususario creador
+Escenario creado martes 22 de enero de 2007
+Funcionalidad: Subir Documento de forma grupal
+---------------------------------------------------------------------
+*/
+
+Roles:{"Administrador,asl,Colaborador"}-&gt;Actions:{"Subir documento en forma grupal"};
+
+Actors:{"servkey"}-&gt;(Actions:{"Subir documento en forma grupal"});
+</Sentence>
+        </IF>
+      </PosConditions>
+    </Initialize>
+    <Finalize>
+      <PreConditions>
+        <IF>
+          <Sentence>Actions:{"Subir documento en forma grupal"};</Sentence>
+        </IF>
+      </PreConditions>
+      <PosConditions>
+        <IF>
+          <Sentence>Exit</Sentence>
+        </IF>
+      </PosConditions>
+    </Finalize>
+  </Interaction>
+</Scenario>

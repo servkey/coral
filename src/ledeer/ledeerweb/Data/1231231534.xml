@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Arena idarena="14" name="123123">
+  <Roles>
+    <Role idrole="2" name="Administrador" />
+    <Role idrole="1" name="Colaborador" />
+  </Roles>
+  <Actors>
+    <Actor idactor="7" idrole="2" name="servkey1" />
+  </Actors>
+  <Objects />
+  <Scenarios>
+    <Scenario idscenario="15" name="EscenarioI" />
+    <Scenario idscenario="16" name="ModGr" />
+    <Scenario idscenario="17" name="Elad" />
+  </Scenarios>
+  <Actions>
+    <Action idaction="1" idscenario="15" name="Subir documento en forma grupal" />
+    <Action idaction="8" idscenario="16" name="Modificar grupo" />
+    <Action idaction="9" idscenario="17" name="Eliminar grupo" />
+  </Actions>
+</Arena>

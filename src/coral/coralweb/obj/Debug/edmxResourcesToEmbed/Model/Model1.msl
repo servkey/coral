@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLEDEERModelStoreContainer" CdmEntityContainer="DBLEDEEREntities">
+    <EntitySetMapping Name="TblActions">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblActions">
+        <MappingFragment StoreEntitySet="TblActions">
+          <ScalarProperty Name="idAction" ColumnName="idAction" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblActors">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblActors">
+        <MappingFragment StoreEntitySet="TblActors">
+          <ScalarProperty Name="idActor" ColumnName="idActor" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblArena_TblAction_TblRoleActancial">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblArena_TblAction_TblRoleActancial">
+        <MappingFragment StoreEntitySet="TblArena_TblAction_TblRoleActancial">
+          <ScalarProperty Name="idArena" ColumnName="idArena" />
+          <ScalarProperty Name="idAction" ColumnName="idAction" />
+          <ScalarProperty Name="idRoleAct" ColumnName="idRoleAct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblArena_TblActor_TblRole">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblArena_TblActor_TblRole">
+        <MappingFragment StoreEntitySet="TblArena_TblActor_TblRole">
+          <ScalarProperty Name="idArena" ColumnName="idArena" />
+          <ScalarProperty Name="idActor" ColumnName="idActor" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblArena_TblActor_TblRoleActancial">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblArena_TblActor_TblRoleActancial">
+        <MappingFragment StoreEntitySet="TblArena_TblActor_TblRoleActancial">
+          <ScalarProperty Name="idArena" ColumnName="idArena" />
+          <ScalarProperty Name="idActor" ColumnName="idActor" />
+          <ScalarProperty Name="idRolAct" ColumnName="idRolAct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblArenas">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblArenas">
+        <MappingFragment StoreEntitySet="TblArenas">
+          <ScalarProperty Name="idArena" ColumnName="idArena" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblObjects">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblObjects">
+        <MappingFragment StoreEntitySet="TblObjects">
+          <ScalarProperty Name="idObj" ColumnName="idObj" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+          <ScalarProperty Name="AtrVal" ColumnName="AtrVal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProcessSentences">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblProcessSentences">
+        <MappingFragment StoreEntitySet="TblProcessSentences">
+          <ScalarProperty Name="idProcess" ColumnName="idProcess" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRoles">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblRoles">
+        <MappingFragment StoreEntitySet="TblRoles">
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblRolesActancial">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblRolesActancial">
+        <MappingFragment StoreEntitySet="TblRolesActancial">
+          <ScalarProperty Name="idRoleAct" ColumnName="idRoleAct" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblScenarios">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblScenarios">
+        <MappingFragment StoreEntitySet="TblScenarios">
+          <ScalarProperty Name="idScenario" ColumnName="idScenario" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+          <ScalarProperty Name="AtrDescription" ColumnName="AtrDescription" />
+          <ScalarProperty Name="idAction" ColumnName="idAction" />
+          <ScalarProperty Name="idArena" ColumnName="idArena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSentences">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblSentences">
+        <MappingFragment StoreEntitySet="TblSentences">
+          <ScalarProperty Name="idSentence" ColumnName="idSentence" />
+          <ScalarProperty Name="AtrSentence" ColumnName="AtrSentence" />
+          <ScalarProperty Name="idType" ColumnName="idType" />
+          <ScalarProperty Name="idProcess" ColumnName="idProcess" />
+          <ScalarProperty Name="idScenario" ColumnName="idScenario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTypesSentences">
+      <EntityTypeMapping TypeName="DBLEDEERModel.TblTypesSentences">
+        <MappingFragment StoreEntitySet="TblTypesSentences">
+          <ScalarProperty Name="IdType" ColumnName="IdType" />
+          <ScalarProperty Name="AtrName" ColumnName="AtrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TblActions_TblActors" TypeName="DBLEDEERModel.TblActions_TblActors" StoreEntitySet="TblActions_TblActors">
+      <EndProperty Name="TblActions">
+        <ScalarProperty Name="idAction" ColumnName="idAction" />
+      </EndProperty>
+      <EndProperty Name="TblActors">
+        <ScalarProperty Name="idActor" ColumnName="idActor" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblActions_TblRoles" TypeName="DBLEDEERModel.TblActions_TblRoles" StoreEntitySet="TblActions_TblRoles">
+      <EndProperty Name="TblActions">
+        <ScalarProperty Name="idAction" ColumnName="idAction" />
+      </EndProperty>
+      <EndProperty Name="TblRoles">
+        <ScalarProperty Name="idRole" ColumnName="idRole" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblActions_TblRolesActancial" TypeName="DBLEDEERModel.TblActions_TblRolesActancial" StoreEntitySet="TblActions_TblRolesActancial">
+      <EndProperty Name="TblActions">
+        <ScalarProperty Name="idAction" ColumnName="idAction" />
+      </EndProperty>
+      <EndProperty Name="TblRolesActancial">
+        <ScalarProperty Name="idRoleAct" ColumnName="idRoleAct" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblArena_TblActions" TypeName="DBLEDEERModel.TblArena_TblActions" StoreEntitySet="TblArena_TblActions">
+      <EndProperty Name="TblActions">
+        <ScalarProperty Name="idAction" ColumnName="idAction" />
+      </EndProperty>
+      <EndProperty Name="TblArenas">
+        <ScalarProperty Name="idArena" ColumnName="idArena" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblArena_TblActors" TypeName="DBLEDEERModel.TblArena_TblActors" StoreEntitySet="TblArena_TblActors">
+      <EndProperty Name="TblArenas">
+        <ScalarProperty Name="idArena" ColumnName="idArena" />
+      </EndProperty>
+      <EndProperty Name="TblActors">
+        <ScalarProperty Name="idActor" ColumnName="idActor" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblArena_TblObjects" TypeName="DBLEDEERModel.TblArena_TblObjects" StoreEntitySet="TblArena_TblObjects">
+      <EndProperty Name="TblArenas">
+        <ScalarProperty Name="idArena" ColumnName="IdArena" />
+      </EndProperty>
+      <EndProperty Name="TblObjects">
+        <ScalarProperty Name="idObj" ColumnName="IdObj" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblArena_TblRoles" TypeName="DBLEDEERModel.TblArena_TblRoles" StoreEntitySet="TblArena_TblRoles">
+      <EndProperty Name="TblArenas">
+        <ScalarProperty Name="idArena" ColumnName="IdArena" />
+      </EndProperty>
+      <EndProperty Name="TblRoles">
+        <ScalarProperty Name="idRole" ColumnName="IdRole" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TblArena_TblRolesActancial" TypeName="DBLEDEERModel.TblArena_TblRolesActancial" StoreEntitySet="TblArena_TblRolesActancial">
+      <EndProperty Name="TblArenas">
+        <ScalarProperty Name="idArena" ColumnName="IdArena" />
+      </EndProperty>
+      <EndProperty Name="TblRolesActancial">
+        <ScalarProperty Name="idRoleAct" ColumnName="IdRoleAct" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

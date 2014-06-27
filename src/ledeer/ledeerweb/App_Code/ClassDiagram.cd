@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="DataAccess.AccesoDatos" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\AccesoDatos\AccesoDatos.cs</FileName>
+      <HashCode>IQBlxCABOBOAQBXBiRKkjBBAvQBqgNS8JMoJAEIpKE0=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnalyzerLEDEER" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\AnalyzerLEDEER.cs</FileName>
+      <HashCode>ACAIAAAAAAQAgAAIAAAAAAAAAAAAAAAAAAAEAAIBAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefinerLEDEER" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\DefinerLEDEER.cs</FileName>
+      <HashCode>YSGoBCEFGcWAoRnAaIAERTIMAJmQgBAIAAMgAIAZEUA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonitorLEDEER" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\MonitorLEDEER.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MotorLEDEER" Collapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\MotorLEDEER.cs</FileName>
+      <HashCode>ECAAAAgAAAAEACAQAEAAgAAgIEAAAAAAAAEBACCAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LEDEER" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\LEDEER.cs</FileName>
+      <HashCode>AAhIAAIABAEAAAggAAAEgBAEAAAEAABgAABEAAABCYA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Usuario" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\LEDEER.cs</FileName>
+      <HashCode>AAAAAEAAAiAAAACgAAAAgACAAAAAAAQCAEAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaNegocio" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LogicaNegocio.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAgAAAgAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Service" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\WebServices\LEDEERService.cs</FileName>
+      <HashCode>IQEAACEBGAaAABCABQIEACIEEpgQgBAAAAAgEAAKEQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MARS.Action" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Action.cs</FileName>
+      <HashCode>ACAgAAAEAEAAAABAKAAABAAIAAKAAAAAAAAAAgAAAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Actor" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Actor.cs</FileName>
+      <HashCode>AAAAAAAAKAQAAABAAAAAAAAAAJIAgAAAAAAAAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Arena" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Arena.cs</FileName>
+      <HashCode>AQEoACABOYEQgCEAQIAGQSIEAwkAAAAJgAMAAoAQAQI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Object" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Object.cs</FileName>
+      <HashCode>IAAAAIEAAAAAAAAAAAAEAAAAAAIAAAAAAAAgAAAAAQA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Role" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Role.cs</FileName>
+      <HashCode>AAAAAAAAAACAAAiAAAAAAAIAAAIAABAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.RoleActancial" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\RoleActancial.cs</FileName>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAgAAAIAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Scenario" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Scenario.cs</FileName>
+      <HashCode>AACIAAAAAAAgAUCAIBEAAAIAAAIAgAAAAIAAAAARAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MARS.Sentence" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Sentence.cs</FileName>
+      <HashCode>QgAAAAAAAAAAAABAAgAQAAIAAAIBAAAAAQIAAAIAAQA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LEDEERTools.Automata" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\Automata.cs</FileName>
+      <HashCode>AgkAQAAAABAABAAIwAQgACAAAABAAAAAAAAAAAIDSAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LEDEERTools.ErrorManager" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\ResultAnalysis.cs</FileName>
+      <HashCode>AAAAABAAAAEQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LEDEERTools.Error" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\ResultAnalysis.cs</FileName>
+      <HashCode>AAEIAAAAAAAgAAAAIAAgAAAAIAAAAAAAAAAAAAABCAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LEDEERTools.ResultAnalysis" Collapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\ResultAnalysis.cs</FileName>
+      <HashCode>AAAAAAAAAAAQAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LEDEERTools.Symbol" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\Symbol.cs</FileName>
+      <HashCode>COkAAgAADAACAQQIAAAkAEACIIgAACQgRAEkAQOBCAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageBox.MessageBox" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\MessageBox.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAABAAAAQAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringTools.StringTokenizer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\StringTokenizer.cs</FileName>
+      <HashCode>ACMAAAAAAIAEBBAACAAIAAQCAIAAAAAAgAIAAIADAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Util.Util" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Library\Util.cs</FileName>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementMARS" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\ElementMARS.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IAction" Collapsed="true">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IAction.cs</FileName>
+      <HashCode>ACAgAAAEAEAAAABAKAAABAAIAACAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IActor" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IActor.cs</FileName>
+      <HashCode>AAAAAAAAKAQAAABAAAAAAAAAAJAAgAAAAAAAAAAAEAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IArena" Collapsed="true">
+    <Position X="22.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IArena.cs</FileName>
+      <HashCode>AQEoACABOQEAgAEAQAAEQSIEAgkAAAAIAAMAAIAQAQI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IObject" Collapsed="true">
+    <Position X="24" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IObject.cs</FileName>
+      <HashCode>IAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IRole" Collapsed="true">
+    <Position X="25.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IRole.cs</FileName>
+      <HashCode>AAAAAAAAAACAAAiAAAAAAAIAAAAAABAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IRoleActancial" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IRoleActancial.cs</FileName>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IScenario" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\IScenario.cs</FileName>
+      <HashCode>AACIAAAAAAAgAUCAABAAAAIAAAAAgAAAAAAAAAARAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISentence" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\LogicaNegocio\LEDEER\Components\Elements\Interfaces\ISentence.cs</FileName>
+      <HashCode>QgAAAAAAAAAAAABAAgAQAAAAAAAAAAAAAQIAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

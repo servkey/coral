@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6AD6107-F779-455F-AF12-5729715B37A2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoRaL</RootNamespace>
+    <AssemblyName>CoRaL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=5.7.22.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="frmAdminActions.aspx" />
+    <Content Include="frmAdminActions1.aspx" />
+    <Content Include="frmAdminActions2.aspx" />
+    <Content Include="frmAdminActors.aspx" />
+    <Content Include="frmAdminArena.aspx" />
+    <Content Include="frmAdminArena1.aspx" />
+    <Content Include="frmCreate.aspx" />
+    <Content Include="frmCreateObject.aspx" />
+    <Content Include="frmCreateScenario.aspx" />
+    <Content Include="frmDefinitions.aspx" />
+    <Content Include="frmDel.aspx" />
+    <Content Include="frmDelObject.aspx" />
+    <Content Include="frmLEDEER.aspx" />
+    <Content Include="frmShow.aspx" />
+    <Content Include="frmShowObjects.aspx" />
+    <Content Include="frmUpdate.aspx" />
+    <Content Include="frmUpObject.aspx" />
+    <Content Include="ledeer.png" />
+    <Content Include="LEDEERService.asmx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminActions.aspx.cs">
+      <DependentUpon>frmAdminActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminActions.aspx.designer.cs">
+      <DependentUpon>frmAdminActions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminActions1.aspx.cs">
+      <DependentUpon>frmAdminActions1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminActions1.aspx.designer.cs">
+      <DependentUpon>frmAdminActions1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminActions2.aspx.cs">
+      <DependentUpon>frmAdminActions2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminActions2.aspx.designer.cs">
+      <DependentUpon>frmAdminActions2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminActors.aspx.cs">
+      <DependentUpon>frmAdminActors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminActors.aspx.designer.cs">
+      <DependentUpon>frmAdminActors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminArena.aspx.cs">
+      <DependentUpon>frmAdminArena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminArena.aspx.designer.cs">
+      <DependentUpon>frmAdminArena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminArena1.aspx.cs">
+      <DependentUpon>frmAdminArena1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAdminArena1.aspx.designer.cs">
+      <DependentUpon>frmAdminArena1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreate.aspx.cs">
+      <DependentUpon>frmCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCreate.aspx.designer.cs">
+      <DependentUpon>frmCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateObject.aspx.cs">
+      <DependentUpon>frmCreateObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCreateObject.aspx.designer.cs">
+      <DependentUpon>frmCreateObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateScenario.aspx.cs">
+      <DependentUpon>frmCreateScenario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCreateScenario.aspx.designer.cs">
+      <DependentUpon>frmCreateScenario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefinitions.aspx.cs">
+      <DependentUpon>frmDefinitions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDefinitions.aspx.designer.cs">
+      <DependentUpon>frmDefinitions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDel.aspx.cs">
+      <DependentUpon>frmDel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDel.aspx.designer.cs">
+      <DependentUpon>frmDel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelObject.aspx.cs">
+      <DependentUpon>frmDelObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDelObject.aspx.designer.cs">
+      <DependentUpon>frmDelObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLEDEER.aspx.cs">
+      <DependentUpon>frmLEDEER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLEDEER.aspx.designer.cs">
+      <DependentUpon>frmLEDEER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmShow.aspx.cs">
+      <DependentUpon>frmShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmShow.aspx.designer.cs">
+      <DependentUpon>frmShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowObjects.aspx.cs">
+      <DependentUpon>frmShowObjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmShowObjects.aspx.designer.cs">
+      <DependentUpon>frmShowObjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.aspx.cs">
+      <DependentUpon>frmUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.aspx.designer.cs">
+      <DependentUpon>frmUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpObject.aspx.cs">
+      <DependentUpon>frmUpObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUpObject.aspx.designer.cs">
+      <DependentUpon>frmUpObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Config" />
+    <Content Include="Web.Debug.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\corallib\corallib.csproj">
+      <Project>{71D0BBAB-DC74-4B8E-AF8B-4155674D73FB}</Project>
+      <Name>corallib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16137</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

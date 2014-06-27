@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Arena idarena="5" name="Estoy es un grupo2">
+  <Roles>
+    <Role idrole="1" name="Colaborador" />
+    <Role idrole="2" name="Administrador" />
+  </Roles>
+  <Actors>
+    <Actor idactor="4" idrole="2" name="bootpassp1" />
+    <Actor idactor="1" idrole="1" name="servkey" />
+    <Actor idactor="7" idrole="1" name="servkey1" />
+  </Actors>
+  <Objects />
+  <Scenarios>
+    <Scenario idscenario="9" name="EscenarioM" />
+    <Scenario idscenario="12" name="EscenarioGG" />
+    <Scenario idscenario="13" name="ModificarW" />
+    <Scenario idscenario="14" name="EliminarE" />
+  </Scenarios>
+  <Actions>
+    <Action idaction="3" idscenario="9" name="Modificar Tema" />
+    <Action idaction="1" idscenario="12" name="Subir documento en forma grupal" />
+    <Action idaction="2" idscenario="0" name="Subir documento en forma individual" />
+    <Action idaction="8" idscenario="13" name="Modificar grupo" />
+    <Action idaction="9" idscenario="14" name="Eliminar grupo" />
+  </Actions>
+</Arena>

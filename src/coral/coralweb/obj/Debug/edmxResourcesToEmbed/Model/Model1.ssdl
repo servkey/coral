@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLEDEERModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DBLEDEERModelStoreContainer">
+    <EntitySet Name="TblActions" EntityType="DBLEDEERModel.Store.TblActions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblActions_TblActors" EntityType="DBLEDEERModel.Store.TblActions_TblActors" store:Type="Tables" store:Schema="dbo" store:Name="TblActions_TblActors">
+      <DefiningQuery>SELECT 
+      [TblActions_TblActors].[idAction] AS [idAction], 
+      [TblActions_TblActors].[idActor] AS [idActor]
+      FROM [dbo].[TblActions_TblActors] AS [TblActions_TblActors]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblActions_TblRoles" EntityType="DBLEDEERModel.Store.TblActions_TblRoles" store:Type="Tables" store:Schema="dbo" store:Name="TblActions_TblRoles">
+      <DefiningQuery>SELECT 
+      [TblActions_TblRoles].[idAction] AS [idAction], 
+      [TblActions_TblRoles].[idRole] AS [idRole]
+      FROM [dbo].[TblActions_TblRoles] AS [TblActions_TblRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblActions_TblRolesActancial" EntityType="DBLEDEERModel.Store.TblActions_TblRolesActancial" store:Type="Tables" store:Schema="dbo" store:Name="TblActions_TblRolesActancial">
+      <DefiningQuery>SELECT 
+      [TblActions_TblRolesActancial].[idAction] AS [idAction], 
+      [TblActions_TblRolesActancial].[idRoleAct] AS [idRoleAct]
+      FROM [dbo].[TblActions_TblRolesActancial] AS [TblActions_TblRolesActancial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblActors" EntityType="DBLEDEERModel.Store.TblActors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblArena_TblAction_TblRoleActancial" EntityType="DBLEDEERModel.Store.TblArena_TblAction_TblRoleActancial" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblAction_TblRoleActancial">
+      <DefiningQuery>SELECT 
+      [TblArena_TblAction_TblRoleActancial].[idArena] AS [idArena], 
+      [TblArena_TblAction_TblRoleActancial].[idAction] AS [idAction], 
+      [TblArena_TblAction_TblRoleActancial].[idRoleAct] AS [idRoleAct]
+      FROM [dbo].[TblArena_TblAction_TblRoleActancial] AS [TblArena_TblAction_TblRoleActancial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblActions" EntityType="DBLEDEERModel.Store.TblArena_TblActions" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblActions">
+      <DefiningQuery>SELECT 
+      [TblArena_TblActions].[idArena] AS [idArena], 
+      [TblArena_TblActions].[idAction] AS [idAction]
+      FROM [dbo].[TblArena_TblActions] AS [TblArena_TblActions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblActor_TblRole" EntityType="DBLEDEERModel.Store.TblArena_TblActor_TblRole" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblActor_TblRole">
+      <DefiningQuery>SELECT 
+      [TblArena_TblActor_TblRole].[idArena] AS [idArena], 
+      [TblArena_TblActor_TblRole].[idActor] AS [idActor], 
+      [TblArena_TblActor_TblRole].[idRole] AS [idRole]
+      FROM [dbo].[TblArena_TblActor_TblRole] AS [TblArena_TblActor_TblRole]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblActor_TblRoleActancial" EntityType="DBLEDEERModel.Store.TblArena_TblActor_TblRoleActancial" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblActor_TblRoleActancial">
+      <DefiningQuery>SELECT 
+      [TblArena_TblActor_TblRoleActancial].[idArena] AS [idArena], 
+      [TblArena_TblActor_TblRoleActancial].[idActor] AS [idActor], 
+      [TblArena_TblActor_TblRoleActancial].[idRolAct] AS [idRolAct]
+      FROM [dbo].[TblArena_TblActor_TblRoleActancial] AS [TblArena_TblActor_TblRoleActancial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblActors" EntityType="DBLEDEERModel.Store.TblArena_TblActors" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblActors">
+      <DefiningQuery>SELECT 
+      [TblArena_TblActors].[idArena] AS [idArena], 
+      [TblArena_TblActors].[idActor] AS [idActor]
+      FROM [dbo].[TblArena_TblActors] AS [TblArena_TblActors]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblObjects" EntityType="DBLEDEERModel.Store.TblArena_TblObjects" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblObjects">
+      <DefiningQuery>SELECT 
+      [TblArena_TblObjects].[IdArena] AS [IdArena], 
+      [TblArena_TblObjects].[IdObj] AS [IdObj]
+      FROM [dbo].[TblArena_TblObjects] AS [TblArena_TblObjects]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblRoles" EntityType="DBLEDEERModel.Store.TblArena_TblRoles" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblRoles">
+      <DefiningQuery>SELECT 
+      [TblArena_TblRoles].[IdArena] AS [IdArena], 
+      [TblArena_TblRoles].[IdRole] AS [IdRole]
+      FROM [dbo].[TblArena_TblRoles] AS [TblArena_TblRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArena_TblRolesActancial" EntityType="DBLEDEERModel.Store.TblArena_TblRolesActancial" store:Type="Tables" store:Schema="dbo" store:Name="TblArena_TblRolesActancial">
+      <DefiningQuery>SELECT 
+      [TblArena_TblRolesActancial].[IdArena] AS [IdArena], 
+      [TblArena_TblRolesActancial].[IdRoleAct] AS [IdRoleAct]
+      FROM [dbo].[TblArena_TblRolesActancial] AS [TblArena_TblRolesActancial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblArenas" EntityType="DBLEDEERModel.Store.TblArenas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblObjects" EntityType="DBLEDEERModel.Store.TblObjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblProcessSentences" EntityType="DBLEDEERModel.Store.TblProcessSentences" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblRoles" EntityType="DBLEDEERModel.Store.TblRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblRolesActancial" EntityType="DBLEDEERModel.Store.TblRolesActancial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblScenarios" EntityType="DBLEDEERModel.Store.TblScenarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblSentences" EntityType="DBLEDEERModel.Store.TblSentences" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblTypesSentences" EntityType="DBLEDEERModel.Store.TblTypesSentences" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TblActions_TblActors_TblActions11" Association="DBLEDEERModel.Store.FK_TblActions_TblActors_TblActions11">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblActions_TblActors" EntitySet="TblActions_TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblActors_TblActors" Association="DBLEDEERModel.Store.FK_TblActions_TblActors_TblActors">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblActions_TblActors" EntitySet="TblActions_TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRoles_TblActions1" Association="DBLEDEERModel.Store.FK_TblActions_TblRoles_TblActions1">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblActions_TblRoles" EntitySet="TblActions_TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRoles_TblRoles" Association="DBLEDEERModel.Store.FK_TblActions_TblRoles_TblRoles">
+      <End Role="TblRoles" EntitySet="TblRoles" />
+      <End Role="TblActions_TblRoles" EntitySet="TblActions_TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblActions" Association="DBLEDEERModel.Store.FK_TblActions_TblRolesActancial_TblActions">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblActions_TblRolesActancial" EntitySet="TblActions_TblRolesActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblActions1" Association="DBLEDEERModel.Store.FK_TblActions_TblRolesActancial_TblActions1">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblRolesActancial" Association="DBLEDEERModel.Store.FK_TblActions_TblRolesActancial_TblRolesActancial">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblActions_TblRolesActancial_TblRolesActancial1" Association="DBLEDEERModel.Store.FK_TblActions_TblRolesActancial_TblRolesActancial1">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblActions_TblRolesActancial" EntitySet="TblActions_TblRolesActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblAction_TblRolesActancial_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblAction_TblRolesActancial_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblAction_TblRoleActancial" EntitySet="TblArena_TblAction_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActions_TblActions" Association="DBLEDEERModel.Store.FK_TblArena_TblActions_TblActions">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblArena_TblActions" EntitySet="TblArena_TblActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActions_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblActions_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActions" EntitySet="TblArena_TblActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblActors" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRol_TblActors">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRol_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRol_TblRoles" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRol_TblRoles">
+      <End Role="TblRoles" EntitySet="TblRoles" />
+      <End Role="TblArena_TblActor_TblRole" EntitySet="TblArena_TblActor_TblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblActors" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRolActancial_TblActors">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRolActancial_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActor_TblRolActancial_TblRolesActancial" Association="DBLEDEERModel.Store.FK_TblArena_TblActor_TblRolActancial_TblRolesActancial">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblArena_TblActor_TblRoleActancial" EntitySet="TblArena_TblActor_TblRoleActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActors_TblActors" Association="DBLEDEERModel.Store.FK_TblArena_TblActors_TblActors">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblActors" EntitySet="TblArena_TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblActors_TblActors1" Association="DBLEDEERModel.Store.FK_TblArena_TblActors_TblActors1">
+      <End Role="TblActors" EntitySet="TblActors" />
+      <End Role="TblArena_TblActors" EntitySet="TblArena_TblActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblObjects_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblObjects_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblObjects" EntitySet="TblArena_TblObjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblObjects_TblObjects" Association="DBLEDEERModel.Store.FK_TblArena_TblObjects_TblObjects">
+      <End Role="TblObjects" EntitySet="TblObjects" />
+      <End Role="TblArena_TblObjects" EntitySet="TblArena_TblObjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblRole_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblRole_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblRoles" EntitySet="TblArena_TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblRole_TblRoles" Association="DBLEDEERModel.Store.FK_TblArena_TblRole_TblRoles">
+      <End Role="TblRoles" EntitySet="TblRoles" />
+      <End Role="TblArena_TblRoles" EntitySet="TblArena_TblRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblRolesActancial_TblArenas" Association="DBLEDEERModel.Store.FK_TblArena_TblRolesActancial_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblArena_TblRolesActancial" EntitySet="TblArena_TblRolesActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArena_TblRolesActancial_TblRolesActancial" Association="DBLEDEERModel.Store.FK_TblArena_TblRolesActancial_TblRolesActancial">
+      <End Role="TblRolesActancial" EntitySet="TblRolesActancial" />
+      <End Role="TblArena_TblRolesActancial" EntitySet="TblArena_TblRolesActancial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblActions1" Association="DBLEDEERModel.Store.FK_TblScenarios_TblActions1">
+      <End Role="TblActions" EntitySet="TblActions" />
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblArenas" Association="DBLEDEERModel.Store.FK_TblScenarios_TblArenas">
+      <End Role="TblArenas" EntitySet="TblArenas" />
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblScenarios_TblScenarios" Association="DBLEDEERModel.Store.FK_TblScenarios_TblScenarios">
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+      <End Role="TblScenarios1" EntitySet="TblScenarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblProcessSentences" Association="DBLEDEERModel.Store.FK_TblSentences_TblProcessSentences">
+      <End Role="TblProcessSentences" EntitySet="TblProcessSentences" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblScenarios1" Association="DBLEDEERModel.Store.FK_TblSentences_TblScenarios1">
+      <End Role="TblScenarios" EntitySet="TblScenarios" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSentences_TblTypesSentences" Association="DBLEDEERModel.Store.FK_TblSentences_TblTypesSentences">
+      <End Role="TblTypesSentences" EntitySet="TblTypesSentences" />
+      <End Role="TblSentences" EntitySet="TblSentences" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TblActions">
+    <Key>
+      <PropertyRef Name="idAction" />
+    </Key>
+    <Property Name="idAction" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblActions_TblActors' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblActions_TblActors">
+    <Key>
+      <PropertyRef Name="idAction" />
+      <PropertyRef Name="idActor" />
+    </Key>
+    <Property Name="idAction" Type="int" Nullable="false" />
+    <Property Name="idActor" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblActions_TblRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblActions_TblRoles">
+    <Key>
+      <PropertyRef Name="idAction" />
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idAction" Type="int" Nullable="false" />
+    <Property Name="idRole" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblActions_TblRolesActancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblActions_TblRolesActancial">
+    <Key>
+      <PropertyRef Name="idAction" />
+      <PropertyRef Name="idRoleAct" />
+    </Key>
+    <Property Name="idAction" Type="int" Nullable="false" />
+    <Property Name="idRoleAct" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblActors">
+    <Key>
+      <PropertyRef Name="idActor" />
+    </Key>
+    <Property Name="idActor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblAction_TblRoleActancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblAction_TblRoleActancial">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idAction" />
+      <PropertyRef Name="idRoleAct" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" />
+    <Property Name="idAction" Type="int" Nullable="false" />
+    <Property Name="idRoleAct" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblActions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblActions">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idAction" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" />
+    <Property Name="idAction" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblActor_TblRole' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblActor_TblRole">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idActor" />
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" />
+    <Property Name="idActor" Type="int" Nullable="false" />
+    <Property Name="idRole" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblActor_TblRoleActancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblActor_TblRoleActancial">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idActor" />
+      <PropertyRef Name="idRolAct" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" />
+    <Property Name="idActor" Type="int" Nullable="false" />
+    <Property Name="idRolAct" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblActors' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblActors">
+    <Key>
+      <PropertyRef Name="idArena" />
+      <PropertyRef Name="idActor" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" />
+    <Property Name="idActor" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblObjects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblObjects">
+    <Key>
+      <PropertyRef Name="IdArena" />
+      <PropertyRef Name="IdObj" />
+    </Key>
+    <Property Name="IdArena" Type="int" Nullable="false" />
+    <Property Name="IdObj" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblRoles">
+    <Key>
+      <PropertyRef Name="IdArena" />
+      <PropertyRef Name="IdRole" />
+    </Key>
+    <Property Name="IdArena" Type="int" Nullable="false" />
+    <Property Name="IdRole" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBLEDEER.dbo.TblArena_TblRolesActancial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TblArena_TblRolesActancial">
+    <Key>
+      <PropertyRef Name="IdArena" />
+      <PropertyRef Name="IdRoleAct" />
+    </Key>
+    <Property Name="IdArena" Type="int" Nullable="false" />
+    <Property Name="IdRoleAct" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblArenas">
+    <Key>
+      <PropertyRef Name="idArena" />
+    </Key>
+    <Property Name="idArena" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblObjects">
+    <Key>
+      <PropertyRef Name="idObj" />
+    </Key>
+    <Property Name="idObj" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="AtrVal" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="TblProcessSentences">
+    <Key>
+      <PropertyRef Name="idProcess" />
+    </Key>
+    <Property Name="idProcess" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblRoles">
+    <Key>
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idRole" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblRolesActancial">
+    <Key>
+      <PropertyRef Name="idRoleAct" />
+    </Key>
+    <Property Name="idRoleAct" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblScenarios">
+    <Key>
+      <PropertyRef Name="idScenario" />
+    </Key>
+    <Property Name="idScenario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="AtrDescription" Type="text" />
+    <Property Name="idAction" Type="int" Nullable="false" />
+    <Property Name="idArena" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblSentences">
+    <Key>
+      <PropertyRef Name="idSentence" />
+    </Key>
+    <Property Name="idSentence" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrSentence" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="idType" Type="int" Nullable="false" />
+    <Property Name="idProcess" Type="int" Nullable="false" />
+    <Property Name="idScenario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblTypesSentences">
+    <Key>
+      <PropertyRef Name="IdType" />
+    </Key>
+    <Property Name="IdType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AtrName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_TblActions_TblActors_TblActions11">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblActors" Type="DBLEDEERModel.Store.TblActions_TblActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblActions_TblActors">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblActors_TblActors">
+    <End Role="TblActors" Type="DBLEDEERModel.Store.TblActors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblActors" Type="DBLEDEERModel.Store.TblActions_TblActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblActions_TblActors">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRoles_TblActions1">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblRoles" Type="DBLEDEERModel.Store.TblActions_TblRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblActions_TblRoles">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRoles_TblRoles">
+    <End Role="TblRoles" Type="DBLEDEERModel.Store.TblRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblRoles" Type="DBLEDEERModel.Store.TblActions_TblRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoles">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="TblActions_TblRoles">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRolesActancial_TblActions">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblRolesActancial" Type="DBLEDEERModel.Store.TblActions_TblRolesActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblActions_TblRolesActancial">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRolesActancial_TblActions1">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRolesActancial_TblRolesActancial">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.Store.TblRolesActancial" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblActions_TblRolesActancial_TblRolesActancial1">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.Store.TblRolesActancial" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblActions_TblRolesActancial" Type="DBLEDEERModel.Store.TblActions_TblRolesActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblActions_TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblAction_TblRolesActancial_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblAction_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblAction_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblAction_TblRoleActancial">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActions_TblActions">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActions" Type="DBLEDEERModel.Store.TblArena_TblActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblArena_TblActions">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActions_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActions" Type="DBLEDEERModel.Store.TblArena_TblActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActions">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblActors">
+    <End Role="TblActors" Type="DBLEDEERModel.Store.TblActors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRol_TblRoles">
+    <End Role="TblRoles" Type="DBLEDEERModel.Store.TblRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActor_TblRole" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoles">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRole">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblActors">
+    <End Role="TblActors" Type="DBLEDEERModel.Store.TblActors" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActor_TblRolActancial_TblRolesActancial">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.Store.TblRolesActancial" Multiplicity="1" />
+    <End Role="TblArena_TblActor_TblRoleActancial" Type="DBLEDEERModel.Store.TblArena_TblActor_TblRoleActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblArena_TblActor_TblRoleActancial">
+        <PropertyRef Name="idRolAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActors_TblActors">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActors" Type="DBLEDEERModel.Store.TblArena_TblActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblActors">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblActors_TblActors1">
+    <End Role="TblActors" Type="DBLEDEERModel.Store.TblActors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblActors" Type="DBLEDEERModel.Store.TblArena_TblActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActors">
+        <PropertyRef Name="idActor" />
+      </Principal>
+      <Dependent Role="TblArena_TblActors">
+        <PropertyRef Name="idActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblObjects_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblObjects" Type="DBLEDEERModel.Store.TblArena_TblObjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblObjects">
+        <PropertyRef Name="IdArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblObjects_TblObjects">
+    <End Role="TblObjects" Type="DBLEDEERModel.Store.TblObjects" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblObjects" Type="DBLEDEERModel.Store.TblArena_TblObjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblObjects">
+        <PropertyRef Name="idObj" />
+      </Principal>
+      <Dependent Role="TblArena_TblObjects">
+        <PropertyRef Name="IdObj" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblRole_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblRoles" Type="DBLEDEERModel.Store.TblArena_TblRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblRoles">
+        <PropertyRef Name="IdArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblRole_TblRoles">
+    <End Role="TblRoles" Type="DBLEDEERModel.Store.TblRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblRoles" Type="DBLEDEERModel.Store.TblArena_TblRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoles">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="TblArena_TblRoles">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblRolesActancial_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblRolesActancial" Type="DBLEDEERModel.Store.TblArena_TblRolesActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblArena_TblRolesActancial">
+        <PropertyRef Name="IdArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArena_TblRolesActancial_TblRolesActancial">
+    <End Role="TblRolesActancial" Type="DBLEDEERModel.Store.TblRolesActancial" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblArena_TblRolesActancial" Type="DBLEDEERModel.Store.TblArena_TblRolesActancial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRolesActancial">
+        <PropertyRef Name="idRoleAct" />
+      </Principal>
+      <Dependent Role="TblArena_TblRolesActancial">
+        <PropertyRef Name="IdRoleAct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblActions1">
+    <End Role="TblActions" Type="DBLEDEERModel.Store.TblActions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblScenarios" Type="DBLEDEERModel.Store.TblScenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblActions">
+        <PropertyRef Name="idAction" />
+      </Principal>
+      <Dependent Role="TblScenarios">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblArenas">
+    <End Role="TblArenas" Type="DBLEDEERModel.Store.TblArenas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblScenarios" Type="DBLEDEERModel.Store.TblScenarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblArenas">
+        <PropertyRef Name="idArena" />
+      </Principal>
+      <Dependent Role="TblScenarios">
+        <PropertyRef Name="idArena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblScenarios_TblScenarios">
+    <End Role="TblScenarios" Type="DBLEDEERModel.Store.TblScenarios" Multiplicity="1" />
+    <End Role="TblScenarios1" Type="DBLEDEERModel.Store.TblScenarios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TblScenarios">
+        <PropertyRef Name="idScenario" />
+      </Principal>
+      <Dependent Role="TblScenarios1">
+        <PropertyRef Name="idScenario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblProcessSentences">
+    <End Role="TblProcessSentences" Type="DBLEDEERModel.Store.TblProcessSentences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.Store.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblProcessSentences">
+        <PropertyRef Name="idProcess" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idProcess" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblScenarios1">
+    <End Role="TblScenarios" Type="DBLEDEERModel.Store.TblScenarios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.Store.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblScenarios">
+        <PropertyRef Name="idScenario" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idScenario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSentences_TblTypesSentences">
+    <End Role="TblTypesSentences" Type="DBLEDEERModel.Store.TblTypesSentences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TblSentences" Type="DBLEDEERModel.Store.TblSentences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblTypesSentences">
+        <PropertyRef Name="IdType" />
+      </Principal>
+      <Dependent Role="TblSentences">
+        <PropertyRef Name="idType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddActionRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="AtrDescription" Type="text" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaActionRoleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="AtrDescription" Type="text" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaActorRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRole" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameObject" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRole" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddArenaRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="AtrVal" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddScenarioProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameProcess" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddScenarioSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameSentence" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameType" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameProcess" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddScenarioType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameType" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelActionRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaActionRoleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaActorRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameObject" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRole" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelArenaRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdActionRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="IdRoleAct" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAction" Type="varchar" Mode="In" />
+    <Parameter Name="IdScenario" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdActor" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaActionRoleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="IdScenario" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdActor" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaActorRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdActor" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdObj" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdArenaRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="IdRole" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdObj" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRole" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRoleAct" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdScenarioProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProcess" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdScenarioSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdScenario" Type="int" Mode="In" />
+    <Parameter Name="IdSentence" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelIdScenarioType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdType" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelScenarioProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelScenarioSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+    <Parameter Name="IdSentence" Type="int" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DelScenarioType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GetActionRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetActions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetActionScenarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetActors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActionRoleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="Number" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GetArenaActions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActionScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActionScenarioData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActionsRolesAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActorRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaActorsRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaObjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenaRolesActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArenas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetArenaScenarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdActionArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdActorArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameActor" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdArena1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdArenaRoleActAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameRoleAct" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameAction" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdProcessSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdRole1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdRoleArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameRole" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdScenario1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameScenario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetIdTypeSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetObjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetProcessSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetRolesActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetScenarioSentences" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AtrNameArena" Type="varchar" Mode="In" />
+    <Parameter Name="AtrName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTypeSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="updateAction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAction" Type="int" Mode="In" />
+    <Parameter Name="AtrNameActionUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateActor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdActor" Type="int" Mode="In" />
+    <Parameter Name="AtrNameActorUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateArena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdArena" Type="int" Mode="In" />
+    <Parameter Name="AtrNameArenaUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdObj" Type="int" Mode="In" />
+    <Parameter Name="AtrNameObjUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameValUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRole" Type="int" Mode="In" />
+    <Parameter Name="AtrNameRoleUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateRoleActancial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRoleAct" Type="int" Mode="In" />
+    <Parameter Name="AtrNameRoleActUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateScenario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdScenario" Type="int" Mode="In" />
+    <Parameter Name="AtrNameScenarioUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="AtrNameDescriptionUpdate" Type="text" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateSentence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSentence" Type="int" Mode="In" />
+    <Parameter Name="AtrNameSentenceUpdate" Type="text" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateSentenceProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSentence" Type="int" Mode="In" />
+    <Parameter Name="AtrNameProcessUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="updateSentenceType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSentence" Type="int" Mode="In" />
+    <Parameter Name="AtrNameTypeUpdate" Type="varchar" Mode="In" />
+    <Parameter Name="Existe" Type="int" Mode="InOut" />
+  </Function>
+</Schema>

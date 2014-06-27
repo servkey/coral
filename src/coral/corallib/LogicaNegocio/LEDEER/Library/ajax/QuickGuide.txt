@@ -1,0 +1,91 @@
+AJAX .Net Wrapper quick usage guide
+Karl Seguin - http://www.openmymind.net/ - copyright 2005
+
+(view AjaxGuide.doc for more detailed information)
+
+
+Step 1 - 
+   Create a reference to the ajax.dll file
+
+Step 2 - Set up the HttpHandler
+In the web.config, set up the HttpHandler, like:
+
+<configuration>
+  <system.web>
+    <httpHandlers>
+	   <add verb="POST,GET" path="ajax/*.ashx" type="Ajax.PageHandlerFactory, Ajax" />
+    </httpHandlers>  
+    ...
+  <system.web>
+</configuration>
+
+
+Step 3 -
+In the Page_Load event, call the following function:
+
+'vb.net
+Public Class Index 
+  Inherits System.Web.UI.Page
+
+  Private Sub Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Ajax.Utility.RegisterTypeForAjax(GetType(Index))
+  '...
+  end sub
+  '...
+End Class
+
+
+//C#
+public class Index : System.Web.UI.Page{
+   private void Page_Load(object sender, EventArgs e){
+      Ajax.Utility.RegisterTypeForAjax(typeof(Index));      
+      //...	
+   }
+   //...  
+}
+
+
+
+Step 4 -
+In the codebehind of your page, add functions (like you normally would) that you'd like to be able to asynchrounsly called by client-side scripting.  Mark these functions with the Ajax.JavascriptMethodAttribute():
+
+//C#
+[Ajax.AjaxMethod()]
+public int ServerSideAdd(int firstNumber, int secondNumber)
+{
+return firstNumber + secondNumber;
+}
+
+'VB.Net
+<Ajax.AjaxMethod()> _
+Public Function ServerSideAdd(ByVal firstNumber As Integer, ByVal secondNumber As Integer) As Integer
+ Return firstNumber + secondNumber
+End Function
+
+The wrapper will automatically create a JavaScript function named "ServerSideAdd" which accepts to parameters.  When called, this server-side function will be called and the result returned.
+
+
+Step 5 -
+Using JavaScript, you can invote the ServerSideAdd function like you would any other JavaScript function.  You can call it using the two parameters, or optionally pass a call back function.  The name of the function is, by default, <name of class>.<name of server side function>, such as Index.ServerSideAdd:
+
+alertIndex.ServerSideAdd(100,99));
+
+OR
+
+Index.ServerSideAdd(100,99, ServerSideAdd_CallBack);
+
+function ServerSideAdd_CallBack(response){
+ alert(response.value);
+}
+
+The response exposes three properties, error, value and request.
+
+
+Note that you can return more complex objects that simple types.
+
+
+See the demo for additional information:
+http://ajax.schwarz-interactive.de/csharpsample/default.aspx
+
+
+

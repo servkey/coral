@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Arena idarena="1" name="Proyecto LEDEER">
+  <Roles>
+    <Role idrole="1" name="Colaborador" />
+    <Role idrole="2" name="Administrador" />
+    <Role idrole="3" name="Coordinador" />
+  </Roles>
+  <Actors>
+    <Actor idactor="1" idrole="1" name="servkey" />
+    <Actor idactor="2" idrole="3" name="bootpassp" />
+    <Actor idactor="3" idrole="2" name="root" />
+  </Actors>
+  <Objects>
+    <Object idobj="1" value="MB" name="archivo" />
+  </Objects>
+  <Scenarios>
+    <Scenario idscenario="7" name="EscenarioG" />
+  </Scenarios>
+  <Actions>
+    <Action idaction="1" idscenario="7" name="Subir documento en forma grupal" />
+    <Action idaction="2" idscenario="0" name="Subir documento en forma individual" />
+  </Actions>
+</Arena>
