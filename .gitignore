@@ -10,7 +10,7 @@
 *.cache
 *.log
 *.pdb
-
+*.out
 
 #Documentación
 ~$*.docx
