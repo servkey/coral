@@ -1,0 +1,31 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Resumen}{2}{section.1}
+\contentsline {section}{\numberline {2}Introducci\'on}{5}{section.2}
+\contentsline {section}{\numberline {3}Antecedentes}{6}{section.3}
+\contentsline {section}{\numberline {4}Definici\'on del problema}{7}{section.4}
+\contentsline {section}{\numberline {5}Objetivos}{8}{section.5}
+\contentsline {section}{\numberline {6}Justificaci\'on}{8}{section.6}
+\contentsline {section}{\numberline {7}Alcances y Limitaciones}{9}{section.7}
+\contentsline {section}{\numberline {8}Marco Te\'orico}{9}{section.8}
+\contentsline {subsection}{\numberline {8.1}Trabajo colaborativo y Sistemas Groupware}{9}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Conciencia en espacios de trabajo}{11}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Conciencia colaborativa}{11}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Conciencia contextual}{11}{subsubsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.3}Conciencia social}{11}{subsubsection.8.2.3}
+\contentsline {subsubsection}{\numberline {8.2.4}Conciencia de espacio de trabajo}{12}{subsubsection.8.2.4}
+\contentsline {subsubsection}{\numberline {8.2.5}Conciencia situacional}{12}{subsubsection.8.2.5}
+\contentsline {subsubsection}{\numberline {8.2.6}Conciencia del lugar}{12}{subsubsection.8.2.6}
+\contentsline {subsection}{\numberline {8.3}Consciencia del contexto}{14}{subsection.8.3}
+\contentsline {section}{\numberline {9}M\'etodo}{16}{section.9}
+\contentsline {section}{\numberline {10}Estado del arte}{17}{section.10}
+\contentsline {subsection}{\numberline {10.1}CSCW y Sistemas Groupware}{17}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Groupware}{17}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Consciencia contextual}{21}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}C\'omputo Consciente del Contexto}{21}{subsection.10.4}
+\contentsline {subsubsection}{\numberline {10.4.1}Contexto}{21}{subsubsection.10.4.1}
+\contentsline {subsubsection}{\numberline {10.4.2}Proceso}{24}{subsubsection.10.4.2}
+\contentsline {subsubsection}{\numberline {10.4.3}Adquisici\'on de contexto}{24}{subsubsection.10.4.3}
+\contentsline {subsubsection}{\numberline {10.4.4}Manejo de contexto}{25}{subsubsection.10.4.4}
+\contentsline {subsubsection}{\numberline {10.4.5}Uso de contexto}{25}{subsubsection.10.4.5}
+\contentsline {subsection}{\numberline {10.5}Sistemas Groupware Conscientes del Contexto}{27}{subsection.10.5}
+\contentsline {subsubsection}{\numberline {10.5.1}Arquitecturas}{27}{subsubsection.10.5.1}

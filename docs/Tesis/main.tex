@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   ARCHIVO PRINCIPAL DEL ANTEPROYECTO         %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,letterpaper,spanish]{article}
+%Cambiar fuente
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{longtable}
+\usepackage{lscape} 
+\usepackage{rotating}
+\usepackage{layout} 
+\usepackage[numbers]{natbib}
+%Referecias link
+%\usepackage{hyperref}
+%\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{makeidx}
+\usepackage{setspace}
+%para el macros
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish]{babel, varioref}
+\usepackage{anysize}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref} 
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{appendix}
+%\usepackage{lnscape}
+% Set equal margins on book style
+%\setlength{\oddsidemargin}{30pt}
+%\setlength{\evensidemargin}{30pt}
+%\setlength{\marginparwidth}{30pt}
+%\setlength{\footskip}{30pt}
+\makeindex
+
+%interlineado
+\linespread{1.0}
+\graphicspath{{images/}}
+%\include{macros} 
+
+\begin{document}
+\title{Dise\'no e implementaci\'on de una arquitectura consciente del contexto para sistemas groupware}
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\renewcommand\appendixname{Anexo}
+\newenvironment{indentpg}[1]%
+ {\begin{list}{}%
+         {\setlength{\leftmargin}{#1}}%
+         \item[]%
+ }
+ {\end{list}}
+%%Incluir guionado de palabras
+\input{guionado.tex}
+
+\includepdf{portada.pdf}
+\input{resume.tex}
+%\thispagestyle{electronic}
+%%\newpage
+%%Márgenes
+\marginsize{2.4cm}{2.4cm}{2.2cm}{2.5cm}
+% Controla los márgenes {izquierda}{derecha}{arriba}{abajo}. 
+\newpage
+\begin{spacing}{1.5}
+  \tableofcontents
+\end{spacing}
+
+\newpage
+%\listoftables
+%\listoffigures
+%\newpage
+
+%Para las pablabras cortadas
+\clubpenalty=10000
+\widowpenalty=10000
+%\renewcommand{\baselinestretch}{1.20}
+%\setlength{\parskip}{4mm}
+%\pretolerance=2000
+%\tolerance=3000
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\parskip}{5mm}
+
+\input{introduccion.tex}
+\input{antecedentes.tex}
+\input{problematica.tex}
+\input{objetivos.tex}
+\input{justificacion.tex}
+\input{alclim.tex}
+\input{marcoteorico.tex}
+\input{metodo.tex}
+\input{stateoftheart}
+
+
+\newpage
+%IEEE
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{apalike} 
+%\bibliographystyle{apacite}
+\bibliography{biblio/biblio}
+\end{document}
