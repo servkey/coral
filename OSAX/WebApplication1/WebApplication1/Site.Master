@@ -8,12 +8,11 @@
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="Scripts/jquery.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.js"></script>
-    <link href="Styles/bootstrap.css" rel="stylesheet" media="screen"/>
+    <link href="Styles/bootstrap.css" rel="stylesheet" media="screen"/>    
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form runat="server">
+<body>    
     <div>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">                        
@@ -24,20 +23,21 @@
                         <li class="dropdown">
                             <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">Elementos Cohesivos<span class="glyphicon glyphicon-chevron-down"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" tabindex="-1">Metas</a></li>
-                                <li><a href="#" tabindex="-1">Objetivos</a></li>
-                                <li><a href="#" tabindex="-1">Actividades</a></li>
-                                <li><a href="#" tabindex="-1">Comunidades</a></li>
+                                <li><a href="Metas.aspx" tabindex="-1">Metas</a></li>
+                                <li><a href="Objetivos.aspx" tabindex="-1">Objetivos</a></li>
+                                <li><a href="Actividades.aspx" tabindex="-1">Actividades</a></li>
+                                <li><a href="Comunidades.aspx" tabindex="-1">Comunidades</a></li>
                             </ul>
                         </li>                    
                         <li class="dropdown">                    
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Elementos Interactivos<span class="glyphicon glyphicon-chevron-down"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Tareas</a></li>
-                                <li><a tabindex="-1" href="#">Roles</a></li>
-                                <li><a tabindex="-1" href="#">Actores</a></li>                          
-                                <li><a tabindex="-1" href="#">Categorías</a></li>
-                                <li><a tabindex="-1" href="#">Objetos</a></li>
+                                <li><a tabindex="-1" href="Tareas.aspx">Tareas</a></li>
+                                <li><a tabindex="-1" href="RolesActor.aspx">Roles de actor</a></li>
+                                <li><a tabindex="-1" href="RolesObjeto.aspx">Roles de objeto</a></li>
+                                <li><a tabindex="-1" href="Actores.aspx">Actores</a></li>                          
+                                <li><a tabindex="-1" href="Categorias.aspx">Categorías</a></li>
+                                <li><a tabindex="-1" href="Objetos.aspx">Objetos</a></li>
                             </ul>                        
                         </li>
                     </ul>
@@ -50,7 +50,6 @@
         </div>
         <div class="footer">
             
-        </div>
-    </form>
+        </div>    
 </body>
 </html>

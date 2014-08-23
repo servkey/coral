@@ -58,9 +58,18 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Actividades.aspx" />
+    <Content Include="Categorias.aspx" />
+    <Content Include="Comunidades.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Metas.aspx" />
+    <Content Include="Modelo\Model1.edmx.sql" />
+    <Content Include="Objetivos.aspx" />
+    <Content Include="Objetos.aspx" />
+    <Content Include="RolesObjeto.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\interacciones.js" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -68,6 +77,8 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\formulario.css" />
+    <Content Include="Tareas.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -76,7 +87,8 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Home.aspx" />
-    <Content Include="Actividades.aspx" />
+    <Content Include="RolesActor.aspx" />
+    <Content Include="Actores.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -114,6 +126,28 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Actividades.aspx.cs">
+      <DependentUpon>Actividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actividades.aspx.designer.cs">
+      <DependentUpon>Actividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categorias.aspx.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categorias.aspx.designer.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actor.cs" />
+    <Compile Include="Comunidades.aspx.cs">
+      <DependentUpon>Comunidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comunidades.aspx.designer.cs">
+      <DependentUpon>Comunidades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,12 +158,40 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Metas.aspx.cs">
+      <DependentUpon>Metas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Metas.aspx.designer.cs">
+      <DependentUpon>Metas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Objetivos.aspx.cs">
+      <DependentUpon>Objetivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objetivos.aspx.designer.cs">
+      <DependentUpon>Objetivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos.aspx.cs">
+      <DependentUpon>Objetos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objetos.aspx.designer.cs">
+      <DependentUpon>Objetos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolesObjeto.aspx.cs">
+      <DependentUpon>RolesObjeto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RolesObjeto.aspx.designer.cs">
+      <DependentUpon>RolesObjeto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,12 +206,26 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Actividades.aspx.cs">
-      <DependentUpon>Actividades.aspx</DependentUpon>
+    <Compile Include="RolesActor.aspx.cs">
+      <DependentUpon>RolesActor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Actividades.aspx.designer.cs">
-      <DependentUpon>Actividades.aspx</DependentUpon>
+    <Compile Include="RolesActor.aspx.designer.cs">
+      <DependentUpon>RolesActor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actores.aspx.cs">
+      <DependentUpon>Actores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actores.aspx.designer.cs">
+      <DependentUpon>Actores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tareas.aspx.cs">
+      <DependentUpon>Tareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tareas.aspx.designer.cs">
+      <DependentUpon>Tareas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
