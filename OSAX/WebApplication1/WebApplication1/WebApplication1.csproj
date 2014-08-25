@@ -79,7 +79,9 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Styles\formulario.css" />
     <Content Include="Tareas.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -140,7 +142,6 @@
     <Compile Include="Categorias.aspx.designer.cs">
       <DependentUpon>Categorias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Actor.cs" />
     <Compile Include="Comunidades.aspx.cs">
       <DependentUpon>Comunidades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -148,6 +149,9 @@
     <Compile Include="Comunidades.aspx.designer.cs">
       <DependentUpon>Comunidades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Connection.cs" />
+    <Compile Include="Controllers\DBM.cs" />
+    <Compile Include="Controllers\ControllerWebForms.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
