@@ -8,7 +8,8 @@
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="Scripts/jquery.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.js"></script>
-    <link href="Styles/bootstrap.css" rel="stylesheet" media="screen"/>    
+    <link href="Styles/bootstrap.css" rel="stylesheet" media="screen"/> 
+    <link href="/Styles/formulario.css" rel="Stylesheet" type="text/css" />}
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>

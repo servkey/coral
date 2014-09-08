@@ -8,12 +8,6 @@ Abowd, G.D., Dey, A.K., Brown, P.J., Davies, N., Smith, M., Steggles, P.:
   Gellersen, H.W. (ed.) Handheld and Ubiquitous Computing, Lecture Notes in
   Computer Science, vol. 1707, pp. 304--307. Springer Berlin Heidelberg (1999)
 
-\bibitem{aehnelt2012discussion}
-Aehnelt, M., Peter, C., M\"{u}sebeck, P.: A discussion of using mental models
-  in assistive environments. In: Proceedings of the 5th International
-  Conference on PErvasive Technologies Related to Assistive Environments. pp.
-  37:1--37:5. PETRA '12, ACM, New York, NY, USA (2012)
-
 \bibitem{alves2013radiator}
 Alves, P., Ferreira, P.: Radiator: Context propagation based on delayed
   aggregation. In: Proceedings of the 2013 Conference on Computer Supported
@@ -23,37 +17,6 @@ Alves, P., Ferreira, P.: Radiator: Context propagation based on delayed
 Anhalt, J., Smailagic, A., Siewiorek, D., Gemperle, F., Salber, D., Weber, S.,
   Beck, J., Jennings, J.: Toward context-aware computing: experiences and
   lessons. Intelligent Systems, IEEE  16(3),  38--46 (May 2001)
-
-\bibitem{antunes2008structuring}
-Antunes, P., Herskovic, V., Ochoa, S.F., Pino, J.A.: Structuring dimensions for
-  collaborative systems evaluation. ACM Comput. Surv.  44(2),  8:1--8:28 (Mar
-  2008)
-
-\bibitem{antunes2014reviewing}
-Antunes, P., Herskovic, V., Ochoa, S.F., Pino, J.A.: Reviewing the quality of
-  awareness support in collaborative applications. Journal of Systems and
-  Software  89(0),  146 -- 169 (2014)
-
-\bibitem{ardissono2012context}
-Ardissono, L., Bosio, G.: Context-dependent awareness support in open
-  collaboration environments. User Modeling and User-Adapted Interaction
-  22(3),  223--254 (2012)
-
-\bibitem{arias2012platform}
-Arias-Baez, M., Torres-Ribero, L., Carrillo-Ramos, A., Quimbaya, A., Gonzalez,
-  E.: Platform based on agents for support to the collaboration of work teams.
-  In: Computing Congress (CCC), 2012 7th Colombian. pp. 1--6 (Oct 2012)
-
-\bibitem{brezillon2004context}
-Br{\'e}zillon, P., Borges, M., Pino, J., Pomerol, J.C.: Context-awareness in
-  group work: Three case studies. In: Proc. of (2004)
-
-\bibitem{cruz2012towards}
-Cruz, A., Correia, A., Paredes, H., Fonseca, B., Morgado, L., Martins, P.:
-  Towards an overarching classification model of cscw and groupware: A
-  socio-technical perspective. In: Herskovic, V., Hoppe, H., Jansen, M.,
-  Ziegler, J. (eds.) Collaboration and Technology, Lecture Notes in Computer
-  Science, vol. 7493, pp. 41--56. Springer Berlin Heidelberg (2012)
 
 \bibitem{decouchant2013adapting}
 Decouchant, D., Mendoza, S., Sánchez, G., Rodríguez, J.: Adapting groupware
@@ -69,20 +32,12 @@ Dey, A.K., Abowd, G.D., Salber, D.: A conceptual framework and a toolkit for
 Dey, A.K., Salber, D., Futakawa, M., Abowd, G.D.: An architecture to support
   context-aware applications  (1999)
 
-\bibitem{dourish1992awareness}
-Dourish, P., Bellotti, V.: Awareness and coordination in shared workspaces. In:
-  Proceedings of the 1992 ACM Conference on Computer-supported Cooperative
-  Work. pp. 107--114. CSCW '92, ACM, New York, NY, USA (1992)
-
-\bibitem{el2011distributed}
-El~Ghayam, Y., Erradi, M.: Distributed context management in collaborative
-  environment. In: New Technologies of Distributed Systems (NOTERE), 2011 11th
-  Annual International Conference on. pp. 1--8 (May 2011)
-
-\bibitem{ellis1994conceptual}
-Ellis, C., Wainer, J.: A conceptual model of groupware. In: Proceedings of the
-  1994 ACM Conference on Computer Supported Cooperative Work. pp. 79--88. CSCW
-  '94, ACM, New York, NY, USA (1994)
+\bibitem{Doweling2012ATheory}
+D\"{o}weling, S., Schmidt, B., G\"{o}b, A.: A model for the design of
+  interactive systems based on activity theory. In: Proceedings of the ACM 2012
+  Conference on Computer Supported Cooperative Work. pp. 539--548. CSCW '12,
+  ACM, New York, NY, USA (2012),
+  \url{http://doi.acm.org/10.1145/2145204.2145287}
 
 \bibitem{ellis1991groupware}
 Ellis, C.A., Gibbs, S.J., Rein, G.: Groupware: Some issues and experiences.
@@ -93,10 +48,6 @@ Gallardo, J., Molina, A.I., Bravo, C.: A framework for the design of awareness
   support in collaborative situations of implicit interaction. In: Proceedings
   of the 13th International Conference on Interacci\'on Persona Ordenador. pp.
   7:1--7:2. INTERACCION '12, ACM, New York, NY, USA (2012)
-
-\bibitem{gross2013supporting}
-Gross, T.: Supporting effortless coordination: 25 years of awareness research.
-  Computer Supported Cooperative Work (CSCW)  22(4-6),  425--474 (2013)
 
 \bibitem{guermah2013ontology}
 Guermah, H., Fissaa, T., Hafiddi, H., Nassar, M., Kriouile, A.: Ontology based
@@ -113,10 +64,6 @@ Hoyos, J.R., Molina, J.G., Bot\'ia, J.A.: A domain-specific language for
   context modeling in context-aware systems. Journal of Systems and Software
   86(11),  2890 -- 2905 (2013)
 
-\bibitem{johansen1988groupware}
-Johansen, R.: GroupWare: Computer Support for Business Teams. The Free Press,
-  New York, NY, USA (1988)
-
 \bibitem{kamoun2012fadyrcos}
 Kamoun, A., Tazi, S., Drira, K.: Fadyrcos, a semantic interoperability
   framework for collaborative model-based dynamic reconfiguration of networked
@@ -124,32 +71,12 @@ Kamoun, A., Tazi, S., Drira, K.: Fadyrcos, a semantic interoperability
   Sustainable Interoperability: The Future of Internet Based Industrial
   Enterprises
 
-\bibitem{malik2007future}
-Malik, N., Mahmud, U., Javed, Y.: Future challenges in context-aware computing.
-  In: proceedings of the IADIS International Conference WWW/Internet. pp.
-  306--310 (2007)
-
-\bibitem{malone1994interdisciplinary}
-Malone, T.W., Crowston, K.: The interdisciplinary study of coordination. ACM
-  Comput. Surv.  26(1),  87--119 (Mar 1994)
-
-\bibitem{mittleman2008toward}
-Mittleman, D., Briggs, R., Murphy, J., Davis, A.: Toward a taxonomy of
-  groupware technologies. In: Briggs, R., Antunes, P., de~Vreede, G.J., Read,
-  A. (eds.) Groupware: Design, Implementation, and Use, Lecture Notes in
-  Computer Science, vol. 5411, pp. 305--317. Springer Berlin Heidelberg (2008)
-
 \bibitem{montane2013context}
 Montane-Jimenez, L., Benitez-Guerrero, E., Mezura-Godoy, C.: A context-aware
   architecture for improving collaboration of users in groupware systems. In:
   Collaborative Computing: Networking, Applications and Worksharing
   (Collaboratecom), 2013 9th International Conference Conference on. pp. 70--76
   (Oct 2013)
-
-\bibitem{pumareja2002evolutionary}
-{Pumareja}, D., {Sikkel}, K.: An evolutionary approach to groupware
-  implementation: the context of requirements engineering in the
-  socio-technical frame (TR-CTIT-02-30),  1--27 (2002)
 
 \bibitem{schillit1994disseminating}
 Schilit, B., Theimer, M.: Disseminating active map information to mobile hosts.
