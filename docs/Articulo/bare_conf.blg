@@ -1,5 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bare_conf.aux
 The style file: ./bibtex/splncs03.bst
 Database file #1: ./bib/biblio.bib
+Repeated entry---line 439 of file ./bib/biblio.bib
+ :  @article{dey1999architecture
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 446 of file ./bib/biblio.bib
+ :  @inproceedings{el2011distributed
+ :                                  ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in dey1999architecture
-(There was 1 warning)
+(There were 2 error messages)

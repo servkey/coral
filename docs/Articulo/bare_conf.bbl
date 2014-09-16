@@ -39,6 +39,11 @@ D\"{o}weling, S., Schmidt, B., G\"{o}b, A.: A model for the design of
   ACM, New York, NY, USA (2012),
   \url{http://doi.acm.org/10.1145/2145204.2145287}
 
+\bibitem{el2011distributed}
+El~Ghayam, Y., Erradi, M.: Distributed context management in collaborative
+  environment. In: New Technologies of Distributed Systems (NOTERE), 2011 11th
+  Annual International Conference on. pp. 1--8 (May 2011)
+
 \bibitem{ellis1991groupware}
 Ellis, C.A., Gibbs, S.J., Rein, G.: Groupware: Some issues and experiences.
   Commun. ACM  34(1),  39--58 (Jan 1991)
@@ -53,11 +58,6 @@ Gallardo, J., Molina, A.I., Bravo, C.: A framework for the design of awareness
 Guermah, H., Fissaa, T., Hafiddi, H., Nassar, M., Kriouile, A.: Ontology based
   context aware e-learning system. In: ISKO-Maghreb, 2013 3rd International
   Symposium. pp. 1--7 (Nov 2013)
-
-\bibitem{gutwin1996supporting}
-Gutwin, C., Greenberg, S., Roseman, M.: Supporting awareness of others in
-  groupware. In: Conference Companion on Human Factors in Computing Systems.
-  pp. 205--. CHI '96, ACM, New York, NY, USA (1996)
 
 \bibitem{hoyos2013domain}
 Hoyos, J.R., Molina, J.G., Bot\'ia, J.A.: A domain-specific language for
