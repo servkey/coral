@@ -1,0 +1,13 @@
+﻿div * 
+{
+    display:block;
+    margin-bottom:5px;
+    margin-top:5px;
+}
+.frame
+{
+    background-color:Gray;
+    padding: 10px;
+    border: 3px solid black;
+    width: 200px;
+}

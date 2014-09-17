@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="osaxxModelStoreContainer" CdmEntityContainer="osaxxEntities1">
+    <EntitySetMapping Name="Actividades">
+      <EntityTypeMapping TypeName="osaxxModel.Actividades">
+        <MappingFragment StoreEntitySet="Actividades">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="F_ID_COM" ColumnName="F_ID_COM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="F_ID_ME" ColumnName="F_ID_ME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actores">
+      <EntityTypeMapping TypeName="osaxxModel.Actores">
+        <MappingFragment StoreEntitySet="Actores">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="F_ID_Cat" ColumnName="F_ID_Cat" />
+          <ScalarProperty Name="F_ID_Com" ColumnName="F_ID_Com" />
+          <ScalarProperty Name="F_ID_AC" ColumnName="F_ID_AC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="osaxxModel.Categorias">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunidades">
+      <EntityTypeMapping TypeName="osaxxModel.Comunidades">
+        <MappingFragment StoreEntitySet="Comunidades">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metas">
+      <EntityTypeMapping TypeName="osaxxModel.Metas">
+        <MappingFragment StoreEntitySet="Metas">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objetivos">
+      <EntityTypeMapping TypeName="osaxxModel.Objetivos">
+        <MappingFragment StoreEntitySet="Objetivos">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="F_ID" ColumnName="F_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objetos">
+      <EntityTypeMapping TypeName="osaxxModel.Objetos">
+        <MappingFragment StoreEntitySet="Objetos">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="F_ID" ColumnName="F_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reglas">
+      <EntityTypeMapping TypeName="osaxxModel.Reglas">
+        <MappingFragment StoreEntitySet="Reglas">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesDeActor">
+      <EntityTypeMapping TypeName="osaxxModel.RolesDeActor">
+        <MappingFragment StoreEntitySet="RolesDeActor">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesDeObjeto">
+      <EntityTypeMapping TypeName="osaxxModel.RolesDeObjeto">
+        <MappingFragment StoreEntitySet="RolesDeObjeto">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tareas">
+      <EntityTypeMapping TypeName="osaxxModel.Tareas">
+        <MappingFragment StoreEntitySet="Tareas">
+          <ScalarProperty Name="ID_Caso" ColumnName="ID_Caso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="F_ID_OB" ColumnName="F_ID_OB" />
+          <ScalarProperty Name="F_ID_CA" ColumnName="F_ID_CA" />
+          <ScalarProperty Name="F_ID_RO" ColumnName="F_ID_RO" />
+          <ScalarProperty Name="F_ID_RA" ColumnName="F_ID_RA" />
+          <ScalarProperty Name="F_ID_OBJETIVO" ColumnName="F_ID_OBJETIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasosEstudio">
+      <EntityTypeMapping TypeName="osaxxModel.CasosEstudio">
+        <MappingFragment StoreEntitySet="CasosEstudio">
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

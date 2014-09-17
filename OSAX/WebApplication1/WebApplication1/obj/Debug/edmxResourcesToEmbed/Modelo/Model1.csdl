@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comunidades" EntityType="Model1.Comunidad" />
+    <EntitySet Name="Actores" EntityType="Model1.Actor" />
+    <EntitySet Name="Roles" EntityType="Model1.RolActor" />
+    <EntitySet Name="Reglas" EntityType="Model1.Regla" />
+    <EntitySet Name="Objetos" EntityType="Model1.Objeto" />
+    <EntitySet Name="Categorias" EntityType="Model1.Categoria" />
+    <EntitySet Name="Actividades" EntityType="Model1.Actividad" />
+    <EntitySet Name="Metas" EntityType="Model1.Meta" />
+    <EntitySet Name="Objetivos" EntityType="Model1.Objetivo" />
+    <EntitySet Name="Tareas" EntityType="Model1.Tarea" />
+    <AssociationSet Name="ComunidadActor" Association="Model1.ComunidadActor">
+      <End Role="Comunidad" EntitySet="Comunidades" />
+      <End Role="Actor" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="ActividadesDeLaComunidad" Association="Model1.ActividadesDeLaComunidad">
+      <End Role="Actividad" EntitySet="Actividades" />
+      <End Role="Comunidad" EntitySet="Comunidades" />
+    </AssociationSet>
+    <AssociationSet Name="MetaDelObjetivo" Association="Model1.MetaDelObjetivo">
+      <End Role="Meta" EntitySet="Metas" />
+      <End Role="Objetivo" EntitySet="Objetivos" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetivoDeLaTarea" Association="Model1.ObjetivoDeLaTarea">
+      <End Role="Objetivo" EntitySet="Objetivos" />
+      <End Role="Tarea" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriaDeLaTarea" Association="Model1.CategoriaDeLaTarea">
+      <End Role="Categoria" EntitySet="Categorias" />
+      <End Role="Tarea" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetosEnLaTarea" Association="Model1.ObjetosEnLaTarea">
+      <End Role="Objeto" EntitySet="Objetos" />
+      <End Role="Tarea" EntitySet="Tareas" />
+    </AssociationSet>
+    <EntitySet Name="RolObjetoEstablecer" EntityType="Model1.RolObjeto" />
+    <AssociationSet Name="MetaDeLaActividad" Association="Model1.MetaDeLaActividad">
+      <End Role="Meta" EntitySet="Metas" />
+      <End Role="Actividad" EntitySet="Actividades" />
+    </AssociationSet>
+    <EntitySet Name="InstanciaComunidades" EntityType="Model1.InstanciaComunidad" />
+    <EntitySet Name="InstanciaActores" EntityType="Model1.InstanciaActor" />
+    <EntitySet Name="InstanciaRolesActor" EntityType="Model1.InstanciaRolActor" />
+    <EntitySet Name="InstanciaObjetos" EntityType="Model1.InstanciaObjeto" />
+    <EntitySet Name="InstanciaCategorias" EntityType="Model1.InstanciaCategoria" />
+    <EntitySet Name="InstanciaActividades" EntityType="Model1.InstanciaActividad" />
+    <EntitySet Name="InstanciaMetas" EntityType="Model1.InstanciaMeta" />
+    <EntitySet Name="InstanciaObjetivos" EntityType="Model1.InstanciaObjetivo" />
+    <EntitySet Name="InstanciaTareas" EntityType="Model1.InstanciaTarea" />
+    <EntitySet Name="InstanciaRolObjetos" EntityType="Model1.InstanciaRolObjeto" />
+    <AssociationSet Name="ComunidadActor1" Association="Model1.ComunidadActor1">
+      <End Role="Comunidad1" EntitySet="InstanciaComunidades" />
+      <End Role="Actor1" EntitySet="InstanciaActores" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriaDelActor1" Association="Model1.CategoriaDelActor1">
+      <End Role="Categoria1" EntitySet="InstanciaCategorias" />
+      <End Role="Actor1" EntitySet="InstanciaActores" />
+    </AssociationSet>
+    <AssociationSet Name="ActividadesDeLaComunidad1" Association="Model1.ActividadesDeLaComunidad1">
+      <End Role="Actividad1" EntitySet="InstanciaActividades" />
+      <End Role="Comunidad1" EntitySet="InstanciaComunidades" />
+    </AssociationSet>
+    <AssociationSet Name="MetaDelObjetivo1" Association="Model1.MetaDelObjetivo1">
+      <End Role="Meta1" EntitySet="InstanciaMetas" />
+      <End Role="Objetivo1" EntitySet="InstanciaObjetivos" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetivoDeLaTarea1" Association="Model1.ObjetivoDeLaTarea1">
+      <End Role="Objetivo1" EntitySet="InstanciaObjetivos" />
+      <End Role="Tarea1" EntitySet="InstanciaTareas" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriaDeLaTarea1" Association="Model1.CategoriaDeLaTarea1">
+      <End Role="Categoria1" EntitySet="InstanciaCategorias" />
+      <End Role="Tarea1" EntitySet="InstanciaTareas" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriaDelObjeto1" Association="Model1.CategoriaDelObjeto1">
+      <End Role="Categoria1" EntitySet="InstanciaCategorias" />
+      <End Role="Objeto1" EntitySet="InstanciaObjetos" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetosEnLaTarea1" Association="Model1.ObjetosEnLaTarea1">
+      <End Role="Objeto1" EntitySet="InstanciaObjetos" />
+      <End Role="Tarea1" EntitySet="InstanciaTareas" />
+    </AssociationSet>
+    <AssociationSet Name="RolActorDeLaTarea1" Association="Model1.RolActorDeLaTarea1">
+      <End Role="RolActor1" EntitySet="InstanciaRolesActor" />
+      <End Role="Tarea1" EntitySet="InstanciaTareas" />
+    </AssociationSet>
+    <AssociationSet Name="RolObjetoDeLaTarea1" Association="Model1.RolObjetoDeLaTarea1">
+      <End Role="RolObjeto1" EntitySet="InstanciaRolObjetos" />
+      <End Role="Tarea1" EntitySet="InstanciaTareas" />
+    </AssociationSet>
+    <AssociationSet Name="MetaDeLaActividad1" Association="Model1.MetaDeLaActividad1">
+      <End Role="Meta1" EntitySet="InstanciaMetas" />
+      <End Role="Actividad1" EntitySet="InstanciaActividades" />
+    </AssociationSet>
+    <AssociationSet Name="InstanciaActividadInstanciaActor" Association="Model1.InstanciaActividadInstanciaActor">
+      <End Role="InstanciaActividad" EntitySet="InstanciaActividades" />
+      <End Role="InstanciaActor" EntitySet="InstanciaActores" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriadeObjeto" Association="Model1.CategoriadeObjeto">
+      <End Role="Categoria" EntitySet="Categorias" />
+      <End Role="Objeto" EntitySet="Objetos" />
+    </AssociationSet>
+    <AssociationSet Name="CategoriadeActor" Association="Model1.CategoriadeActor">
+      <End Role="Categoria" EntitySet="Categorias" />
+      <End Role="Actor" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="ActividaddeActor" Association="Model1.ActividaddeActor">
+      <End Role="Actividad" EntitySet="Actividades" />
+      <End Role="Actor" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="RolObjetodeTarea" Association="Model1.RolObjetodeTarea">
+      <End Role="RolObjeto" EntitySet="RolObjetoEstablecer" />
+      <End Role="Tarea" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="RolActordeTarea" Association="Model1.RolActordeTarea">
+      <End Role="RolActor" EntitySet="Roles" />
+      <End Role="Tarea" EntitySet="Tareas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Comunidad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Atributos" Nullable="false" />
+    <NavigationProperty Name="Actor" Relationship="Model1.ComunidadActor" FromRole="Comunidad" ToRole="Actor" />
+    <NavigationProperty Name="Actividad" Relationship="Model1.ActividadesDeLaComunidad" FromRole="Comunidad" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="Actor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Comunidad" Relationship="Model1.ComunidadActor" FromRole="Actor" ToRole="Comunidad" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriadeActor" FromRole="Actor" ToRole="Categoria" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Model1.ActividaddeActor" FromRole="Actor" ToRole="Actividad" />
+    <Property Type="Int32" Name="Actividad_id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RolActor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Regla">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Objeto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.ObjetosEnLaTarea" FromRole="Objeto" ToRole="Tarea" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriadeObjeto" FromRole="Objeto" ToRole="Categoria" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.CategoriaDeLaTarea" FromRole="Categoria" ToRole="Tarea" />
+    <NavigationProperty Name="Objeto" Relationship="Model1.CategoriadeObjeto" FromRole="Categoria" ToRole="Objeto" />
+    <NavigationProperty Name="Actor" Relationship="Model1.CategoriadeActor" FromRole="Categoria" ToRole="Actor" />
+  </EntityType>
+  <EntityType Name="Actividad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Comunidad" Relationship="Model1.ActividadesDeLaComunidad" FromRole="Actividad" ToRole="Comunidad" />
+    <Property Type="Int32" Name="Meta_id" Nullable="false" />
+    <NavigationProperty Name="Meta" Relationship="Model1.MetaDeLaActividad" FromRole="Actividad" ToRole="Meta" />
+    <NavigationProperty Name="Actor" Relationship="Model1.ActividaddeActor" FromRole="Actividad" ToRole="Actor" />
+  </EntityType>
+  <EntityType Name="Meta">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Objetivo" Relationship="Model1.MetaDelObjetivo" FromRole="Meta" ToRole="Objetivo" />
+    <NavigationProperty Name="Actividad" Relationship="Model1.MetaDeLaActividad" FromRole="Meta" ToRole="Actividad" />
+  </EntityType>
+  <EntityType Name="Objetivo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Meta" Relationship="Model1.MetaDelObjetivo" FromRole="Objetivo" ToRole="Meta" />
+    <Property Type="Int32" Name="Meta_id" Nullable="false" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.ObjetivoDeLaTarea" FromRole="Objetivo" ToRole="Tarea" />
+  </EntityType>
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Objetivo" Relationship="Model1.ObjetivoDeLaTarea" FromRole="Tarea" ToRole="Objetivo" />
+    <Property Type="Int32" Name="Objetivo_id" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriaDeLaTarea" FromRole="Tarea" ToRole="Categoria" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+    <NavigationProperty Name="Objeto" Relationship="Model1.ObjetosEnLaTarea" FromRole="Tarea" ToRole="Objeto" />
+    <NavigationProperty Name="RolObjeto" Relationship="Model1.RolObjetodeTarea" FromRole="Tarea" ToRole="RolObjeto" />
+    <Property Type="Int32" Name="RolObjeto_id" Nullable="false" />
+    <NavigationProperty Name="RolActor" Relationship="Model1.RolActordeTarea" FromRole="Tarea" ToRole="RolActor" />
+    <Property Type="Int32" Name="RolActor_id" Nullable="false" />
+  </EntityType>
+  <Association Name="ComunidadActor">
+    <End Type="Model1.Comunidad" Role="Comunidad" Multiplicity="1" />
+    <End Type="Model1.Actor" Role="Actor" Multiplicity="*" />
+  </Association>
+  <Association Name="ActividadesDeLaComunidad">
+    <End Type="Model1.Actividad" Role="Actividad" Multiplicity="*" />
+    <End Type="Model1.Comunidad" Role="Comunidad" Multiplicity="0..1" />
+  </Association>
+  <Association Name="MetaDelObjetivo">
+    <End Type="Model1.Meta" Role="Meta" Multiplicity="1" />
+    <End Type="Model1.Objetivo" Role="Objetivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meta">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Objetivo">
+        <PropertyRef Name="Meta_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetivoDeLaTarea">
+    <End Type="Model1.Objetivo" Role="Objetivo" Multiplicity="1" />
+    <End Type="Model1.Tarea" Role="Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objetivo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="Objetivo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoriaDeLaTarea">
+    <End Type="Model1.Categoria" Role="Categoria" Multiplicity="1" />
+    <End Type="Model1.Tarea" Role="Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetosEnLaTarea">
+    <End Type="Model1.Objeto" Role="Objeto" Multiplicity="*" />
+    <End Type="Model1.Tarea" Role="Tarea" Multiplicity="1" />
+  </Association>
+  <EntityType Name="RolObjeto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Tarea_id" Relationship="Model1.RolObjetodeTarea" FromRole="RolObjeto" ToRole="Tarea" />
+  </EntityType>
+  <Association Name="MetaDeLaActividad">
+    <End Type="Model1.Meta" Role="Meta" Multiplicity="1" />
+    <End Type="Model1.Actividad" Role="Actividad" Multiplicity="1" />
+  </Association>
+  <EntityType Name="InstanciaComunidad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Atributos" Nullable="false" />
+    <NavigationProperty Name="Actor" Relationship="Model1.ComunidadActor1" FromRole="Comunidad1" ToRole="Actor1" />
+    <NavigationProperty Name="Actividad" Relationship="Model1.ActividadesDeLaComunidad1" FromRole="Comunidad1" ToRole="Actividad1" />
+  </EntityType>
+  <EntityType Name="InstanciaActor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <Property Type="Int32" Name="Rol_id" Nullable="false" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+    <NavigationProperty Name="Comunidad" Relationship="Model1.ComunidadActor1" FromRole="Actor1" ToRole="Comunidad1" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriaDelActor1" FromRole="Actor1" ToRole="Categoria1" />
+    <NavigationProperty Name="InstanciaActividad" Relationship="Model1.InstanciaActividadInstanciaActor" FromRole="InstanciaActor" ToRole="InstanciaActividad" />
+    <Property Type="Int32" Name="InstanciaActividad_id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InstanciaRolActor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.RolActorDeLaTarea1" FromRole="RolActor1" ToRole="Tarea1" />
+  </EntityType>
+  <EntityType Name="InstanciaObjeto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <Property Type="Int32" Name="Rol_id" Nullable="false" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriaDelObjeto1" FromRole="Objeto1" ToRole="Categoria1" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.ObjetosEnLaTarea1" FromRole="Objeto1" ToRole="Tarea1" />
+  </EntityType>
+  <EntityType Name="InstanciaCategoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Actor" Relationship="Model1.CategoriaDelActor1" FromRole="Categoria1" ToRole="Actor1" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.CategoriaDeLaTarea1" FromRole="Categoria1" ToRole="Tarea1" />
+    <NavigationProperty Name="Objeto" Relationship="Model1.CategoriaDelObjeto1" FromRole="Categoria1" ToRole="Objeto1" />
+  </EntityType>
+  <EntityType Name="InstanciaActividad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <Property Type="Int32" Name="Meta_id" Nullable="false" />
+    <NavigationProperty Name="Comunidad" Relationship="Model1.ActividadesDeLaComunidad1" FromRole="Actividad1" ToRole="Comunidad1" />
+    <NavigationProperty Name="Meta" Relationship="Model1.MetaDeLaActividad1" FromRole="Actividad1" ToRole="Meta1" />
+    <NavigationProperty Name="InstanciaActor" Relationship="Model1.InstanciaActividadInstanciaActor" FromRole="InstanciaActividad" ToRole="InstanciaActor" />
+  </EntityType>
+  <EntityType Name="InstanciaMeta">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <NavigationProperty Name="Objetivo" Relationship="Model1.MetaDelObjetivo1" FromRole="Meta1" ToRole="Objetivo1" />
+    <NavigationProperty Name="Actividad" Relationship="Model1.MetaDeLaActividad1" FromRole="Meta1" ToRole="Actividad1" />
+  </EntityType>
+  <EntityType Name="InstanciaObjetivo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <Property Type="Int32" Name="Meta_id" Nullable="false" />
+    <NavigationProperty Name="Meta" Relationship="Model1.MetaDelObjetivo1" FromRole="Objetivo1" ToRole="Meta1" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.ObjetivoDeLaTarea1" FromRole="Objetivo1" ToRole="Tarea1" />
+  </EntityType>
+  <EntityType Name="InstanciaTarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atributos" Nullable="false" />
+    <Property Type="Int32" Name="Objetivo_id" Nullable="false" />
+    <Property Type="Int32" Name="Categoria_id" Nullable="false" />
+    <NavigationProperty Name="Objetivo" Relationship="Model1.ObjetivoDeLaTarea1" FromRole="Tarea1" ToRole="Objetivo1" />
+    <NavigationProperty Name="Categoria" Relationship="Model1.CategoriaDeLaTarea1" FromRole="Tarea1" ToRole="Categoria1" />
+    <NavigationProperty Name="Objeto" Relationship="Model1.ObjetosEnLaTarea1" FromRole="Tarea1" ToRole="Objeto1" />
+    <NavigationProperty Name="RolActor" Relationship="Model1.RolActorDeLaTarea1" FromRole="Tarea1" ToRole="RolActor1" />
+    <NavigationProperty Name="RolObjeto" Relationship="Model1.RolObjetoDeLaTarea1" FromRole="Tarea1" ToRole="RolObjeto1" />
+  </EntityType>
+  <EntityType Name="InstanciaRolObjeto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Tarea" Relationship="Model1.RolObjetoDeLaTarea1" FromRole="RolObjeto1" ToRole="Tarea1" />
+  </EntityType>
+  <Association Name="ComunidadActor1">
+    <End Type="Model1.InstanciaComunidad" Role="Comunidad1" Multiplicity="1" />
+    <End Type="Model1.InstanciaActor" Role="Actor1" Multiplicity="*" />
+  </Association>
+  <Association Name="CategoriaDelActor1">
+    <End Type="Model1.InstanciaCategoria" Role="Categoria1" Multiplicity="1" />
+    <End Type="Model1.InstanciaActor" Role="Actor1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Actor1">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActividadesDeLaComunidad1">
+    <End Type="Model1.InstanciaActividad" Role="Actividad1" Multiplicity="*" />
+    <End Type="Model1.InstanciaComunidad" Role="Comunidad1" Multiplicity="0..1" />
+  </Association>
+  <Association Name="MetaDelObjetivo1">
+    <End Type="Model1.InstanciaMeta" Role="Meta1" Multiplicity="1" />
+    <End Type="Model1.InstanciaObjetivo" Role="Objetivo1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meta1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Objetivo1">
+        <PropertyRef Name="Meta_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetivoDeLaTarea1">
+    <End Type="Model1.InstanciaObjetivo" Role="Objetivo1" Multiplicity="1" />
+    <End Type="Model1.InstanciaTarea" Role="Tarea1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objetivo1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea1">
+        <PropertyRef Name="Objetivo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoriaDeLaTarea1">
+    <End Type="Model1.InstanciaCategoria" Role="Categoria1" Multiplicity="1" />
+    <End Type="Model1.InstanciaTarea" Role="Tarea1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea1">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoriaDelObjeto1">
+    <End Type="Model1.InstanciaCategoria" Role="Categoria1" Multiplicity="1" />
+    <End Type="Model1.InstanciaObjeto" Role="Objeto1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria1">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Objeto1">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetosEnLaTarea1">
+    <End Type="Model1.InstanciaObjeto" Role="Objeto1" Multiplicity="*" />
+    <End Type="Model1.InstanciaTarea" Role="Tarea1" Multiplicity="1" />
+  </Association>
+  <Association Name="RolActorDeLaTarea1">
+    <End Type="Model1.InstanciaRolActor" Role="RolActor1" Multiplicity="1" />
+    <End Type="Model1.InstanciaTarea" Role="Tarea1" Multiplicity="1" />
+  </Association>
+  <Association Name="RolObjetoDeLaTarea1">
+    <End Type="Model1.InstanciaRolObjeto" Role="RolObjeto1" Multiplicity="0..1" />
+    <End Type="Model1.InstanciaTarea" Role="Tarea1" Multiplicity="1" />
+  </Association>
+  <Association Name="MetaDeLaActividad1">
+    <End Type="Model1.InstanciaMeta" Role="Meta1" Multiplicity="1" />
+    <End Type="Model1.InstanciaActividad" Role="Actividad1" Multiplicity="1" />
+  </Association>
+  <Association Name="InstanciaActividadInstanciaActor">
+    <End Type="Model1.InstanciaActividad" Role="InstanciaActividad" Multiplicity="1" />
+    <End Type="Model1.InstanciaActor" Role="InstanciaActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstanciaActividad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="InstanciaActor">
+        <PropertyRef Name="InstanciaActividad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoriadeObjeto">
+    <End Type="Model1.Categoria" Role="Categoria" Multiplicity="1" />
+    <End Type="Model1.Objeto" Role="Objeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Objeto">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoriadeActor">
+    <End Type="Model1.Categoria" Role="Categoria" Multiplicity="1" />
+    <End Type="Model1.Actor" Role="Actor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Actor">
+        <PropertyRef Name="Categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActividaddeActor">
+    <End Type="Model1.Actividad" Role="Actividad" Multiplicity="1" />
+    <End Type="Model1.Actor" Role="Actor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Actor">
+        <PropertyRef Name="Actividad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RolObjetodeTarea">
+    <End Type="Model1.RolObjeto" Role="RolObjeto" Multiplicity="1" />
+    <End Type="Model1.Tarea" Role="Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolObjeto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="RolObjeto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RolActordeTarea">
+    <End Type="Model1.RolActor" Role="RolActor" Multiplicity="1" />
+    <End Type="Model1.Tarea" Role="Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolActor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="RolActor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

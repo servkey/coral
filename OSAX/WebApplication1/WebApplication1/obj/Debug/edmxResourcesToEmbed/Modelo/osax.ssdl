@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="osaxxModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="osaxxModelStoreContainer">
+    <EntitySet Name="Actividades" EntityType="osaxxModel.Store.Actividades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Actores" EntityType="osaxxModel.Store.Actores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CasosEstudio" EntityType="osaxxModel.Store.CasosEstudio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categorias" EntityType="osaxxModel.Store.Categorias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comunidades" EntityType="osaxxModel.Store.Comunidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Metas" EntityType="osaxxModel.Store.Metas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Objetivos" EntityType="osaxxModel.Store.Objetivos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Objetos" EntityType="osaxxModel.Store.Objetos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Reglas" EntityType="osaxxModel.Store.Reglas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RolesDeActor" EntityType="osaxxModel.Store.RolesDeActor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RolesDeObjeto" EntityType="osaxxModel.Store.RolesDeObjeto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tareas" EntityType="osaxxModel.Store.Tareas" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Actividad__F_ID___300424B4" Association="osaxxModel.Store.FK__Actividad__F_ID___300424B4">
+      <End Role="Metas" EntitySet="Metas" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Actividad__F_ID___398D8EEE" Association="osaxxModel.Store.FK__Actividad__F_ID___398D8EEE">
+      <End Role="Comunidades" EntitySet="Comunidades" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Actividad__ID_Ca__48CFD27E" Association="osaxxModel.Store.FK__Actividad__ID_Ca__48CFD27E">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Actores__F_ID_AC__34C8D9D1" Association="osaxxModel.Store.FK__Actores__F_ID_AC__34C8D9D1">
+      <End Role="Actividades" EntitySet="Actividades" />
+      <End Role="Actores" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Actores__F_ID_Ca__15502E78" Association="osaxxModel.Store.FK__Actores__F_ID_Ca__15502E78">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Actores" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Actores__F_ID_Co__164452B1" Association="osaxxModel.Store.FK__Actores__F_ID_Co__164452B1">
+      <End Role="Comunidades" EntitySet="Comunidades" />
+      <End Role="Actores" EntitySet="Actores" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Categoria__ID_Ca__403A8C7D" Association="osaxxModel.Store.FK__Categoria__ID_Ca__403A8C7D">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Categorias" EntitySet="Categorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comunidad__ID_Ca__412EB0B6" Association="osaxxModel.Store.FK__Comunidad__ID_Ca__412EB0B6">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Comunidades" EntitySet="Comunidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Metas__ID_Caso__4222D4EF" Association="osaxxModel.Store.FK__Metas__ID_Caso__4222D4EF">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Metas" EntitySet="Metas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objetivos__F_ID__1ED998B2" Association="osaxxModel.Store.FK__Objetivos__F_ID__1ED998B2">
+      <End Role="Metas" EntitySet="Metas" />
+      <End Role="Objetivos" EntitySet="Objetivos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objetivos__ID_Ca__4316F928" Association="osaxxModel.Store.FK__Objetivos__ID_Ca__4316F928">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Objetivos" EntitySet="Objetivos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objetos__F_ID__0CBAE877" Association="osaxxModel.Store.FK__Objetos__F_ID__0CBAE877">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Objetos" EntitySet="Objetos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objetos__ID_Caso__440B1D61" Association="osaxxModel.Store.FK__Objetos__ID_Caso__440B1D61">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Objetos" EntitySet="Objetos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reglas__ID_Caso__44FF419A" Association="osaxxModel.Store.FK__Reglas__ID_Caso__44FF419A">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Reglas" EntitySet="Reglas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesDeAc__ID_Ca__45F365D3" Association="osaxxModel.Store.FK__RolesDeAc__ID_Ca__45F365D3">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="RolesDeActor" EntitySet="RolesDeActor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolesDeOb__ID_Ca__46E78A0C" Association="osaxxModel.Store.FK__RolesDeOb__ID_Ca__46E78A0C">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="RolesDeObjeto" EntitySet="RolesDeObjeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__F_ID_CA__24927208" Association="osaxxModel.Store.FK__Tareas__F_ID_CA__24927208">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__F_ID_OB__37A5467C" Association="osaxxModel.Store.FK__Tareas__F_ID_OB__37A5467C">
+      <End Role="Objetos" EntitySet="Objetos" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__F_ID_OBJ__38996AB5" Association="osaxxModel.Store.FK__Tareas__F_ID_OBJ__38996AB5">
+      <End Role="Objetivos" EntitySet="Objetivos" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__F_ID_RA__267ABA7A" Association="osaxxModel.Store.FK__Tareas__F_ID_RA__267ABA7A">
+      <End Role="RolesDeActor" EntitySet="RolesDeActor" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__F_ID_RO__25869641" Association="osaxxModel.Store.FK__Tareas__F_ID_RO__25869641">
+      <End Role="RolesDeObjeto" EntitySet="RolesDeObjeto" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tareas__ID_Caso__47DBAE45" Association="osaxxModel.Store.FK__Tareas__ID_Caso__47DBAE45">
+      <End Role="CasosEstudio" EntitySet="CasosEstudio" />
+      <End Role="Tareas" EntitySet="Tareas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="F_ID_ME" Type="int" />
+    <Property Name="F_ID_COM" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Actores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="F_ID_Cat" Type="int" />
+    <Property Name="F_ID_Com" Type="int" />
+    <Property Name="F_ID_AC" Type="int" />
+  </EntityType>
+  <EntityType Name="CasosEstudio">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="contraseña" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Comunidades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Metas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Objetivos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="F_ID" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Objetos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="F_ID" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Reglas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="RolesDeActor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="RolesDeObjeto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <EntityType Name="Tareas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atributos" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="F_ID_OB" Type="int" />
+    <Property Name="F_ID_CA" Type="int" />
+    <Property Name="F_ID_RO" Type="int" />
+    <Property Name="F_ID_RA" Type="int" />
+    <Property Name="F_ID_OBJETIVO" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+    <Property Name="ID_Caso" Type="int" />
+  </EntityType>
+  <Association Name="FK__Actividad__F_ID___300424B4">
+    <End Role="Metas" Type="osaxxModel.Store.Metas" Multiplicity="0..1" />
+    <End Role="Actividades" Type="osaxxModel.Store.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="F_ID_ME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Actividad__F_ID___398D8EEE">
+    <End Role="Comunidades" Type="osaxxModel.Store.Comunidades" Multiplicity="0..1" />
+    <End Role="Actividades" Type="osaxxModel.Store.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comunidades">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="F_ID_COM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Actividad__ID_Ca__48CFD27E">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Actividades" Type="osaxxModel.Store.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Actores__F_ID_AC__34C8D9D1">
+    <End Role="Actividades" Type="osaxxModel.Store.Actividades" Multiplicity="0..1" />
+    <End Role="Actores" Type="osaxxModel.Store.Actores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividades">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actores">
+        <PropertyRef Name="F_ID_AC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Actores__F_ID_Ca__15502E78">
+    <End Role="Categorias" Type="osaxxModel.Store.Categorias" Multiplicity="0..1" />
+    <End Role="Actores" Type="osaxxModel.Store.Actores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actores">
+        <PropertyRef Name="F_ID_Cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Actores__F_ID_Co__164452B1">
+    <End Role="Comunidades" Type="osaxxModel.Store.Comunidades" Multiplicity="0..1" />
+    <End Role="Actores" Type="osaxxModel.Store.Actores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comunidades">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Actores">
+        <PropertyRef Name="F_ID_Com" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Categoria__ID_Ca__403A8C7D">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Categorias" Type="osaxxModel.Store.Categorias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Categorias">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comunidad__ID_Ca__412EB0B6">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Comunidades" Type="osaxxModel.Store.Comunidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comunidades">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Metas__ID_Caso__4222D4EF">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Metas" Type="osaxxModel.Store.Metas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Metas">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objetivos__F_ID__1ED998B2">
+    <End Role="Metas" Type="osaxxModel.Store.Metas" Multiplicity="0..1" />
+    <End Role="Objetivos" Type="osaxxModel.Store.Objetivos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Objetivos">
+        <PropertyRef Name="F_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objetivos__ID_Ca__4316F928">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Objetivos" Type="osaxxModel.Store.Objetivos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Objetivos">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objetos__F_ID__0CBAE877">
+    <End Role="Categorias" Type="osaxxModel.Store.Categorias" Multiplicity="0..1" />
+    <End Role="Objetos" Type="osaxxModel.Store.Objetos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Objetos">
+        <PropertyRef Name="F_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objetos__ID_Caso__440B1D61">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Objetos" Type="osaxxModel.Store.Objetos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Objetos">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reglas__ID_Caso__44FF419A">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Reglas" Type="osaxxModel.Store.Reglas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reglas">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesDeAc__ID_Ca__45F365D3">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="RolesDeActor" Type="osaxxModel.Store.RolesDeActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RolesDeActor">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolesDeOb__ID_Ca__46E78A0C">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="RolesDeObjeto" Type="osaxxModel.Store.RolesDeObjeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RolesDeObjeto">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__F_ID_CA__24927208">
+    <End Role="Categorias" Type="osaxxModel.Store.Categorias" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="F_ID_CA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__F_ID_OB__37A5467C">
+    <End Role="Objetos" Type="osaxxModel.Store.Objetos" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objetos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="F_ID_OB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__F_ID_OBJ__38996AB5">
+    <End Role="Objetivos" Type="osaxxModel.Store.Objetivos" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objetivos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="F_ID_OBJETIVO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__F_ID_RA__267ABA7A">
+    <End Role="RolesDeActor" Type="osaxxModel.Store.RolesDeActor" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolesDeActor">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="F_ID_RA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__F_ID_RO__25869641">
+    <End Role="RolesDeObjeto" Type="osaxxModel.Store.RolesDeObjeto" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolesDeObjeto">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="F_ID_RO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tareas__ID_Caso__47DBAE45">
+    <End Role="CasosEstudio" Type="osaxxModel.Store.CasosEstudio" Multiplicity="0..1" />
+    <End Role="Tareas" Type="osaxxModel.Store.Tareas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasosEstudio">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tareas">
+        <PropertyRef Name="ID_Caso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

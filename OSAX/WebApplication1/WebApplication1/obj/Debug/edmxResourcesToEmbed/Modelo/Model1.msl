@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Comunidades">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Comunidad)">
+        <MappingFragment StoreEntitySet="Comunidades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Atributos" ColumnName="Atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actores">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Actor)">
+        <MappingFragment StoreEntitySet="Actores">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+          <ScalarProperty Name="Actividad_id" ColumnName="Actividad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.RolActor)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reglas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Regla)">
+        <MappingFragment StoreEntitySet="Reglas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objetos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Objeto)">
+        <MappingFragment StoreEntitySet="Objetos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Categoria)">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actividades">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Actividad)">
+        <MappingFragment StoreEntitySet="Actividades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Meta_id" ColumnName="Meta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Meta)">
+        <MappingFragment StoreEntitySet="Metas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objetivos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Objetivo)">
+        <MappingFragment StoreEntitySet="Objetivos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Meta_id" ColumnName="Meta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tareas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Tarea)">
+        <MappingFragment StoreEntitySet="Tareas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Objetivo_id" ColumnName="Objetivo_id" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolObjetoEstablecer">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.RolObjeto)">
+        <MappingFragment StoreEntitySet="RolObjetoEstablecer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaComunidades">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaComunidad)">
+        <MappingFragment StoreEntitySet="InstanciaComunidades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Atributos" ColumnName="Atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaActores">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaActor)">
+        <MappingFragment StoreEntitySet="InstanciaActores">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Rol_id" ColumnName="Rol_id" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+          <ScalarProperty Name="InstanciaActividad_id" ColumnName="InstanciaActividad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaRolesActor">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaRolActor)">
+        <MappingFragment StoreEntitySet="InstanciaRolesActor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaObjetos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaObjeto)">
+        <MappingFragment StoreEntitySet="InstanciaObjetos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Rol_id" ColumnName="Rol_id" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaCategorias">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaCategoria)">
+        <MappingFragment StoreEntitySet="InstanciaCategorias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaActividades">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaActividad)">
+        <MappingFragment StoreEntitySet="InstanciaActividades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Meta_id" ColumnName="Meta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaMetas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaMeta)">
+        <MappingFragment StoreEntitySet="InstanciaMetas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaObjetivos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaObjetivo)">
+        <MappingFragment StoreEntitySet="InstanciaObjetivos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Meta_id" ColumnName="Meta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaTareas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaTarea)">
+        <MappingFragment StoreEntitySet="InstanciaTareas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="atributos" ColumnName="atributos" />
+          <ScalarProperty Name="Objetivo_id" ColumnName="Objetivo_id" />
+          <ScalarProperty Name="Categoria_id" ColumnName="Categoria_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstanciaRolObjetos">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.InstanciaRolObjeto)">
+        <MappingFragment StoreEntitySet="InstanciaRolObjetos">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ComunidadActor" TypeName="Model1.ComunidadActor" StoreEntitySet="Actores">
+      <EndProperty Name="Comunidad">
+        <ScalarProperty Name="id" ColumnName="Comunidad_id" />
+      </EndProperty>
+      <EndProperty Name="Actor">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ActividadesDeLaComunidad" TypeName="Model1.ActividadesDeLaComunidad" StoreEntitySet="Actividades">
+      <EndProperty Name="Comunidad">
+        <ScalarProperty Name="id" ColumnName="Comunidad_id" />
+      </EndProperty>
+      <EndProperty Name="Actividad">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="Comunidad_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ObjetosEnLaTarea" TypeName="Model1.ObjetosEnLaTarea" StoreEntitySet="Objetos">
+      <EndProperty Name="Tarea">
+        <ScalarProperty Name="id" ColumnName="Tarea_id" />
+      </EndProperty>
+      <EndProperty Name="Objeto">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MetaDeLaActividad" TypeName="Model1.MetaDeLaActividad" StoreEntitySet="Metas">
+      <EndProperty Name="Actividad">
+        <ScalarProperty Name="id" ColumnName="Actividad_id" />
+      </EndProperty>
+      <EndProperty Name="Meta">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ComunidadActor1" TypeName="Model1.ComunidadActor1" StoreEntitySet="InstanciaActores">
+      <EndProperty Name="Comunidad1">
+        <ScalarProperty Name="id" ColumnName="Comunidad_id" />
+      </EndProperty>
+      <EndProperty Name="Actor1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ActividadesDeLaComunidad1" TypeName="Model1.ActividadesDeLaComunidad1" StoreEntitySet="InstanciaActividades">
+      <EndProperty Name="Comunidad1">
+        <ScalarProperty Name="id" ColumnName="Comunidad_id" />
+      </EndProperty>
+      <EndProperty Name="Actividad1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="Comunidad_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ObjetosEnLaTarea1" TypeName="Model1.ObjetosEnLaTarea1" StoreEntitySet="InstanciaObjetos">
+      <EndProperty Name="Tarea1">
+        <ScalarProperty Name="id" ColumnName="Tarea_id" />
+      </EndProperty>
+      <EndProperty Name="Objeto1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RolActorDeLaTarea1" TypeName="Model1.RolActorDeLaTarea1" StoreEntitySet="InstanciaRolesActor">
+      <EndProperty Name="Tarea1">
+        <ScalarProperty Name="id" ColumnName="Tarea_id" />
+      </EndProperty>
+      <EndProperty Name="RolActor1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RolObjetoDeLaTarea1" TypeName="Model1.RolObjetoDeLaTarea1" StoreEntitySet="InstanciaRolObjetos">
+      <EndProperty Name="Tarea1">
+        <ScalarProperty Name="id" ColumnName="Tarea_id" />
+      </EndProperty>
+      <EndProperty Name="RolObjeto1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MetaDeLaActividad1" TypeName="Model1.MetaDeLaActividad1" StoreEntitySet="InstanciaMetas">
+      <EndProperty Name="Actividad1">
+        <ScalarProperty Name="id" ColumnName="Actividad_id" />
+      </EndProperty>
+      <EndProperty Name="Meta1">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

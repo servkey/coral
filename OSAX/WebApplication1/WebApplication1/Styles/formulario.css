@@ -1,0 +1,26 @@
+﻿.jumbotron
+{
+    width:35%;
+    border: 1px solid gray;
+    padding: 2% 2% 2% 2%;
+    border-radius: 15px;
+}
+.input-group *
+{
+    display:inline-block;    
+}
+label,.label,.label-default
+{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.divrow
+{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.main
+{
+    margin-top:15%;
+}
