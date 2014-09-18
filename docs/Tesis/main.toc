@@ -8,24 +8,27 @@
 \contentsline {section}{\numberline {7}Alcances y Limitaciones}{9}{section.7}
 \contentsline {section}{\numberline {8}Marco Te\'orico}{9}{section.8}
 \contentsline {subsection}{\numberline {8.1}Trabajo colaborativo y Sistemas Groupware}{9}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Conciencia en espacios de trabajo}{11}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Conciencia colaborativa}{11}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Conciencia contextual}{11}{subsubsection.8.2.2}
-\contentsline {subsubsection}{\numberline {8.2.3}Conciencia social}{11}{subsubsection.8.2.3}
-\contentsline {subsubsection}{\numberline {8.2.4}Conciencia de espacio de trabajo}{12}{subsubsection.8.2.4}
-\contentsline {subsubsection}{\numberline {8.2.5}Conciencia situacional}{12}{subsubsection.8.2.5}
-\contentsline {subsubsection}{\numberline {8.2.6}Conciencia del lugar}{12}{subsubsection.8.2.6}
-\contentsline {subsection}{\numberline {8.3}Consciencia del contexto}{14}{subsection.8.3}
-\contentsline {section}{\numberline {9}M\'etodo}{16}{section.9}
-\contentsline {section}{\numberline {10}Estado del arte}{17}{section.10}
-\contentsline {subsection}{\numberline {10.1}CSCW y Sistemas Groupware}{17}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Groupware}{17}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Consciencia contextual}{21}{subsection.10.3}
-\contentsline {subsection}{\numberline {10.4}C\'omputo Consciente del Contexto}{21}{subsection.10.4}
-\contentsline {subsubsection}{\numberline {10.4.1}Contexto}{21}{subsubsection.10.4.1}
-\contentsline {subsubsection}{\numberline {10.4.2}Proceso}{24}{subsubsection.10.4.2}
-\contentsline {subsubsection}{\numberline {10.4.3}Adquisici\'on de contexto}{24}{subsubsection.10.4.3}
-\contentsline {subsubsection}{\numberline {10.4.4}Manejo de contexto}{25}{subsubsection.10.4.4}
-\contentsline {subsubsection}{\numberline {10.4.5}Uso de contexto}{25}{subsubsection.10.4.5}
-\contentsline {subsection}{\numberline {10.5}Sistemas Groupware Conscientes del Contexto}{27}{subsection.10.5}
-\contentsline {subsubsection}{\numberline {10.5.1}Arquitecturas}{27}{subsubsection.10.5.1}
+\contentsline {subsection}{\numberline {8.2}Consciencia}{11}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Consciencia colaborativa}{12}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Conciencia contextual}{12}{subsubsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.3}Conciencia social}{12}{subsubsection.8.2.3}
+\contentsline {subsubsection}{\numberline {8.2.4}Conciencia de espacio de trabajo}{13}{subsubsection.8.2.4}
+\contentsline {subsubsection}{\numberline {8.2.5}Conciencia situacional}{13}{subsubsection.8.2.5}
+\contentsline {subsubsection}{\numberline {8.2.6}Conciencia del lugar}{13}{subsubsection.8.2.6}
+\contentsline {subsection}{\numberline {8.3}Consciencia del contexto}{15}{subsection.8.3}
+\contentsline {section}{\numberline {9}M\'etodo}{17}{section.9}
+\contentsline {section}{\numberline {10}Estado del arte}{18}{section.10}
+\contentsline {subsection}{\numberline {10.1}CSCW y Sistemas Groupware}{18}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Groupware}{18}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Consciencia contextual}{22}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}C\'omputo Consciente del Contexto}{22}{subsection.10.4}
+\contentsline {subsubsection}{\numberline {10.4.1}Contexto}{22}{subsubsection.10.4.1}
+\contentsline {subsubsection}{\numberline {10.4.2}Proceso}{26}{subsubsection.10.4.2}
+\contentsline {subsubsection}{\numberline {10.4.3}Adquisici\'on de contexto}{26}{subsubsection.10.4.3}
+\contentsline {subsubsection}{\numberline {10.4.4}Manejo de contexto}{26}{subsubsection.10.4.4}
+\contentsline {subsubsection}{\numberline {10.4.5}Uso de contexto}{27}{subsubsection.10.4.5}
+\contentsline {subsection}{\numberline {10.5}Sistemas Groupware Conscientes del Contexto}{28}{subsection.10.5}
+\contentsline {subsubsection}{\numberline {10.5.1}Arquitecturas}{29}{subsubsection.10.5.1}
+\contentsline {section}{\numberline {11}An\'alisis y dise\~no}{31}{section.11}
+\contentsline {subsection}{\numberline {11.1}Caso de estudio}{32}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Prototipo}{34}{subsection.11.2}

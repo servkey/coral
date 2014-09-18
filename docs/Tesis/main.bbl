@@ -106,6 +106,16 @@ P.~Dourish and V.~Bellotti, ``Awareness and coordination in shared
   Available: \url{http://doi.acm.org/10.1145/143457.143468}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Belkadi2013110}
+\BIBentryALTinterwordspacing
+F.~Belkadi, E.~Bonjour, M.~Camargo, N.~Troussier, and B.~Eynard, ``A situation
+  model to support awareness in collaborative design,'' \emph{International
+  Journal of Human-Computer Studies}, vol.~71, no.~1, pp. 110 -- 129, 2013,
+  special Issue on supporting shared representations in collaborative
+  activities. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S107158191200050X}
+\BIBentrySTDinterwordspacing
+
 \bibitem{brezillon2004context}
 P.~Br{\'e}zillon, M.~Borges, J.~Pino, and J.-C. Pomerol, ``Context-awareness in
   group work: Three case studies,'' in \emph{Proc. of}, 2004.
@@ -172,6 +182,13 @@ M.~Aehnelt, C.~Peter, and P.~M\"{u}sebeck, ``A discussion of using mental
   York, NY, USA: ACM, 2012, pp. 37:1--37:5. [Online]. Available:
   \url{http://doi.acm.org/10.1145/2413097.2413145}
 \BIBentrySTDinterwordspacing
+
+\bibitem{pereira2013CSCWD}
+J.~Pereira~de Souza, C.~Tacla, F.~Beal, E.~Cabrera~Paraiso, and
+  G.~Gimenez-Lugo, ``An ontology-based agent for context aware software process
+  development,'' in \emph{Computer Supported Cooperative Work in Design
+  (CSCWD), 2013 IEEE 17th International Conference on}, June 2013, pp.
+  287--292.
 
 \bibitem{hoyos2013domain}
 \BIBentryALTinterwordspacing
