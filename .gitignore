@@ -1,6 +1,7 @@
 # Compiled Object files
 *.slo
 *.obj
+*.aux
 
 #solución visual studio
 *.suo
