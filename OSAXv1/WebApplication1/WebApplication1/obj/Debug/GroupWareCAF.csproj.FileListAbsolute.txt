@@ -1,0 +1,9 @@
+C:\Users\santigm\Git\Coral\OSAX\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\santigm\Git\Coral\OSAX\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\santigm\Git\Coral\OSAX\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\santigm\Git\Coral\OSAX\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\santigm\Git\Coral\OSAXv1\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\santigm\Git\Coral\OSAXv1\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\WebApplication1\WebApplication1\obj\Debug\GroupWareCAF.csprojResolveAssemblyReference.cache

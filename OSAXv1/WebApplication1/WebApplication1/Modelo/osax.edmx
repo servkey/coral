@@ -1174,7 +1174,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="osax" ZoomLevel="117">
+      <Diagram Name="osax" ZoomLevel="94">
         <EntityTypeShape EntityType="osaxxModel.Actividades" Width="1.5" PointX="0.5" PointY="5.125" Height="1.7566536458333335" IsExpanded="true" />
         <EntityTypeShape EntityType="osaxxModel.Actores" Width="1.5" PointX="3" PointY="4.125" Height="2.2496956380208335" IsExpanded="true" />
         <EntityTypeShape EntityType="osaxxModel.Categorias" Width="1.5" PointX="5.625" PointY="4.125" Height="1.7566536458333335" IsExpanded="true" />
