@@ -39,6 +39,7 @@ La siguiente capa del modelo se enfoca a los grupos, los cuales son definidos co
 Un groupware se puede caracterizar por 3 aspectos complementarios importantes desde la vista del usuario: una descripci\'on de los objetos y las operaciones que se pueden hacer sobre ellos y que est\'an disponibles para los usuarios, una descripci\'on de los aspectos din\'amicos del sistema (flujo de control y  de datos) y una descripci\'on de la interfaz entre el sistema y los usuarios y entre los usuarios \cite{ellis1994conceptual}. Este modelo es llamado de coordinaci\'on y describe la organizaci\'on de las actividades realizadas por los usuarios y no por el sistema. Los componentes principales de este modelo ontol\'ogico son los objetos y las operaciones. Las operaciones sobre objetos son aspectos importantes que determinan el nivel de contribuci\'on de un usuario al trabajo\cite{ellis1994conceptual}, e.g. en un sistema editor de c\'odigo colaborativo, los usuarios que realicen m\'as operaciones sobre un archivo(actualizar el archivo, crear archivo, eliminar archivo) son los que m\'as aportan al proyecto, sin embargo la desventaja de esto es que no se sabe si la operaci\'on que se hizo produjo resultados positivos, as\'i un usuario que realice varios cambios sobre un archivo puede ser se\'nal de que se equivoca mucho en su redacci\'on, otros aspectos importantes en la colaboraci\'on son la interacci\'on con miembros del grupo y el ambiente para resolver problemas, tomar decisiones, mantener la afiliaci\'on del grupo, etc.
 
 Antunes\cite{antunes2008structuring} presenta un framework detallado para evaluar los sistemas colaborativos bajo desarrollo de acuerdo a variables dadas y niveles de desempe\'no. Considera dos dimensiones: una define el conjunto de variables de evaluaci\'on relevantes y el otro se ocupa de los niveles de desempe\'no que los usuarios evaluados. El tiempo de evaluaci\'on es inherentemente asociado con el proceso de desarrollo. Menciona una lista de m\'etodos de evaluaci\'on de groupwares son: 
+
 \begin{itemize}
 \item Evaluaci\'on heur\'istica de Groupware:(Backer et al 2002) es basado en ocho heur\'isticas groupware como una lista de caracter\'isticas que los groupware deber\'ian de tener. Los problemas que surjan se apuntan y se corrigen.
 \item Groupware walkthrough: (Pinelle and Gutwin 2002) un escenario es una descripci\'on de una actividad o conjunto de actividades, que incluye a los usuarios, su conocimiento, el resultado esperado y las circunstancias que los rodean.
@@ -47,6 +48,7 @@ Antunes\cite{antunes2008structuring} presenta un framework detallado para evalua
 \item Human-Performance Model (Antunes et al. 2006): los evaluadores descomponen las interfaces en espacios de trabajo compartidos, definen escenarios cr\'iticos enfocados a acciones colaborativas para los espacios compartidos y comparan el desempe\'no del grupo en escenarios cr\'iticos para predecir tiempos de ejecuci\'on.
 \item Enfoque de Manejo de conocimiento (Vizca\'ino et al. 2005): se mide si el sistema ayuda a los usuarios a detectar flujos de conocimiento y diseminar, reusar y almacenar conocimiento. El proceso de circulaci\'on de movimiento se comprende de 6 fases (creaci\'on de conocimiento, acumulaci\'on, divisi\'on, utilizaci\'on, internalizaci\'on), la evaluaci\'on se realiza contestando preguntas relacionadas a cada \'area.
 \end{itemize}
+
 Adem\'as de estos aspectos inherentes al trabajo colaborativo, es importante que los groupware proporcionen a los usuarios medios con los que puedan articular el trabajo que est\'an realizando de manera grupal, estos medios deben de apoyar la comunicaci\'on, la coordinaci\'on y la cooperaci\'on de los miembros del grupo. Para que esto se logre con mayor naturalidad es necesario mantenerlos al tanto de la situaci\'on del grupo, el estado de las actividades que se est\'an realizando, el objetivo que persigue el grupo, etc. a esto se le llama consciencia.
 
 La consciencia se refiere al conocimiento que tienen los individuos sobre s\'i mismos y sobre el ambiente que los rodea, y en el caso de trabajo colaborativo, el rol que desempe\'nan en su grupo y el estado de los dem\'as integrantes.
@@ -156,10 +158,29 @@ Por lo tanto un conjunto de contextos $C_{1}..C_{n}$ es solo propagado a $P$ cua
 
 En el trabajo de Ardissono \cite{ardissono2012context} mencionan activity frames para simplificar el contexto de actividades cooperativas, un frame era definido por una 5-tupla $( fn, U, O, Oi, T )$, donde $fn$ era el nombre del frame, $U$ el conjunto de usuarios involucrados en la actividad, $O$ los objetos asociados al frame, $Oi$ es el conjunto de objetos del frame por medio de inferencias, y $T$ las tareas asociadas a la actividad. Y a su vez las tareas est\'an formadas por $( tn, U, O, Oi, g, P, T, s, d )$, donde $tn$ es el nombre de la tarea, $U$, $O$ y $Oi$ como dicho antes son los Usuarios, Objetos, y objetos inferidos asociados a la tarea, $g$ es el objetivo, $P$ es el grupo de tareas que deben de estar cerradas antes de iniciar $tn$, $T$ es el conjunto de tareas hijas, $s$ es el estado(habilitada, deshabilitada, cerrada) y $d$ es la fecha l\'imite para terminar la tarea, nula por defecto.
 
-En el a\'no 2013 se propone MARS\(\) que es un modelo contextual de regulaci\'on y lenguaje asociado, ayuda a modelar la actividad soportada por herramientas groupware. En este modelo las interacciones toman lugar en un espacio llamado arena, cada interacci\'on es representada por un escenario que describe la forma en que se lleva a cabo dicha interacci\'on, qui\'enes participan y los objetos involucrados, adem\'as se definen condiciones y precondiciones para que este escenario se lleve a cabo; en esta arena est\'an presentes actores que realizan acciones, durante esta actividad se manejan o producen objetos; actores y objetos pertenecen a diferentes familias y desempe\'nan diferentes papeles o roles. Dado que los miembros de un grupo colaborativo pueden serlo a su vez de otro, se definen vistas que determinan los actores, objetos e interacciones que una arena puede compartir con otra.
+En el a\~no 2013 se propone MARS que es un modelo contextual de regulaci\'on y lenguaje asociado, ayuda a modelar la actividad soportada por herramientas groupware. En este modelo las interacciones toman lugar en un espacio llamado arena, cada interacci\'on es representada por un escenario que describe la forma en que se lleva a cabo dicha interacci\'on, qui\'enes participan y los objetos involucrados, adem\'as se definen condiciones y precondiciones para que este escenario se lleve a cabo; en esta arena est\'an presentes actores que realizan acciones, durante esta actividad se manejan o producen objetos; actores y objetos pertenecen a diferentes familias y desempe\'nan diferentes papeles o roles. Dado que los miembros de un grupo colaborativo pueden serlo a su vez de otro, se definen vistas que determinan los actores, objetos e interacciones que una arena puede compartir con otra.
+
+Junto con MARS viene un lenguaje de regulaci\'on para describir escenarios llamado CORAL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: quién puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis descrita en noteaci\'on BNF. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles:
+	
+%\begin{gather}
+	Aqui va el lenguaje
+%    <sentencia> $::=$ <expresión><operador><expresión>";"
+%    
+%    <expresion> $::=$ %<palabraReservada>":${$"<elementos>"$}$"
+%    
+%    <expresion> ::= !<palabraReservada>":${$"<elementos>"$}$"
+%    
+%    <operador> ::= :: | ->
+%    
+%    <palabraReservada> ::= "Arena" | "Interaccion" | "Actor" | "Familia de actor" | "Familia de Objeto" | "Objeto" | "Rol"
+%    
+%    <elemento> ::= cualquier cadena en E    
+%\end{gather}
 
 Un modelo enfocado en el contexto social de aplicaciones groupware clasifica los elementos contextuales en 3 categor\'ias: la interactiva, la cohesiva y la afectiva \cite{montane2013context}. En la interactiva se encuentran variables como: objetos, tareas, eventos, usuarios, y ubicaciones; en la cohesiva se pueden observar a grupos, roles, objetivos, alianzas, actividades, y reglas; por \'ultimo est\'an las variables afectivas en las que se encuentran las emociones y los gestos de los usuarios.	
+
 \subsubsection{Proceso}
+
 Para obtener resultados de un conjunto de variables contextuales se establecen 3 pasos ya descritos antes \cite{montane2013context}: recuperar las variables contextuales en un formato legible para la computadora, almacenar, recuperar y actualizar los datos contextuales de una base de datos, e inferir resultados de un conjunto particular de variables asociadas unas con otras.
 
 \subsubsection {Adquisici\'on de contexto}
