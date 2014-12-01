@@ -1,4 +1,3 @@
-\section{Estado del arte}
 \subsection{CSCW y Sistemas Groupware}
 El trabajo colaborativo tiene un alto impacto hoy en d\'ia, ya que las personas pueden realizar m\'as r\'apido una tarea compleja si tienen los elementos necesarios para poder llevar a cabo una colaboraci\'on eficiente, hay muchas formas de trabajo colaborativo, y el contexto en el que se desarrolla es muy diverso. El \'area de CSCW se concentra en las actividades colaborativas, y el hecho de que m\'ultiples individuos situados en diferentes escenarios de trabajo y situaciones, con diferentes responsabilidades, perspectivas y propensiones interact\'uen sean mutuamente dependientes en el conducto de su trabajo tienen implicaciones importantes en el dise\'no de sistemas computacionales dirigidos a apoyar estos esfuerzos \cite{schmidt1992taking}.
 
@@ -162,20 +161,21 @@ En el a\~no 2013 se propone MARS que es un modelo contextual de regulaci\'on y l
 
 Junto con MARS viene un lenguaje de regulaci\'on para describir escenarios llamado CORAL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: quién puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis descrita en noteaci\'on BNF. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles:
 	
-%\begin{gather}
+\begin{gather}
 	Aqui va el lenguaje
-%    <sentencia> $::=$ <expresión><operador><expresión>";"
-%    
-%    <expresion> $::=$ %<palabraReservada>":${$"<elementos>"$}$"
-%    
-%    <expresion> ::= !<palabraReservada>":${$"<elementos>"$}$"
-%    
-%    <operador> ::= :: | ->
-%    
-%    <palabraReservada> ::= "Arena" | "Interaccion" | "Actor" | "Familia de actor" | "Familia de Objeto" | "Objeto" | "Rol"
-%    
-%    <elemento> ::= cualquier cadena en E    
-%\end{gather}
+		
+   <sentencia> $::=$ <expresión><operador><expresión>";"
+       
+    <expresion> $::=$ <palabraReservada>:${$<elementos>$}$
+    
+    <expresion> $::=$ $!<$palabraReservada$>:{$<elementos>$}$
+    
+    <operador> $::= :: | ->$
+    
+    <palabraReservada> $::=$ "Arena" | "Interaccion" | "Actor" | "Familia de actor" | "Familia de Objeto" | "Objeto" | "Rol"
+    
+    <elemento> $::=$ cualquier cadena en E    
+\end{gather}
 
 Un modelo enfocado en el contexto social de aplicaciones groupware clasifica los elementos contextuales en 3 categor\'ias: la interactiva, la cohesiva y la afectiva \cite{montane2013context}. En la interactiva se encuentran variables como: objetos, tareas, eventos, usuarios, y ubicaciones; en la cohesiva se pueden observar a grupos, roles, objetivos, alianzas, actividades, y reglas; por \'ultimo est\'an las variables afectivas en las que se encuentran las emociones y los gestos de los usuarios.	
 

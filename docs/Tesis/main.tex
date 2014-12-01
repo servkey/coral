@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   ARCHIVO PRINCIPAL DEL ANTEPROYECTO         %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[11pt,letterpaper,spanish]{article}
+\documentclass[11pt,letterpaper,spanish]{book}
 %Cambiar fuente
 %\usepackage[scaled]{helvet}
 %\renewcommand*\familydefault{\sfdefault}
@@ -81,16 +81,23 @@
 %\tolerance=3000
 %\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \setlength{\parskip}{5mm}
+\chapter{Introducción}
 \input{introduccion.tex}
 \input{antecedentes.tex}
 \input{problematica.tex}
 \input{objetivos.tex}
 \input{justificacion.tex}
 \input{alclim.tex}
-\input{marcoteorico.tex}
 \input{metodo.tex}
+\chapter{Marco Teórico}
+\input{marcoteorico.tex}
+\chapter{Estado del arte}
 \input{stateoftheart}
+\chapter{Análisis}
 \input{analisis.tex}
+\chapter{Diseño}
+\chapter{Implementación}
+
 \newpage
 %IEEE
 \bibliographystyle{IEEEtran}
