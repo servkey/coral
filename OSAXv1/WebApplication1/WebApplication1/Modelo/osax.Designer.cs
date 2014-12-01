@@ -31,16 +31,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("osaxxModel", "FK__Tareas__F_ID_RA__267ABA7A", "RolesDeActor", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.RolesDeActor), "Tareas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Tareas), true)]
 [assembly: EdmRelationshipAttribute("osaxxModel", "FK__Tareas__F_ID_RO__25869641", "RolesDeObjeto", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.RolesDeObjeto), "Tareas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Tareas), true)]
 [assembly: EdmRelationshipAttribute("osaxxModel", "FK__Actividad__F_ID___398D8EEE", "Comunidades", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.Comunidades), "Actividades", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Actividades), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Actividades", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Actividades), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Categorias", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Categorias), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Comunidades", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Comunidades), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Metas__ID_Caso__4222D4EF", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Metas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Metas), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Objetivos__ID_Ca__4316F928", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Objetivos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Objetivos), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Objetos__ID_Caso__440B1D61", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Objetos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Objetos), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Reglas__ID_Caso__44FF419A", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Reglas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Reglas), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "RolesDeActor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.RolesDeActor), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "RolesDeObjeto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.RolesDeObjeto), true)]
-[assembly: EdmRelationshipAttribute("osaxxModel", "FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebApplication1.Modelo.CasosEstudio), "Tareas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebApplication1.Modelo.Tareas), true)]
 
 #endregion
 
@@ -267,22 +257,6 @@ namespace WebApplication1.Modelo
             }
         }
         private ObjectSet<Tareas> _Tareas;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<CasosEstudio> CasosEstudio
-        {
-            get
-            {
-                if ((_CasosEstudio == null))
-                {
-                    _CasosEstudio = base.CreateObjectSet<CasosEstudio>("CasosEstudio");
-                }
-                return _CasosEstudio;
-            }
-        }
-        private ObjectSet<CasosEstudio> _CasosEstudio;
 
         #endregion
 
@@ -374,14 +348,6 @@ namespace WebApplication1.Modelo
         public void AddToTareas(Tareas tareas)
         {
             base.AddObject("Tareas", tareas);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet CasosEstudio. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToCasosEstudio(CasosEstudio casosEstudio)
-        {
-            base.AddObject("CasosEstudio", casosEstudio);
         }
 
         #endregion
@@ -668,44 +634,6 @@ namespace WebApplication1.Modelo
                 }
             }
         }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "CasosEstudio", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -987,335 +915,6 @@ namespace WebApplication1.Modelo
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="osaxxModel", Name="CasosEstudio")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class CasosEstudio : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto CasosEstudio.
-        /// </summary>
-        /// <param name="id">Valor inicial de la propiedad ID.</param>
-        public static CasosEstudio CreateCasosEstudio(global::System.Int32 id)
-        {
-            CasosEstudio casosEstudio = new CasosEstudio();
-            casosEstudio.ID = id;
-            return casosEstudio;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String nombre
-        {
-            get
-            {
-                return _nombre;
-            }
-            set
-            {
-                OnnombreChanging(value);
-                ReportPropertyChanging("nombre");
-                _nombre = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("nombre");
-                OnnombreChanged();
-            }
-        }
-        private global::System.String _nombre;
-        partial void OnnombreChanging(global::System.String value);
-        partial void OnnombreChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String contraseña
-        {
-            get
-            {
-                return _contraseña;
-            }
-            set
-            {
-                OncontraseñaChanging(value);
-                ReportPropertyChanging("contraseña");
-                _contraseña = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("contraseña");
-                OncontraseñaChanged();
-            }
-        }
-        private global::System.String _contraseña;
-        partial void OncontraseñaChanging(global::System.String value);
-        partial void OncontraseñaChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Actividad__ID_Ca__48CFD27E", "Actividades")]
-        public EntityCollection<Actividades> Actividades
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Actividades>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "Actividades");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Actividades>("osaxxModel.FK__Actividad__ID_Ca__48CFD27E", "Actividades", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Categoria__ID_Ca__403A8C7D", "Categorias")]
-        public EntityCollection<Categorias> Categorias
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Categorias>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "Categorias");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Categorias>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "Categorias", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Comunidad__ID_Ca__412EB0B6", "Comunidades")]
-        public EntityCollection<Comunidades> Comunidades
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comunidades>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "Comunidades");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comunidades>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "Comunidades", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Metas__ID_Caso__4222D4EF", "Metas")]
-        public EntityCollection<Metas> Metas
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Metas>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "Metas");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Metas>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "Metas", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Objetivos__ID_Ca__4316F928", "Objetivos")]
-        public EntityCollection<Objetivos> Objetivos
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Objetivos>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "Objetivos");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Objetivos>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "Objetivos", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Objetos__ID_Caso__440B1D61", "Objetos")]
-        public EntityCollection<Objetos> Objetos
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Objetos>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "Objetos");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Objetos>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "Objetos", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Reglas__ID_Caso__44FF419A", "Reglas")]
-        public EntityCollection<Reglas> Reglas
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reglas>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "Reglas");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reglas>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "Reglas", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__RolesDeAc__ID_Ca__45F365D3", "RolesDeActor")]
-        public EntityCollection<RolesDeActor> RolesDeActor
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RolesDeActor>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "RolesDeActor");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RolesDeActor>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "RolesDeActor", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__RolesDeOb__ID_Ca__46E78A0C", "RolesDeObjeto")]
-        public EntityCollection<RolesDeObjeto> RolesDeObjeto
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RolesDeObjeto>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "RolesDeObjeto");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RolesDeObjeto>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "RolesDeObjeto", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Tareas__ID_Caso__47DBAE45", "Tareas")]
-        public EntityCollection<Tareas> Tareas
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Tareas>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "Tareas");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Tareas>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "Tareas", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="osaxxModel", Name="Categorias")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -1509,44 +1108,6 @@ namespace WebApplication1.Modelo
                 }
             }
         }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Categoria__ID_Ca__403A8C7D", "CasosEstudio", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -1726,44 +1287,6 @@ namespace WebApplication1.Modelo
                 }
             }
         }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Comunidad__ID_Ca__412EB0B6", "CasosEstudio", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -1940,44 +1463,6 @@ namespace WebApplication1.Modelo
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Objetivos>("osaxxModel.FK__Objetivos__F_ID__1ED998B2", "Objetivos", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Metas__ID_Caso__4222D4EF", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Metas__ID_Caso__4222D4EF", "CasosEstudio", value);
                 }
             }
         }
@@ -2200,44 +1685,6 @@ namespace WebApplication1.Modelo
                 }
             }
         }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Objetivos__ID_Ca__4316F928", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Objetivos__ID_Ca__4316F928", "CasosEstudio", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -2457,44 +1904,6 @@ namespace WebApplication1.Modelo
                 }
             }
         }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Objetos__ID_Caso__440B1D61", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Objetos__ID_Caso__440B1D61", "CasosEstudio", value);
-                }
-            }
-        }
 
         #endregion
 
@@ -2629,48 +2038,6 @@ namespace WebApplication1.Modelo
         #endregion
 
     
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Reglas__ID_Caso__44FF419A", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Reglas__ID_Caso__44FF419A", "CasosEstudio", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -2822,44 +2189,6 @@ namespace WebApplication1.Modelo
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Tareas>("osaxxModel.FK__Tareas__F_ID_RA__267ABA7A", "Tareas", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeAc__ID_Ca__45F365D3", "CasosEstudio", value);
                 }
             }
         }
@@ -3017,44 +2346,6 @@ namespace WebApplication1.Modelo
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Tareas>("osaxxModel.FK__Tareas__F_ID_RO__25869641", "Tareas", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__RolesDeOb__ID_Ca__46E78A0C", "CasosEstudio", value);
                 }
             }
         }
@@ -3500,44 +2791,6 @@ namespace WebApplication1.Modelo
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RolesDeObjeto>("osaxxModel.FK__Tareas__F_ID_RO__25869641", "RolesDeObjeto", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("osaxxModel", "FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio")]
-        public CasosEstudio CasosEstudio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CasosEstudio> CasosEstudioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CasosEstudio>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CasosEstudio>("osaxxModel.FK__Tareas__ID_Caso__47DBAE45", "CasosEstudio", value);
                 }
             }
         }
