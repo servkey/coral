@@ -226,6 +226,17 @@ P.~Alves and P.~Ferreira, ``Radiator: Context propagation based on delayed
   \url{http://doi.acm.org/10.1145/2441776.2441806}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Skillen201497}
+\BIBentryALTinterwordspacing
+K.-L. Skillen, L.~Chen, C.~D. Nugent, M.~P. Donnelly, W.~Burns, and I.~Solheim,
+  ``Ontological user modelling and semantic rule-based reasoning for
+  personalisation of help-on-demand services in pervasive environments,''
+  \emph{Future Generation Computer Systems}, vol.~34, no.~0, pp. 97 -- 109,
+  2014, special Section: Distributed Solutions for Ubiquitous Computing and
+  Ambient Intelligence. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S0167739X1300246X}
+\BIBentrySTDinterwordspacing
+
 \bibitem{gross2013supporting}
 T.~Gross, ``Supporting effortless coordination: 25 years of awareness
   research,'' \emph{Computer Supported Cooperative Work (CSCW)}, vol.~22, no.

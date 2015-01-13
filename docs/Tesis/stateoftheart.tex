@@ -159,25 +159,20 @@ En el trabajo de Ardissono \cite{ardissono2012context} mencionan activity frames
 
 En el a\~no 2013 se propone MARS que es un modelo contextual de regulaci\'on y lenguaje asociado, ayuda a modelar la actividad soportada por herramientas groupware. En este modelo las interacciones toman lugar en un espacio llamado arena, cada interacci\'on es representada por un escenario que describe la forma en que se lleva a cabo dicha interacci\'on, qui\'enes participan y los objetos involucrados, adem\'as se definen condiciones y precondiciones para que este escenario se lleve a cabo; en esta arena est\'an presentes actores que realizan acciones, durante esta actividad se manejan o producen objetos; actores y objetos pertenecen a diferentes familias y desempe\'nan diferentes papeles o roles. Dado que los miembros de un grupo colaborativo pueden serlo a su vez de otro, se definen vistas que determinan los actores, objetos e interacciones que una arena puede compartir con otra.
 
-Junto con MARS viene un lenguaje de regulaci\'on para describir escenarios llamado CORAL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: quién puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis descrita en noteaci\'on BNF. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles:
+Junto con MARS viene un lenguaje de regulaci\'on para describir escenarios llamado CORAL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: qui\'en puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis descrita en noteaci\'on BNF. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles:
 	
-\begin{gather}
-	Aqui va el lenguaje
-		
-   <sentencia> $::=$ <expresión><operador><expresión>";"
-       
-    <expresion> $::=$ <palabraReservada>:${$<elementos>$}$
-    
-    <expresion> $::=$ $!<$palabraReservada$>:{$<elementos>$}$
-    
-    <operador> $::= :: | ->$
-    
-    <palabraReservada> $::=$ "Arena" | "Interaccion" | "Actor" | "Familia de actor" | "Familia de Objeto" | "Objeto" | "Rol"
-    
-    <elemento> $::=$ cualquier cadena en E    
-\end{gather}
+\begin{gather*}
+ \langle sentencia \rangle ::= \langle expresi\acute{o}n \rangle \langle operador \rangle \langle expresi\acute{o}n \rangle";"\\
+ \langle expresi\acute{o}n \rangle  ::= \langle palabraReservada \rangle :\{\langle elementos \rangle \}\\
+ \langle expresi\acute{o}n \rangle  ::=! \langle palabraReservada \rangle :\{\langle elementos \rangle \}\\
+ \langle operador \rangle  ::=  :: | \rightarrow  \\
+ \langle palabraReservada \rangle  ::= "Arena" |\\* "Interacci\acute{o}n" | "Actor" | "Familia de actor" \\*| "Familia de Objeto" | "Objeto" | "Rol"\\
+ \langle elemento \rangle  ::= cualquier cadena en E
+\end{gather*}
 
 Un modelo enfocado en el contexto social de aplicaciones groupware clasifica los elementos contextuales en 3 categor\'ias: la interactiva, la cohesiva y la afectiva \cite{montane2013context}. En la interactiva se encuentran variables como: objetos, tareas, eventos, usuarios, y ubicaciones; en la cohesiva se pueden observar a grupos, roles, objetivos, alianzas, actividades, y reglas; por \'ultimo est\'an las variables afectivas en las que se encuentran las emociones y los gestos de los usuarios.	
+
+En otro estudio realizado por Skillen \cite{Skillen201497} se habla de un mecanismo de personalizaci\'on basado en reglas, en el que se perfila a los usuarios por medio de un m\'etodo ontol\'ogico especificando elementos como la ubicaci\'on, preferencias multimedia del usuario, objetos de asistencia que son los involucrados en la interacci'on, actividades, medios de entrega de informaci\'on, condici\'ones de salud, escala de calidad multimedia y formato de interfaz gr\'afica.
 
 \subsubsection{Proceso}
 

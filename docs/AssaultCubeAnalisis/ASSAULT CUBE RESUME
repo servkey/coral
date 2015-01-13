@@ -1,0 +1,200 @@
+ASSAULT CUBE RESUME
+
+** COMMUNITIES
+
+[TABLE] two teams in a single battle ground
+
+	- team clubers liberation army
+	- rabid viper special forces
+
+** OBJECTS
+
+[TABLE]	 Weaopns
+
+"eight weapons available... every player spawns with the standard outfitting of three weapons: a knife, a pistol & primary weapon. Greanades must be piked up along the way"
+
+- Swiss tech cmbat blade DR-88
+- Mk-77 Semi-Automatic Pistol
+- MTP-57 Assault Rifle
+- Precision Tech AD-81 Sniper Rifle
+- A-ARD/10 Sub-machine Gun
+- V-19 Combat Shotgun
+- TMP-M&A Carbine
+- SAL-T3 Grenade
+
+[ATTRIBUTES - Weapons]
+
+- RTD: Reload Time Delay
+- ATD: Attack Time Delay
+- MDPS: Maximum Damage Per Shot
+- AP: Armour Pearcing (damage not affected by armour)
+- SPREAD: Percentage of shots that spreads out over a distance
+- MS: Magazine Size
+- EAPP: Extra Ammo Per Pick Up
+- AQOS: Ammo Quantyty On Spawn
+- MAQ: Maximum Ammo Quantity
+
+[TABLE] Item Pickup
+
+- AmmoBox
+- Pistol Magazine
+- Akimbo
+- Healt
+- Helmet Armour
+- Kevlar Armour
+- Grenade
+
+[ATTRIBUES - Item pickups]
+
+- Spawn time (depends on the number of players)
+
+** ACTIVITIES
+
+MULTI-PLAYER FREE-FOR-ALL MODES
+
+With these modes, your aim is [to frag anyone & everyone!] They're more suited for smaller games.
+
+Deathmatch: No teams, it's everyone for themselves!
+[GOAL: kill the most]
+
+Survivor: No teams, it's everyone for themselves! Survivor is a round based combat, so if you die, you will need to wait until the end of the round before you can respawn. The round ends when no enemies are left alive.
+[GOAL: don't die]
+
+Pistol Frenzy: A deathmatch mode with pistols as the main weapon (no primary weapons). Grenades and knives are also present in this mode. Make sure YOU get to the akimbo first!
+[GOAL: same as deathmatch]
+
+Last Swiss Standing: Survive the battle with the help of your knife. Grenades are also present in this mode. If you die, you will have to wait until the end of the round until you can spawn again. All pistol pickups turn into grenades and grenade pickups fit 2 grenades to your pocket.
+[GOAL: same as survive]
+
+One Shot, One Kill: Each player starts with 1hp, a sniper rifle, a knife and no pickups. Survive with your sniper, or humiliate with your Swiss steel. If you die, you will need to wait until the end of the round before you can spawn again. The round ends when no enemies are left alive.
+[GOAL: same as survive]
+
+MULTI-PLAYER TEAM MODES
+
+[GOAL: Don't frag your team mates!] 
+Most suited to bigger games!
+
+Team Deathmatch/Pistol Frenzy/Last Swiss Standing: Two teams fight each other. The team that has the most frags at the end of the game wins.
+[GOAL: kill the most]
+
+Team Survivor: Two team in round based combat. If you die, you will have to wait until the end of the round until you can spawn again. The round will end when all members from one team are dead.
+[GOAL: don't die]
+
+Team One Shot, One Kill: Each team member starts with 1hp, a sniper rifle, a knife and no pickups. Survive with your sniper, or humiliate with your Swiss steel. If you die, you will have to wait until the end of the round until you can spawn again. The round ends when all members from one team are dead.
+[GOAL: don't die]
+
+MULTI-PLAYER FLAG MODES
+
+Suited best to large games (6+ players), these modes provide special tactics and ways to score and win the game!
+
+Hunt the Flag: Find the enemy flag, frag the flag bearer and collect the flag to score. If no-ones holding your flag, the score won't count, so be sure to protect your own flag bearer! If the flag bearer collects the enemy flag, they gain an extra bonus point.
+[GOAL: score the most]
+[OBJECTIVE: find the enemy's flag bearer]
+[OBJECTIVE: frag the enemy's flag bearer]
+[OBJECTIVE: collect the flag to score]
+[OBJECTIVE: protect own flag bearer]
+
+Team Keep the Flag: There is only one flag. Grab the flag and keep it, you'll score 1 flag point for every 15 seconds you keep the flag. Be sure to protect your team's flag bearer!
+[GOAL: score the most]
+[OBJECTIVE: grab the flag]
+[OBJECTIVE: keep the flag]
+[OBJECTIVE: protect own flag bearer]
+[OBJECTIVE: frag the enemy's flag bearer]
+
+Keep the Flag: There is only one flag, and everybody will want it. If you have it, be careful, because everyone else will want to frag you to stop you scoring! Score one point for every fifteen seconds you can hold the flag, if you can manage that long!
+[GOAL: score the most]
+[OBJECTIVE: grab the flag]
+[OBJECTIVE: keep the flag]
+
+Capture The Flag: Two teams fight each other. Steal the enemy team's flag and bring it back to your base to score. If your team's flag has gone, someone will have to go and recover it first. Note: there is a special HUD for the CTF mode.
+[GOAL: score the most]
+[OBJECTIVE: steal the enemy's flag]
+[OBJECTIVE: keep the flag]
+[OBJECTIVE: bring flag to base]
+[OBJECTIVE: protect own flag bearer]
+[OBJECTIVE: frag the enemy's flag bearer]
+[OBJECTIVE: recover own flag]
+
+** INTERFACE INTERACTIONS
+- access the menu
+	- join multiplayer games
+	- change settings
+	- set mode/map
+	- customize player
+- interact with console
+
+----------------------------------------------------
+Annotations
+
+According to the web page of the game the objectives are:
+ "find the enemy, frag or gib the enemy, repeat"
+
+Means of communication
+ - Talking/chating (pressing T)
+ - Voice-com (pressing V)
+
+A role (also rôle or social role) is a set of connected behaviours, rights, obligations, beliefs, and norms as conceptualised by people in a social situation.
+
+-----------------------------------------------------
+
+Players
+
+- player1
+- player2
+- player3
+- player4
+- player5
+- player6
+
+Weapons
+
+- Swiss tech cmbat blade DR-88
+- Mk-77 Semi-Automatic Pistol
+- MTP-57 Assault Rifle
+- Precision Tech AD-81 Sniper Rifle
+- A-ARD/10 Sub-machine Gun
+- V-19 Combat Shotgun
+- TMP-M&A Carbine
+- SAL-T3 Grenade
+
+Items
+
+- AmmoBox
+- Pistol Magazine
+- Akimbo
+- Healt
+- Helmet Armour
+- Kevlar Armour
+- Grenade
+
+Roles
+
+- Explorer
+- Protector
+- Fragger
+- Recoverer
+
+Objectives
+
+- find the enemy's flag bearer
+- grab the flag
+- steal the enemy's flag
+- frag the enemy's flag bearer
+
+- collect the flag to score
+- protect own flag bearer
+- keep the flag
+- bring flag to base
+- recover own flag
+- Don't frag your team mates
+
+Goals
+
+- kill the most
+- don't die
+- score the most (flags mode)
+
+Activities
+
+- Team Keep the Flag
+- Capture The Flag

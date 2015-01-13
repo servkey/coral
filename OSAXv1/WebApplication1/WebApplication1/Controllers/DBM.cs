@@ -12,10 +12,31 @@ namespace WebApplication1.Controllers
     {
 
         Connection cn;
-        
+        string errorMsg {get; set;}
+
         public DBM(Connection cn)
         {
             this.cn = cn;
+            errorMsg = "clear";
+        }
+
+        public bool createDataBase(string databaseName)
+        {
+            try
+            {
+                string query = "create database " + databaseName;
+                SqlCommand sql = new SqlCommand(query, cn.getOpenedConnection());
+                return true;
+            }
+            catch (SqlException e)
+            {
+                errorMsg = e.Message;
+                return false;
+            }
+            finally
+            {
+                cn.closeConnection();
+            }            
         }
 
         public SqlDataReader readData(string query)
@@ -67,9 +88,14 @@ namespace WebApplication1.Controllers
             query += fields + ") values("+values+")";
             SqlCommand cm = new SqlCommand(query,cn.getOpenedConnection());
             if (cm.ExecuteNonQuery() > 0) res = true;
+            cn.closeConnection();
             return res;
         }
         
+        public bool createTable(string tableName, Dictionary<string,string> nameType)
+        {
+            return true;
+        }
     }
     
 }

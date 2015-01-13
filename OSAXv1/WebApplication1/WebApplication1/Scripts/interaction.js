@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {    
+﻿$(document).ready(function () {
 
     $(".newitem").click(function () {
         var id = $(this).attr('id');
@@ -49,10 +49,10 @@
         }
         var itemid = "item" + itemname;
         $(ulid).append('<li id="' + itemid + '" class="tabitem">' + itemname + '</li>');
-        $("#"+itemid).click(function () {
+        $("#" + itemid).click(function () {
             var tabName = $(this).html();
             addElementTable(tabName);
-        });        
+        });
         slideElement(html);
     });
 
@@ -61,14 +61,23 @@
         slideElement(html);
     });
 
+
     function addElementTable(tableName) {
-        var id = "#item" + tableName;        
+        var id = "#item" + tableName;
         var table = '<div class="elementTable"><h3> > ' + tableName + '</h3>' +
-                    '<div class="attributes-wrapper"> <ul class="elementAttributes">' +
-                    '<li><span class="glyphicon glyphicon-plus"></span> Add Attribute</li>' +
-                    '<li><span class="glyphicon glyphicon-plus"></span> Add Relation</li>' +
+                    '<div class="attributes-wrapper"> <ul id="table-' + tableName + '" class="elementAttributes">' +
+                    '<li id="addatt-' + tableName + '" ><span class="glyphicon glyphicon-plus"></span> Add Attribute</li>' +
+                    '<li id="addrel-' + tableName + '" ><span class="glyphicon glyphicon-plus"></span> Add Relation</li>' +
                     '</div> </div>';
         $("#page-content-wrapper").append(table);
+        disbaleElment(id);
+        $("#addatt-" + tableName).click(function () {
+            var id = $(this).attr('id');
+            addAttribute(id);
+        });
+    }
+
+    function disbaleElment(id) {
         $(id).off();
         $(id).css("background-color", "#BB4A4E");
         $(id).css("width", "180px");
@@ -109,7 +118,7 @@
             default:
                 alert("Function Undefined.");
                 break;
-        }        
+        }
         if ($(ulid).is(':visible')) {
             $(ulid).slideUp();
         } else {
@@ -117,5 +126,11 @@
         }
         return false;
         makeDraggable();
+    }
+
+    function addAttribute(childId) {        
+        var attributeName = prompt("Attribute's name");
+        var attributeClass = prompt("Attribute class");        
+        $("#" + childId).parent().append('<li><span class="attribute">' + attributeName + '</span>  :<span class="attributeClass">' + attributeClass + '</span></li>');
     }
 });

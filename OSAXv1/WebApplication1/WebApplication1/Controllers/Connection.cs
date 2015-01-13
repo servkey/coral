@@ -24,6 +24,15 @@ namespace WebApplication1.Controllers
             pass = "a1s2d3";
         }
 
+        public Connection(string initDB)
+        {
+            cx = new SqlConnection();
+            host = "localhost\\SQLEXPRESS";
+            initCat = initDB;
+            user = "SA";
+            pass = "a1s2d3";
+        }
+
         public Connection(string host, string initCat, string user, string pass)
         {
             cx = new SqlConnection();
