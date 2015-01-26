@@ -84,7 +84,105 @@ En la Tabla 1 se muestran las interacciones identificadas en el juego para la ac
 \end{longtable}
 \end{center}
 
-En la lista anterior de interacciones se pueden identificar ya algunos elementos del modelo del groupware, por ejemplo, jugador como actor; arma, munici\'on y mapa como posibles objetos, y el conjunto de ellos relacionados con una acci\'on como tareas. Tambi\'en a partir de estas interacciones pueden empezar a definirse algunas reglas, por ejemplo establecer una regla que diga que si un jugador captur\'o una bandera y est\'a en peligro inminente de ser atacado, el sistema muestre a sus compa\~neros de equipo la ubicaci\'on del abanderado y env\'ie una se\~nal de auxilio para que ellos puedan acudir a su ayuda.
+En la lista anterior se pueden identificar ya algunos elementos del modelo del groupware, por ejemplo, jugador como actor; arma, munici\'on y mapa como posibles objetos, y el conjunto de ellos relacionados con una acci\'on como tareas. Tambi\'en a partir de estas interacciones pueden empezar a definirse algunas reglas, por ejemplo establecer una regla que diga que si un jugador captur\'o una bandera y est\'a en peligro inminente de ser atacado, el sistema muestre a sus compa\~neros de equipo la ubicaci\'on del abanderado y env\'ie una se\~nal de auxilio para que ellos puedan acudir a su ayuda.
+
+En las reglas definidas para describir el contexto se muestran tres tipos diferentes:
+
+\begin{itemize}
+\item Pertenencia(P): Estas reglas verifican si un elemento est\'a contenido o relacionado con otro. Esta regla est\'a definida por $Elemento [ \rightarrow | \rightsquigarrow ] Elemento$; por ejemplo la pertenencia de un actor a un equipo determinado.
+\item Comparaci\'on(C): comparan el atributo  de un elemmento con un valor. La sintaxis para esta regla es la siguiente $Elemento.NombreAtributo [ = | ¬ | < | > ] Valor$; por ejemplo que el nombre de un jugador sea "Jes\'us".
+\item Ejecuci\'on(X): indica que una tarea ha sido llevada a cabo, y si es el caso, con qu\'e objeto se realiz\'o, adem\'as se puede puntualizar otras caracter\'isticas de la tarea como efectividad, o la afectaci\'on que tuvo, y si es necesario se puede a\~nadir una regla de pertenencia en la misma declaraci\'on del elemento.  $ [Elemento | P] - Task(nombre, Elemento) [ .nombreAtributo [ = | ¬ | < | > ] valor ]$; un ejemplo pr\'actico de esta regla puede ser la ejecuci\'on de un disparo efectivo por parte de un jugador perteneciente al equipo rojo con un francotirador.
+\end{itemize}
+
+En donde $Elemento$ es un elemento del modelo, el cual es descrito por un meta elemento, un elemento del modelo, y la instancia o instancias quedando la sintaxis de la siguiente forma: $MetaElemento(Elemento{ListaDeInstancias})$, evidentemente los elementos y lsa instancias tienen que formar parte del modelo. As\'i se cre\'o la siguiente gram\'atica libre de contexto que es la que valida el correcto uso de este lenguaje:
+\begin{itemize}
+\item $S \rightarrow ML:=XJ$
+\item $M \rightarrow P$
+\item $M \rightarrow C$
+\item $M \rightarrow X$
+\item $J \rightarrow \&XJ$
+\item $J \rightarrow \lambda$
+\item $L \rightarrow \&ML$
+\item $L \rightarrow \lambda$
+\item $E \rightarrow m(e{iH})$
+\item $E \rightarrow m(*)$
+\item $E \rightarrow m(e{*})$
+\item $E \rightarrow m(iH)$
+\item $H \rightarrow ,iH$
+\item $H \rightarrow \lambda$
+\item $P \rightarrow EOE$
+\item $O \rightarrow \Rightarrow$
+\item $O \rightarrow \rightsquigarrow$
+\item $C \rightarrow E.aKv$
+\item $K \rightarrow =$
+\item $K \rightarrow ¬$
+\item $K \rightarrow <$
+\item $K \rightarrow >$
+\item $X \rightarrow F-t(n,F)Q$
+\item $X \rightarrow F-t(n)Q$
+\item $Q \rightarrow .aKv$
+\item $Q \rightarrow \lambda$
+\item $F \rightarrow E$
+\item $F \rightarrow [P]$
+\end{itemize}
+
+
+Con estas interacciones y el conjunto de reglas definido se propone un conjunto de guiones que describen diferentes tipos de comportamiento dado el caso de estudio; entre los que se encuentra un guion para jugadores novatos, un guion para jugadores in\'utiles, uno para jugadores con comportamiento sospechoso que podr\'ian considerarse como traidores y uno para jugadores expertos. Estos guiones servir\'an al momento de ejecutar el sistema \textit{AssaultCube} se estar\'a recibiendo tareas ejecutadas durante las partidas, estas tareas ser\'an comparadas con cada uno de los guiones y se contar\'a la frecuencia de cada una de ellas, cuando las ejecuciones lleguen a el n\'umero indicado, el guion se cumplir\'a y se mandar\'a otra tarea como resultado para que se ejecute en el groupware. Una vez que se cumple un guion, este se reinicia para continuar recibiendo las tareas desde el sistema. Los guiones se definen como sigue.
+
+\textbf{Guion para jugador in\'util:}
+
+$Actor(Player{*})-Task(Shot) [<3]\\
+\& Actor(Player{*})-Task(Move) [>10] \\
+\& Actor(Player{*})-Task(PickItem) [>5]\\ 
+\& Actor(Player{*}).Attribute(enemyKills)=0 \\
+\& Actor(Player{*}).Attribute(allyKills)=0\\
+\& Actor(Player{*})-Task(captureFlag) [=0]\\
+\& Actor(Player{*}).Attribute(socialPresense)=bad\\
+\& Actor(Player{*}) \rightarrow Team(red)\\
+:= 
+[Actor(Player{*})  \rightarrow Team(red)]-Task(sendWarningMessage"Someone is playing fool"), Object(UI{messageConsole})$
+
+\textbf{Guion para jugador novato:}
+
+$
+Actor(Player{*}).Attribute(enemyKills)<2\\
+\& Actor(Player{*}).Attribute(deads)>2\\
+\& Actor(Player{*})-Task(Shot) [>5]\\
+\& Actor(Player{*})-Task(scoreCapturedFlag) [<1]\\
+\& Actor(Player{*})-Task(loseFlag) [>1]\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(Shot).Success = true [<5]\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(Shot).Dimension = positive [<5]\\
+:=
+[Actor(Player{*}) \rightarrow Team(red)]-Task(sendMessage"Noob Player needs help", Object(UI{messageConsole})$
+
+\textbf{Guion para jugador experto:}
+
+$
+Actor(Player{*}).Attribute(enemyKills)>5\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(Shot).Success = true [>5]\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(Shot).Dimension = positive [>5]\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(Destroy).Bearer = true [>0]\\
+\& Actor(Player{*})-Task(captureFlag)[>3]\\
+\& Actor(Player{*}).Attribute(socialPresence)=quite good\\
+\& Actor(Player{*}).Attribute(deads)<2\\
+:=
+[Actor(Player{*}) \rightarrow Team(red)]-Task(showPosition,Object(UI{map,displayScreen})\\
+\& [Actor(Player{*}) \rightarrow Team(red)]-Task(sendHelpMessage"stayCloseToHero",Object(UI{messageConsole})
+$
+
+\textbf{Guion de jugador traidor:}
+
+$
+Actor(Player{*})-Task(captureFlag)[=0]\\
+\& [Actor(Player{*})->Team(red)]-Task(Shot)-Affects([Actor(Player{*})->Team(red)]) [>3]\\
+\& Actor(Player{*}).Attribute(socialPresence) = bad\\
+\& Actor(Player{*}).Attribute(allyKills) > 2\\
+\& [Actor(Player{*})->Team(red)]-Task(Shot).Dimension = negative [>5]\\
+\& [Actor(Player{*})->Team(red)]-Task(Shot).Dimension = positive [=0]\\
+:=
+[Actor(Player{*})->Team(red)]-Task(blockWeaponry)-Affects([Object(Weapon{*})->Actor(Player{*})])\\
+\& [Actor(Player{*})->Team(red)]-Task(sendWarningMessage"there is a traitor in our lines",Object(UI{messageConsole})
+$
 
 \subsection{Prototipo}
 Para el presente trabajo se hace uso de un meta modelo contextual para el modelado de actividades de sistemas groupware basado un modelo propuesto anteriormente\cite{montane2013context}, en el cual se pueden encontrar dos categor\'ias de elementos, interactivos y cohesivos.  Entre los interactivos se encuentran \textit{actores}, que son los usuarios del sistema, \textit{objetos} que se usan en \textit{tareas} o que son producto de ellas, \textit{categor\'ias} que clasifican a los actores, objetos y tareas seg\'un sus atributos, por \'ultimo est\'an los roles del objeto y del actor los cuales son asignadas a una tarea para establecer el rol que va a tener el actor u objeto involucrado en dicha tarea. Entre los datos cohesivos se encuentran las \textit{comunidades} que son el conjunto de actores con una \textit{actividad} en com\'un, estas actividades pueden tener varias \textit{metas} las cuales se cumplen realizando tareas. Por \'ultimo se encuentran las reglas que son sentencias en un lenguaje definido para poder inferir las interacciones que suceden en el groupware. En la figura \ref{cmp:mmc} se muestra un diagrama de los elementos de este modelo y sus relaciones.

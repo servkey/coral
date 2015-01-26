@@ -1,0 +1,5 @@
+C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\bin\Debug\RuleLanguaje.exe
+C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\bin\Debug\RuleLanguaje.pdb
+C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.exe
+C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.pdb
+C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.csprojResolveAssemblyReference.cache

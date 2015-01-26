@@ -32,6 +32,6 @@
 \contentsline {subsubsection}{Arquitecturas}{32}{section*.14}
 \contentsline {chapter}{\numberline {4}An\'alisis}{37}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.9}Caso de estudio}{38}{subsection.4.0.9}
-\contentsline {subsection}{\numberline {4.0.10}Prototipo}{40}{subsection.4.0.10}
-\contentsline {chapter}{\numberline {5}Dise\~no}{43}{chapter.5}
-\contentsline {chapter}{\numberline {6}Implementaci\'on}{45}{chapter.6}
+\contentsline {subsection}{\numberline {4.0.10}Prototipo}{43}{subsection.4.0.10}
+\contentsline {chapter}{\numberline {5}Dise\~no}{47}{chapter.5}
+\contentsline {chapter}{\numberline {6}Implementaci\'on}{49}{chapter.6}
