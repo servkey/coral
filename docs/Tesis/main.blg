@@ -1,6 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: IEEEtran.bst
 Database file #1: biblio/biblio.bib
+Warning--string name "dic" is undefined
+--line 602 of file biblio/biblio.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -8,4 +10,4 @@ Warning--empty journal in pumareja2002evolutionary
 Warning--empty journal in dey1999architecture
 
 Done.
-(There were 2 warnings)
+(There were 3 warnings)

@@ -21,36 +21,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{ellis1991groupware}
-\BIBentryALTinterwordspacing
-C.~A. Ellis, S.~J. Gibbs, and G.~Rein, ``Groupware: Some issues and
-  experiences,'' \emph{Commun. ACM}, vol.~34, no.~1, pp. 39--58, Jan. 1991.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/99977.99987}
-\BIBentrySTDinterwordspacing
-
-\bibitem{schmidt1992taking}
-\BIBentryALTinterwordspacing
-K.~Schmidt and L.~Bannon, ``\BIBforeignlanguage{English}{Taking cscw
-  seriously},'' \emph{\BIBforeignlanguage{English}{Computer Supported
-  Cooperative Work (CSCW)}}, vol.~1, no. 1-2, pp. 7--40, 1992. [Online].
-  Available: \url{http://dx.doi.org/10.1007/BF00752449}
-\BIBentrySTDinterwordspacing
-
-\bibitem{gutwin1996supporting}
-\BIBentryALTinterwordspacing
-C.~Gutwin, S.~Greenberg, and M.~Roseman, ``Supporting awareness of others in
-  groupware,'' in \emph{Conference Companion on Human Factors in Computing
-  Systems}, ser. CHI '96.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
-  USA: ACM, 1996, pp. 205--. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/257089.257282}
-\BIBentrySTDinterwordspacing
-
 \bibitem{montane2013context}
 L.~Montane-Jimenez, E.~Benitez-Guerrero, and C.~Mezura-Godoy, ``A context-aware
   architecture for improving collaboration of users in groupware systems,'' in
   \emph{Collaborative Computing: Networking, Applications and Worksharing
   (Collaboratecom), 2013 9th International Conference Conference on}, Oct 2013,
   pp. 70--76.
+
+\bibitem{ellis1991groupware}
+\BIBentryALTinterwordspacing
+C.~A. Ellis, S.~J. Gibbs, and G.~Rein, ``Groupware: Some issues and
+  experiences,'' \emph{Commun. ACM}, vol.~34, no.~1, pp. 39--58, Jan. 1991.
+  [Online]. Available: \url{http://doi.acm.org/10.1145/99977.99987}
+\BIBentrySTDinterwordspacing
 
 \bibitem{schillit1994disseminating}
 B.~Schilit and M.~Theimer, ``Disseminating active map information to mobile
@@ -69,6 +52,18 @@ J.~Anhalt, A.~Smailagic, D.~Siewiorek, F.~Gemperle, D.~Salber, S.~Weber,
   J.~Beck, and J.~Jennings, ``Toward context-aware computing: experiences and
   lessons,'' \emph{Intelligent Systems, IEEE}, vol.~16, no.~3, pp. 38--46, May
   2001.
+
+\bibitem{schmidt1992taking}
+K.~Schmidt and L.~Bannon, ``\BIBforeignlanguage{English}{Taking cscw
+  seriously},'' \emph{\BIBforeignlanguage{English}{Computer Supported
+  Cooperative Work (CSCW)}}, vol.~1, no. 1-2, pp. 7--40, 1992.
+
+\bibitem{pascoe1999}
+J.~Pascoe, N.~Ryan, and D.~Morse, ``\BIBforeignlanguage{English}{Issues in
+  developing context-aware computing},'' in
+  \emph{\BIBforeignlanguage{English}{Handheld and Ubiquitous Computing}}, ser.
+  Lecture Notes in Computer Science, H.-W. Gellersen, Ed.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer Berlin Heidelberg, 1999, vol. 1707, pp. 208--221.
 
 \bibitem{cruz2012towards}
 \BIBentryALTinterwordspacing
@@ -96,34 +91,6 @@ P.~Antunes, V.~Herskovic, S.~F. Ochoa, and J.~A. Pino, ``Reviewing the quality
   Available:
   \url{http://www.sciencedirect.com/science/article/pii/S0164121213002756}
 \BIBentrySTDinterwordspacing
-
-\bibitem{dourish1992awareness}
-\BIBentryALTinterwordspacing
-P.~Dourish and V.~Bellotti, ``Awareness and coordination in shared
-  workspaces,'' in \emph{Proceedings of the 1992 ACM Conference on
-  Computer-supported Cooperative Work}, ser. CSCW '92.\hskip 1em plus 0.5em
-  minus 0.4em\relax New York, NY, USA: ACM, 1992, pp. 107--114. [Online].
-  Available: \url{http://doi.acm.org/10.1145/143457.143468}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Belkadi2013110}
-\BIBentryALTinterwordspacing
-F.~Belkadi, E.~Bonjour, M.~Camargo, N.~Troussier, and B.~Eynard, ``A situation
-  model to support awareness in collaborative design,'' \emph{International
-  Journal of Human-Computer Studies}, vol.~71, no.~1, pp. 110 -- 129, 2013,
-  special Issue on supporting shared representations in collaborative
-  activities. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S107158191200050X}
-\BIBentrySTDinterwordspacing
-
-\bibitem{brezillon2004context}
-P.~Br{\'e}zillon, M.~Borges, J.~Pino, and J.-C. Pomerol, ``Context-awareness in
-  group work: Three case studies,'' in \emph{Proc. of}, 2004.
-
-\bibitem{malik2007future}
-N.~Malik, U.~Mahmud, and Y.~Javed, ``Future challenges in context-aware
-  computing,'' in \emph{proceedings of the IADIS International Conference
-  WWW/Internet}, 2007, pp. 306--310.
 
 \bibitem{johansen1988groupware}
 R.~Johansen, \emph{GroupWare: Computer Support for Business Teams}.\hskip 1em
@@ -164,13 +131,32 @@ D.~Mittleman, R.~Briggs, J.~Murphy, and A.~Davis, ``Toward a taxonomy of
   \url{http://dx.doi.org/10.1007/978-3-540-92831-7_25}
 \BIBentrySTDinterwordspacing
 
-\bibitem{ardissono2012context}
+\bibitem{gutwin1996supporting}
 \BIBentryALTinterwordspacing
-L.~Ardissono and G.~Bosio, ``\BIBforeignlanguage{English}{Context-dependent
-  awareness support in open collaboration environments},''
-  \emph{\BIBforeignlanguage{English}{User Modeling and User-Adapted
-  Interaction}}, vol.~22, no.~3, pp. 223--254, 2012. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/s11257-011-9100-1}
+C.~Gutwin, S.~Greenberg, and M.~Roseman, ``Supporting awareness of others in
+  groupware,'' in \emph{Conference Companion on Human Factors in Computing
+  Systems}, ser. CHI '96.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY,
+  USA: ACM, 1996, pp. 205--. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/257089.257282}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dourish1992awareness}
+\BIBentryALTinterwordspacing
+P.~Dourish and V.~Bellotti, ``Awareness and coordination in shared
+  workspaces,'' in \emph{Proceedings of the 1992 ACM Conference on
+  Computer-supported Cooperative Work}, ser. CSCW '92.\hskip 1em plus 0.5em
+  minus 0.4em\relax New York, NY, USA: ACM, 1992, pp. 107--114. [Online].
+  Available: \url{http://doi.acm.org/10.1145/143457.143468}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Belkadi2013110}
+\BIBentryALTinterwordspacing
+F.~Belkadi, E.~Bonjour, M.~Camargo, N.~Troussier, and B.~Eynard, ``A situation
+  model to support awareness in collaborative design,'' \emph{International
+  Journal of Human-Computer Studies}, vol.~71, no.~1, pp. 110 -- 129, 2013,
+  special Issue on supporting shared representations in collaborative
+  activities. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S107158191200050X}
 \BIBentrySTDinterwordspacing
 
 \bibitem{aehnelt2012discussion}
@@ -182,6 +168,15 @@ M.~Aehnelt, C.~Peter, and P.~M\"{u}sebeck, ``A discussion of using mental
   York, NY, USA: ACM, 2012, pp. 37:1--37:5. [Online]. Available:
   \url{http://doi.acm.org/10.1145/2413097.2413145}
 \BIBentrySTDinterwordspacing
+
+\bibitem{brezillon2004context}
+P.~Br{\'e}zillon, M.~Borges, J.~Pino, and J.-C. Pomerol, ``Context-awareness in
+  group work: Three case studies,'' in \emph{Proc. of}, 2004.
+
+\bibitem{malik2007future}
+N.~Malik, U.~Mahmud, and Y.~Javed, ``Future challenges in context-aware
+  computing,'' in \emph{proceedings of the IADIS International Conference
+  WWW/Internet}, 2007, pp. 306--310.
 
 \bibitem{pereira2013CSCWD}
 J.~Pereira~de Souza, C.~Tacla, F.~Beal, E.~Cabrera~Paraiso, and
@@ -197,6 +192,43 @@ J.~R. Hoyos, J.~G. Molina, and J.~A. Bot\'ia, ``A domain-specific language for
   Software}, vol.~86, no.~11, pp. 2890 -- 2905, 2013. [Online]. Available:
   \url{http://www.sciencedirect.com/science/article/pii/S0164121213001696}
 \BIBentrySTDinterwordspacing
+
+\bibitem{alves2013radiator}
+\BIBentryALTinterwordspacing
+P.~Alves and P.~Ferreira, ``Radiator: Context propagation based on delayed
+  aggregation,'' in \emph{Proceedings of the 2013 Conference on Computer
+  Supported Cooperative Work}, ser. CSCW '13.\hskip 1em plus 0.5em minus
+  0.4em\relax New York, NY, USA: ACM, 2013, pp. 249--260. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2441776.2441806}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ardissono2012context}
+\BIBentryALTinterwordspacing
+L.~Ardissono and G.~Bosio, ``\BIBforeignlanguage{English}{Context-dependent
+  awareness support in open collaboration environments},''
+  \emph{\BIBforeignlanguage{English}{User Modeling and User-Adapted
+  Interaction}}, vol.~22, no.~3, pp. 223--254, 2012. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/s11257-011-9100-1}
+\BIBentrySTDinterwordspacing
+
+\bibitem{olivares2011}
+A.~Olivares, S.~Mendoza, and A.~de~Luca, ``An architecture to support context
+  of use in groupware systems,'' in \emph{Electrical Engineering Computing
+  Science and Automatic Control (CCE), 2011 8th International Conference on},
+  Oct 2011, pp. 1--6.
+
+\bibitem{bohu2013}
+B.~Hu, Z.-X. Wang, and Q.-C. Dong, ``A novel context-aware modeling and
+  reasoning method based on owl,'' \emph{Journal of Computers}, vol.~8, no.~4,
+  2013.
+
+\bibitem{Skillen201497}
+K.-L. Skillen, L.~Chen, C.~D. Nugent, M.~P. Donnelly, W.~Burns, and I.~Solheim,
+  ``Ontological user modelling and semantic rule-based reasoning for
+  personalisation of help-on-demand services in pervasive environments,''
+  \emph{Future Generation Computer Systems}, vol.~34, no.~0, pp. 97 -- 109,
+  2014, special Section: Distributed Solutions for Ubiquitous Computing and
+  Ambient Intelligence.
 
 \bibitem{gallardo2012framework}
 \BIBentryALTinterwordspacing
@@ -217,36 +249,15 @@ D.~Decouchant, S.~Mendoza, G.~Sánchez, and J.~Rodríguez, ``Adapting groupware
   \url{http://www.sciencedirect.com/science/article/pii/S0957417413000742}
 \BIBentrySTDinterwordspacing
 
-\bibitem{alves2013radiator}
-\BIBentryALTinterwordspacing
-P.~Alves and P.~Ferreira, ``Radiator: Context propagation based on delayed
-  aggregation,'' in \emph{Proceedings of the 2013 Conference on Computer
-  Supported Cooperative Work}, ser. CSCW '13.\hskip 1em plus 0.5em minus
-  0.4em\relax New York, NY, USA: ACM, 2013, pp. 249--260. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2441776.2441806}
-\BIBentrySTDinterwordspacing
+\bibitem{gutheim2011}
+P.~Gutheim, ``An ontology-based context inference service for mobile
+  applications in next-generation networks,'' \emph{Communications Magazine,
+  IEEE}, vol.~49, no.~1, pp. 60--66, January 2011.
 
-\bibitem{Skillen201497}
-\BIBentryALTinterwordspacing
-K.-L. Skillen, L.~Chen, C.~D. Nugent, M.~P. Donnelly, W.~Burns, and I.~Solheim,
-  ``Ontological user modelling and semantic rule-based reasoning for
-  personalisation of help-on-demand services in pervasive environments,''
-  \emph{Future Generation Computer Systems}, vol.~34, no.~0, pp. 97 -- 109,
-  2014, special Section: Distributed Solutions for Ubiquitous Computing and
-  Ambient Intelligence. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S0167739X1300246X}
-\BIBentrySTDinterwordspacing
-
-\bibitem{gross2013supporting}
-T.~Gross, ``Supporting effortless coordination: 25 years of awareness
-  research,'' \emph{Computer Supported Cooperative Work (CSCW)}, vol.~22, no.
-  4-6, pp. 425--474, 2013.
-
-\bibitem{arias2012platform}
-M.~Arias-Baez, L.~Torres-Ribero, A.~Carrillo-Ramos, A.~Quimbaya, and
-  E.~Gonzalez, ``Platform based on agents for support to the collaboration of
-  work teams,'' in \emph{Computing Congress (CCC), 2012 7th Colombian}, Oct
-  2012, pp. 1--6.
+\bibitem{yoosoo2010}
+Y.~Oh, J.~Han, and W.~Woo, ``A context management architecture for large-scale
+  smart environments,'' \emph{Communications Magazine, IEEE}, vol.~48, no.~3,
+  pp. 118--126, March 2010.
 
 \bibitem{dey1999architecture}
 A.~K. Dey, D.~Salber, M.~Futakawa, and G.~D. Abowd, ``An architecture to
@@ -265,6 +276,11 @@ G.~D. Abowd, A.~K. Dey, P.~J. Brown, N.~Davies, M.~Smith, and P.~Steggles,
   Gellersen, Ed.\hskip 1em plus 0.5em minus 0.4em\relax Springer Berlin
   Heidelberg, 1999, vol. 1707, pp. 304--307.
 
+\bibitem{Chihani201459}
+B.~Chihani, E.~Bertin, and N.~Crespi, ``Programmable context awareness
+  framework,'' \emph{Journal of Systems and Software}, vol.~92, no.~0, pp. 59
+  -- 70, 2014.
+
 \bibitem{kamoun2012fadyrcos}
 \BIBentryALTinterwordspacing
 A.~Kamoun, S.~Tazi, and K.~Drira, ``Fadyrcos, a semantic interoperability
@@ -279,5 +295,22 @@ A.~Kamoun, S.~Tazi, and K.~Drira, ``Fadyrcos, a semantic interoperability
 H.~Guermah, T.~Fissaa, H.~Hafiddi, M.~Nassar, and A.~Kriouile, ``Ontology based
   context aware e-learning system,'' in \emph{ISKO-Maghreb, 2013 3rd
   International Symposium}, Nov 2013, pp. 1--7.
+
+\bibitem{gross2013supporting}
+T.~Gross, ``Supporting effortless coordination: 25 years of awareness
+  research,'' \emph{Computer Supported Cooperative Work (CSCW)}, vol.~22, no.
+  4-6, pp. 425--474, 2013.
+
+\bibitem{arias2012platform}
+M.~Arias-Baez, L.~Torres-Ribero, A.~Carrillo-Ramos, A.~Quimbaya, and
+  E.~Gonzalez, ``Platform based on agents for support to the collaboration of
+  work teams,'' in \emph{Computing Congress (CCC), 2012 7th Colombian}, Oct
+  2012, pp. 1--6.
+
+\bibitem{assCube2014}
+\BIBentryALTinterwordspacing
+R.~V. Productions. (2014) Documentaci\'on de assault cube. [Online]. Available:
+  \url{http://assault.cubers.net/docs/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
