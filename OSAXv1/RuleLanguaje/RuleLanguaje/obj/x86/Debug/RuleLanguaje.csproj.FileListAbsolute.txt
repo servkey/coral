@@ -3,3 +3,8 @@ C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\bin\Debug\Ru
 C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.exe
 C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.pdb
 C:\Users\santigm\Software\c#\RuleLanguaje\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.csprojResolveAssemblyReference.cache
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\bin\Debug\RuleLanguaje.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.csprojResolveAssemblyReference.cache
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\bin\Debug\RuleLanguaje.exe
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\obj\x86\Debug\RuleLanguaje.exe

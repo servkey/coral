@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A5CD4127-0905-4979-A7BD-4FDDC5E24F8D}</ProjectGuid>
+    <ProjectGuid>{6740FE1F-6662-4D37-BCB3-0CA551402BE2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RuleLanguaje</RootNamespace>
-    <AssemblyName>RuleLanguaje</AssemblyName>
+    <RootNamespace>BehaviorScriptProcessor</RootNamespace>
+    <AssemblyName>BehaviorScriptProcessor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -33,9 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>RuleLanguaje.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,15 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnSintax.cs" />
-    <Compile Include="DBConnection.cs" />
-    <Compile Include="DBValidator.cs" />
-    <Compile Include="Lexan.cs" />
-    <Compile Include="ParseTable.cs" />
+    <Compile Include="BehaviorScript.cs" />
+    <Compile Include="DataBase\DBConnection.cs" />
+    <Compile Include="DataBase\DBValidator.cs" />
+    <Compile Include="DataBase\SQLManager.cs" />
+    <Compile Include="Evaluator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLManager.cs" />
-    <Compile Include="TableItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

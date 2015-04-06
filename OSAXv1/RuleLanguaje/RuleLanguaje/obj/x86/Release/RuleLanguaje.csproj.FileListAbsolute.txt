@@ -1,0 +1,4 @@
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\bin\Release\RuleLanguaje.dll
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\bin\Release\RuleLanguaje.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\obj\x86\Release\RuleLanguaje.dll
+C:\Users\santigm\Git\Coral\OSAXv1\RuleLanguaje\RuleLanguaje\obj\x86\Release\RuleLanguaje.pdb
