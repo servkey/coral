@@ -1,6 +1,6 @@
 \section{Modelos Contextuales}
 
-Contexto es tradicionalmente la localizaci\'on, identidad, y estado de las personas, grupos y objetos virtuales y f\'isicos, seg\'un Pereira \cite{pereira2013CSCWD} el contexto puede ser visto como un conjunto de condiciones e influencias en una situaci\'on relevante y que la hacen \'unica y comprensible, esta situaci\'on puede referirse a una persona, grupo de personas, objeto f\'isico, entidad computacional, etc. El concepto de modelos mentales tiene una relaci\'on muy cercana a la consciencia contextual y situacional \cite{aehnelt2012discussion}, al momento de modelar contexto, es necesario distinguir entre los diferentes tipos de informaci\'on contextual\cite{hoyos2013domain}, el contexto de las actividades colaborativas pueden ir desde un editor de documentos distribuido, hasta un videojuego colaborativo; por lo que los elementos particulares de dichas actividades cambia muy radicalmente de uno a otro, y con esto surge la necesidad de usar una taxonom\'ia con un alto nivel de abstracci\'on que soporte la diversidad de contexto con los que se trabaja.
+Contexto es tradicionalmente la localizaci\'on, identidad, y estado de las personas, grupos y objetos virtuales y f\'isicos, seg\'un Pereira  \cite{pereira2013CSCWD} el contexto puede ser visto como un conjunto de condiciones e influencias en una situaci\'on relevante y que la hacen \'unica y comprensible, esta situaci\'on puede referirse a una persona, grupo de personas, objeto f\'isico, entidad computacional, etc. El concepto de modelos mentales tiene una relaci\'on muy cercana a la consciencia contextual y situacional \cite{aehnelt2012discussion}, al momento de modelar contexto, es necesario distinguir entre los diferentes tipos de informaci\'on contextual\cite{hoyos2013domain}, el contexto de las actividades colaborativas pueden ir desde un editor de documentos distribuido, hasta un videojuego colaborativo; por lo que los elementos particulares de dichas actividades cambia muy radicalmente de uno a otro, y con esto surge la necesidad de usar una taxonom\'ia con un alto nivel de abstracci\'on que soporte la diversidad de contexto con los que se trabaja.
 
 Belkadi et al \cite{Belkadi2013110} proponen un modelo situacional para mejorar la conciencia centrada en los conceptos de situaci\'on, interacci\'on y rol, en el que hacen un recuento de los conceptos clave a tomar en cuenta para un modelo, entre ellos se encuentran: 
 \begin{itemize}
@@ -164,9 +164,7 @@ El problema de mantener la consciencia del espacio de trabajo en los groupware g
 
 \subsubsection {Manejo de contexto}
 
-Alves \cite{alves2013radiator} propone un mecanismo de agregaci\'on de informaci\'on contextual para mejorar la eficiencia de consumo de recursos de red para aplicaciones conscientes del contexto, definiendo agregaci\'on como ${ ( P_{1},t_{1},A_{1} ),..., ( P_{n},t_{n},A_{n} ) }$ es un conjunto de contextos y $Ac$ un atributo en com\'un tal que para todo atributo $A_{i}$ perteneciente a $A_{1} ... A_{n}$, $Ac$ pertenece a $A_{i}$.
-
-$Aggr( A_{c}, {( P_{1},t_{1},A_{1} ),..., ( P_{n},t_{n},A_{n} )}) = ( P, t, A )\Rightarrow \forall P_{i}\in P_{1}...P_{n}:P_{i}\in P \wedge \forall t_{i} \in t_{1}...t_{n}:t_{i}\subseteq t \wedge \forall A_{i}\in A_{1}...A_{n}:A_{i}\in A$
+Alves \cite{alves2013radiator} propone un mecanismo de agregaci\'on de informaci\'on contextual para mejorar la eficiencia de consumo de recursos de red para aplicaciones conscientes del contexto, para esto se define contexto como un conjunto $( P_{n},t_{n},A_{n} ) }$, conformado por un grupo de personas ${ ( P_{1}...P_{n} )$ que en un lapso de tiempo $t$ cumplen con un cierto atributo $A$ compuesto por un nombre y un valor, con esto propone una funci\'on de agregaci\'on $Aggr( A_{c}, {( P_{1},t_{1},A_{1} ),..., ( P_{n},t_{n},A_{n} )})$ en la que se mezclan un conjunto de contextos acontecidos en un lapso de tiempo con un atributo $Ac$ en com\'un tal que para todo atributo $A_{i}$ perteneciente a $A_{1} ... A_{n}$, $Ac$ pertenece a $A_{i}$.
 
 AYPUY es un manejador de recursos creado para ambientes de colaboraci\'on distribuidos.  Almacena diferentes tipos de recursos, como contratos, historias cl\'inicas, objetos de aprendizaje, etc., y garantiza su acceso cumpliendo con los objetos de confidencialidad, seguridad y escalabilidad de los sistemas que lo utilizan. En este framework un recurso est\'a compuesto de un conjunto de atributos $A = { L, D, F }$, donde $L$ describe las caracter\'isticas l\'ogicas generales del recurso (fecha de creaci\'on, autor, tipo de recurso), $D$ establece las caracter\'isticas relacionadas con el dominio (e.g., salud, educaci\'on) al que pertenece el recurso, y $F$ describe las caracter\'isticas f\'isicas de almacenamiento del recurso (e.g., tipo de replicaci\'on, cadena de conexi\'on), as\'i AYPUY establece la estrategia de almacenamiento y acceso, adicionalmente los recursos tienen un conjunto de operadores $O$, que determinan las acciones que se pueden hacer con ellos, y son extensibles para soportar un dominio espec\'ifico.
 
@@ -195,25 +193,39 @@ El objetivo de su trabajo es proveer a usuarios apoyo automatizado para especifi
 
 Para adaptar servicios cooperativos al contexto del usuario, AYLLU \cite{arias2012platform} usa el framework AES que adapta la informaci\'on en diversos contextos. AES funciona de la siguiente manera: una aplicaci\'on env\'ia una consulta inicial a AES para que esta la enriquezca, AES obtiene los perfiles o caracter\'isticas de la aplicaci\'on externa (usuario, contexto, dispositivo, perfiles), e invoca funciones de filtro de acuerdo a los perfiles. El resultado es un conjunto de datos de alta abstracci\'on que es usado para generar una consulta enriquecida que ser\'a devuelta a la aplicaci\'on externa.
 
-El framework AYLLU \cite{arias2012platform} usa un protocolo de comunicaci\'on donde los mensajes son enriquecidos sem\'anticamente, como en un sistema multiagentes. Se basa en la creaci\'on de una serie de agentes, que ayuden al usuario a seguir una serie de protocolos de interacci\'on que determinan un servicio cooperativo, cuando un servicio cooperativo se instancia se crea un Agente Manejador de Comunidad (CMA) por medio de un agente de f\'abrica (FA). Los CMA crean agentes de comunidad (CA) los cuales ejecutan protocolos de interacci\'on comunicacion estructurada entre los CA dentro de un servicio cooperativo. El agente administrador (AA) administra a los usuarios, roles, habilidades, recursos y grupos de trabajo. FA crea los servicios cooperativos en la plataforma, para ejecutar un servicio cooperativo se construye un CMA y un grupo de CA, el CMA controla la creaci\'on, destrucci\'on e interacci\'on  de los CA para informar el estado actual del servicio. Para cada usuario existen dos agentes: el manejador de sesi\'on (SM) y el agente representante (RA), adem\'as cuentan con un agente de interfaz (IA) en cada dispositivo en el que el usuario ejecute un cliente; el SM act\'ua como un puente entre el usuario y los agentes CA asociados con los servicios cooperativos de los que el usuario forma parte, el SM controla los mensajes de cada CA en los servicios cooperativos y los transmite al RA, el cual responde en nombre del usuario a diferentes peticiones, si el RA no puede manejar la informaci\'on, se comunica con el IA para mostrar las peticiones al usuario y le solicitar\'a una respuesta.
+El framework AYLLU \cite{arias2012platform} usa un protocolo de comunicaci\'on donde los mensajes son enriquecidos sem\'anticamente, como en un sistema multiagentes. Se basa en la creaci\'on de una serie de agentes que ejecutan protocolos de  comunicaci\'on, que ayudan al usuario a seguir una serie de protocolos de interacci\'on que determinan un servicio cooperativo, cuando un servicio cooperativo se instancia se crea un Agente Manejador de Comunidad (CMA) por medio de un agente de f\'abrica (FA), el usuario cuenta con un agente asistente que muestra las peticiones al usuario para generar respuestas.
 
 \subsubsection{Mecanismos de razonamiento}
 
 Para adaptar los sistemas es necesario reconocer la situaci\'on de los usuarios y saber c\'omo brindarles apoyo, en consecuencia se requiere de una forma de interpretar las interacciones que se est\'an llevando a cabo en la aplicaci\'on con lo que se han propuesto diferentes mecanismos de razonamiento para estos casos.
 
-En el modelo contextual MARS se usa un lenguaje de regulaci\'on para describir escenarios llamado CORAL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: qui\'en puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis descrita en noteaci\'on BNF. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles:
-	
-\begin{gather*}
- \langle sentencia \rangle ::= \langle expresi\acute{o}n \rangle \langle operador \rangle \langle expresi\acute{o}n \rangle";"\\
- \langle expresi\acute{o}n \rangle  ::= \langle palabraReservada \rangle :\{\langle elementos \rangle \}\\
- \langle expresi\acute{o}n \rangle  ::=! \langle palabraReservada \rangle :\{\langle elementos \rangle \}\\
- \langle operador \rangle  ::=  :: | \rightarrow  \\
- \langle palabraReservada \rangle  ::= "Arena" |\\* "Interacci\acute{o}n" | "Actor" | "Familia de actor" \\*| "Familia de Objeto" | "Objeto" | "Rol"\\
- \langle elemento \rangle  ::= cualquier cadena en E
-\end{gather*}
+En el modelo contextual MARS se usa un lenguaje de regulaci\'on para describir escenarios llamado CoRaL\footnote{Collaborative Regulation Language} que toma en cuenta tres aspectos de los escenarios definidos en MARS especificados en las pre y pos condiciones de la interacci\'on: qui\'en puede participar en la interacci\'on, qu\'e objetos pueden ser manipulados, qu\'e rol tiene un actor u objeto durante la interacci\'on y en casos similares, referencias a otros escenarios. Con esto se define el lenguaje CoRaL con la siguiente sintaxis(Cuadro \ref{lan:mars}) descrita en noteaci\'on BNF para gram\'aticas libres de contexto. Siendo E el conjunto de elementos de cadenas de nombres de arenas, actores, familias de actores, familias de objetos, objetos y roles. 
 
-Skillen \cite{Skillen201497} en su capa de uso de contexto define cuatro funciones para el procesamiento de contexto, estas funciones se definen con el lenguaje de reglas de web semantico SWRL con el que describe condiciones que la informaci\'on contextual debe de cumplir para personalizar un conjunto de servicios. Haciendo uso de la sintaxis de este lenguaje definen reglas como la siguiente. $UserProfile(?up), hasHealthCondition(?up, Blind) \rightarrow HelpDelivery(PlayAudio), hasMediaType(PlayAudio, Audio), hasMediaVolumeLevel(PlayAudio, VolLevel\_5)$. En la definici\'on se puede observar un caso en el que se especifica la preferencia de audio con un vol\'umen espec\'ifico para la entrega de informaci\'on para una persona con discapacidad visual.
+\begin{table}
+\label{lan:mars}
+\centering
+\caption{Lenguaje CoRaL}
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline \textbf{No terminal} & \textbf{Expresi\'on}\\
+\hline $\langle sentencia \rangle ::=$ & $\langle expresi\acute{o}n \rangle \langle operador \rangle \langle expresi\acute{o}n \rangle";"$\\
+\hline $\langle expresi\acute{o}n \rangle  ::=$ & $\langle palabraReservada \rangle :\{\langle elementos \rangle \}$\\
+\hline
+$\langle expresi\acute{o}n \rangle  ::=$ & $!\langle palabraReservada \rangle :\{\langle elementos \rangle \}$\\
+\hline $\langle operador \rangle  ::=$ & $:: | \rightarrow$\\
+\hline $\langle palabraReservada \rangle  ::=$ &  ``Arena" | ``Interacci\'on" | ``Actor" | ``Familia de actor" | ``Familia de Objeto" | ``Objeto" | ``Rol"\\
+\hline $\langle elemento \rangle  ::=$ & $cualquier cadena en E$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Skillen \cite{Skillen201497} en su capa de uso de contexto define cuatro funciones para el procesamiento de contexto, estas funciones se definen con el lenguaje de reglas de web semantico SWRL con el que describe condiciones que la informaci\'on contextual debe de cumplir para personalizar un conjunto de servicios. Haciendo uso de la sintaxis de este lenguaje definen reglas como la siguiente. 
+
+\textbf{UserProfile(?up), hasHealthCondition(?up, Blind) $\rightarrow$ HelpDelivery(PlayAudio), hasMediaType(PlayAudio, Audio), hasMediaVolumeLevel(PlayAudio, VolLevel\_5)}. 
+
+En la definici\'on se puede observar un caso en el que se especifica la preferencia de audio con un vol\'umen espec\'ifico para la entrega de informaci\'on para una persona con discapacidad visual.
 
 As\'i mismo Bo Hu \cite{bohu2013} implementa el lenguaje SWRL para definir reglas en la ontolog\'ia contextual, estas reglas son una clase de restricciones, relaciones y atributos que se deben de cumplir y siguen una estructura de l\'ogica de predicados. Como ejemplo muestran una regla de ejecuci\'on entre los conceptos de persona y actvividad defini\'endola de la siguiente manera $\forall x.Activity(x) \rightarrow (\sharp \{y|Person(y)\wedge Executing(x,y)\} \geq 1$.
 
-En el caso de Pereira et. al. \cite{pereira2013CSCWD} el mecanismo de inferencia que implementa es un lenguaje basado en SQL llamado SPARQL el cual realiza consultas sobre ontolog\'ias
+%En el caso de Pereira et. al. \cite{pereira2013CSCWD} el mecanismo de inferencia que implementa es un lenguaje basado en SQL llamado SPARQL el cual realiza consultas sobre ontolog\'ias
+
+En algunos casos se puede notar en los mecanismos de uso de contexto que se hace uso de lenguajes formales para la descripci\'on de situaciones de los usuarios, algunos de ellos se centran en un usuario y lo que pasa alrededor de \'el para inferir resultados, en otros se hace m\'as importante el concepto de trabajo colaborativo y los lenguajes que proponen se centran en describir la actividad de todos los usuarios y mezclar aquellos que tienen contextos similares.
