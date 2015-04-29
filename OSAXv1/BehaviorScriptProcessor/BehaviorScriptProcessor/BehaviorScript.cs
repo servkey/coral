@@ -180,6 +180,7 @@ namespace BehaviorScriptProcessor
             char ope;
             while (rule[c] != '-' && rule[c] != '~') super += rule[c++];
             ope = rule[c++];
+            c++;
             while (c < rule.Length - 1) sub += rule[c++];
             perData.subelement = getElemData(sub);
             perData.superelement = getElemData(super);
@@ -198,7 +199,7 @@ namespace BehaviorScriptProcessor
             {
                 comparisonDataEl c = (comparisonDataEl)constraintData;
                 query = String.Format(query, c.instance.meta.ToUpper(), c.instance.model, c.attribute, c.op, c.value);
-                if (c.instance.instances.Count > 0 /*&& c.instance.instances[0] != "*"*/)
+                if (c.instance.instances.Count > 0)
                 {
                     string op = "=";
                     query += " AND (";
@@ -215,6 +216,21 @@ namespace BehaviorScriptProcessor
             {
                 pertenenceData p = (pertenenceData)constraintData;
                 // under construction
+                query = "select {0}.{0}_name,{1}.{1}_name from {0} join {0}_HAS_{1} on {0}.{0}_id = {0}_HAS_{1}.{0}_id join {1} on {1}.{1}_id = {0}_HAS_{1}.{1}_id";
+                query = String.Format(query, p.subelement.meta, p.superelement.meta);
+                bool pert = true;
+                if (p.op == '~') pert = false;
+                if (p.subelement.instances.Count > 0 && p.superelement.instances.Count > 0)
+                {
+                    query += " WHERE(" + p.subelement.meta + "." + p.subelement.meta + "_name = '" + p.subelement.instances[0] + "') AND (";
+                    foreach (string i in p.superelement.instances)
+                    {
+                        query += " (" + p.superelement.meta + "." + p.superelement.meta + "_name = '" + i + "') OR";
+                    }
+                    query = query.Remove(query.Length - 3) + " )";
+                    if ((pert && sql.readData(query).HasRows)||((!pert && !sql.readData(query).HasRows))) return true;
+                }
+                
             }
             return res;
         }

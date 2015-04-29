@@ -3,3 +3,8 @@ C:\Users\santigm\Software\c#\BehaviorScriptProcessor\BehaviorScriptProcessor\bin
 C:\Users\santigm\Software\c#\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.exe
 C:\Users\santigm\Software\c#\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.pdb
 C:\Users\santigm\Software\c#\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.csprojResolveAssemblyReference.cache
+C:\Users\santigm\Git\Coral\OSAXv1\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.exe
+C:\Users\santigm\Git\Coral\OSAXv1\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\BehaviorScriptProcessor\BehaviorScriptProcessor\bin\Debug\BehaviorScriptProcessor.exe
+C:\Users\santigm\Git\Coral\OSAXv1\BehaviorScriptProcessor\BehaviorScriptProcessor\bin\Debug\BehaviorScriptProcessor.pdb
+C:\Users\santigm\Git\Coral\OSAXv1\BehaviorScriptProcessor\BehaviorScriptProcessor\obj\x86\Debug\BehaviorScriptProcessor.csprojResolveAssemblyReference.cache
