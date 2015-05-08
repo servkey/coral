@@ -198,3 +198,100 @@ Activities
 
 - Team Keep the Flag
 - Capture The Flag
+
+ACTIVITY INSTANCE
+
+TeamKeepTheFlag[1]{
+	score the most[2]{
+		capture  enemys flag[2]{
+			captureFlag
+			
+			pickItem
+			reloadWeapon
+			changeWeapon
+			viewMap
+		}
+
+		collect flag to score[3]{
+			scoreFlag
+			
+			pickItem
+			reloadWeapon
+			changeWeapon
+			viewMap
+		}
+
+		kill flag bearer[5]{
+			shot
+			kill
+			
+			pickItem
+			reloadWeapon
+			changeWeapon
+			viewMap
+
+		}
+	}
+	,
+
+}
+
+(Swiss tech cmbat blade DR-88, Mk-77 Semi-Automatic Pistol, MTP-57 Assault Rifle, Precision Tech AD-81 Sniper Rifle, A-ARD/10 Sub-machine Gun, V-19 Combat Shotgun, TMP-M\&A Carbine, SAL-T3 Grenade)
+
+(AmmoBox, Pistol Magazine, Akimbo, Healt, Helmet Armour, Kevlar Armour, Grenade)
+
+
+/*insert into rules(definition,frecuency,res)
+values
+('Actor(Player{*})-Task(Shot)','3','n')
+,('Actor(Player{*})-Task(Move)','10','n')
+,('Actor(Player{*})-Task(PikItem)','5','n')
+,('Actor(Player{*}).enemyKills=0','-1','n')
+,('Actor(Player{*}).allyKills=0','-1','n')
+,('Actor(Player{*})-Task(CaptureFlag)','-1','n')
+,('Actor(Player{*}).socialPresense=bad','-1','n')
+,('Actor(Player{*})->Team(RVSF)','-1','n')
+,('[Actor(Player({*})->Team(RVSF)]-Task(sendMessage,Object(UI{messageConsole}))','-1','y')
+*/
+
+(3,10)
+,(3,11)
+,(3,12)
+,(3,13)
+,(3,14)
+,(3,15)
+,(3,16)
+,(3,17)
+,(3,18)
+
+,(4,19)
+,(4,20)
+,(4,21)
+,(4,22)
+,(4,23)
+,(4,24)
+,(4,25)
+,(4,26)
+
+,(5,27)
+,(5,28)
+,(5,29)
+,(5,30)
+,(5,31)
+,(5,32)
+,(5,33)
+,(5,34)
+,(5,35)
+
+,(6,36)
+,(6,37)
+,(6,38)
+,(6,39)
+,(6,40)
+,(6,41)
+,(6,42)
+
+
+Actor(Player{*})-Task(shot)
+Actor(Player{*})-Task(pickItem)
+Actor(Player{*})-Task(captureFlag)

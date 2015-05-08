@@ -8,14 +8,6 @@ namespace BehaviorScriptProcessor
 {
     class BehaviorScript
     {
-        Dictionary<string,int> tasks; //tasks and frecuencies
-        public List<string> results; // results if script accomplishes
-        //constraints
-        List<string> comparisons;
-        List<string> pertenences;
-        string studyCase;
-        public string scriptName;
-
         private struct elemData
         {
             public string meta { get; set; }
@@ -23,7 +15,7 @@ namespace BehaviorScriptProcessor
             public List<string> instances { get; set; }
         }
 
-        private struct comparisonDataEl
+        private struct comparisonData
         {
             public elemData instance { get; set; }
             public string op { get; set; }
@@ -38,55 +30,119 @@ namespace BehaviorScriptProcessor
             public char op { get; set; }
         }
 
+        private struct taskData
+        {
+            public string def { get; set; }
+            public string name { get; set; }
+            public elemData assistanceObject { get; set; }
+            public elemData actor { get; set; }
+            public bool hasAtt { get; set; }
+            public string attribute { get; set; }
+            public string value { get; set; }
+            public char op { get; set; }
+            public int frecuency { get; set; }
+            public Dictionary<string, int> usersFrecuecnies { get; set; }
+            public bool hasPert { get; set; }
+            public pertenenceData pert { get; set; }
+        }
+
+        List<taskData> tasks; //tasks and frecuencies
+        public List<string> results; // results if script accomplishes
+        //constraints
+        List<string> comparisons;
+        List<string> pertenences;
+        string studyCase;
+        public string scriptName;
+
         public BehaviorScript(string studyCase, string scriptName, bool usesFrecs)
         {
             this.studyCase = studyCase;
             this.scriptName = scriptName;
-            if (usesFrecs) recoverRules(); else recoverRulesFrecless();
+            recoverRules(usesFrecs);
+            Console.Write("ok");
         }
         
         public bool pushTask(string task)
         {
-            if (tasks.ContainsKey(task)) tasks[task]--;
-            
-            Console.WriteLine("{0}:", scriptName);
-            foreach (KeyValuePair<string, int> kvp in tasks)
+            task = task.ToUpper();
+            taskData recievedTask = getTaskData(task, 0);
+            string elem = task.Substring(0,task.IndexOf("-TASK")-1);
+            elemData ed  = getElemData(elem);
+            foreach(taskData td in tasks)
             {
-                Console.WriteLine("\t{0}->{1}",kvp.Key,kvp.Value);
+                if (td.name == recievedTask.name)
+                {
+                    if (!td.hasPert)
+                    {
+                        foreach (string ac in recievedTask.actor.instances)
+                        {
+                            if (td.usersFrecuecnies.ContainsKey(ac))
+                            {
+                                td.usersFrecuecnies[ac]++;
+                            }
+                            else
+                            {
+                                td.usersFrecuecnies[ac] = 1;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        pertenenceData pd = new pertenenceData();
+                        pd.subelement = td.pert.subelement;
+                        pd.op = td.pert.op;
+                        pd.superelement = recievedTask.actor;
+                        if (validateConstraint(pd))
+                        {
+                            foreach (string ac in recievedTask.actor.instances)
+                            {
+                                if (td.usersFrecuecnies.ContainsKey(ac))
+                                {
+                                    td.usersFrecuecnies[ac]++;
+                                }
+                                else
+                                {
+                                    td.usersFrecuecnies[ac] = 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
+            showUsersFrecs();
             return scriptAccomplished();
         }
 
         private bool scriptAccomplished()
-        {
-            foreach (KeyValuePair<string, int> kvp in tasks)
+        {//redefine look for who
+            /*foreach (KeyValuePair<string, int> kvp in tasks)
             {
                 if (tasks[kvp.Key] > 0) return false;
-            }
-            return constraintsMatch();
+            }*/
+            return false; // constraintsMatch();
         }
 
         private bool constraintsMatch()
         {
-            comparisonDataEl cd;
+            comparisonData cd;
             pertenenceData pd;
             foreach (string c in comparisons)
             {
-                cd = extractComp(c);
+                cd = getCompData(c);
                 if (!validateConstraint(cd)) return false;
             }
             foreach (string p in pertenences)
             {
-                pd = extractPert(p);
+                pd = getPertData(p);
                 if (!validateConstraint(pd)) return false;
             }
             return true;
         }
 
-        private void recoverRules()
+        private void recoverRules(bool usesFrecuencies)
         {
-            tasks = new Dictionary<string, int>();
+            tasks = new List<taskData>();
             comparisons = new List<string>();
             pertenences = new List<string>();
             results = new List<string>();
@@ -111,52 +167,21 @@ namespace BehaviorScriptProcessor
                 frecuency = sqlRes.GetInt32(1);
                 isResult = sqlRes.GetString(2)[0];
 
-                if (isResult == 'y') results.Add(rule);
-                else if (frecuency != -1) tasks.Add(rule, frecuency);
-                else if (rule.Contains('.')) comparisons.Add(rule);
+                if (isResult == 'y') results.Add(rule.ToUpper());
+                else if (frecuency != -1)
+                {
+                    if (!usesFrecuencies) frecuency = 1;
+                    tasks.Add(getTaskData(rule.ToUpper(), frecuency));
+                }
+                else if (rule.Contains('.')) comparisons.Add(rule.ToUpper());
                 else pertenences.Add(rule);
             }
             cn.closeConnection();
         }
 
-        private void recoverRulesFrecless()
+        private comparisonData getCompData(string rule)
         {
-            tasks = new Dictionary<string, int>();
-            comparisons = new List<string>();
-            pertenences = new List<string>();
-            results = new List<string>();
-
-            DBConnection cn = new DBConnection(studyCase);
-            SQLManager sql = new SQLManager(cn);
-            SqlDataReader sqlRes = sql.readData
-                (
-                "SELECT c.definition,c.frecuency,c.res FROM SCRIPT_HAS_RULES a "
-                + "inner join SCRIPTS b ON a.script_id=b.script_id "
-                + "inner join RULES c ON a.rule_id=c.rule_id "
-                + "WHERE b.name = '" + scriptName + "'"
-                );
-
-            int frecuency;
-            char isResult;
-            string rule;
-
-            while (sqlRes.Read())
-            {
-                rule = sqlRes.GetString(0);
-                frecuency = sqlRes.GetInt32(1);
-                isResult = sqlRes.GetString(2)[0];
-
-                if (isResult == 'y') results.Add(rule);
-                else if (frecuency != -1) tasks.Add(rule, 1);
-                else if (rule.Contains('.')) comparisons.Add(rule);
-                else pertenences.Add(rule);
-            }
-            cn.closeConnection();
-        }
-
-        private comparisonDataEl extractComp(string rule)
-        {
-            comparisonDataEl compData = new comparisonDataEl();
+            comparisonData compData = new comparisonData();
             string elem = "", attr = "", value = "";
             int c = 0;
             char op;
@@ -172,11 +197,11 @@ namespace BehaviorScriptProcessor
             return compData;
         }
 
-        private pertenenceData extractPert(string rule)
+        private pertenenceData getPertData(string rule)
         {
             pertenenceData perData = new pertenenceData();
             string super = "", sub = "";
-            int c = 0;
+            int c = 1;
             char ope;
             while (rule[c] != '-' && rule[c] != '~') super += rule[c++];
             ope = rule[c++];
@@ -188,6 +213,53 @@ namespace BehaviorScriptProcessor
             return perData;
         }
 
+        private taskData getTaskData(string rule, int frec)
+        {
+            rule = rule.ToUpper();
+
+            taskData td = new taskData();
+            td.def = rule;
+            td.name = "";
+            td.assistanceObject = new elemData();
+            td.actor = new elemData();
+            td.attribute = "";
+            td.op = ' ';
+            td.value = "";
+            td.frecuency = frec;
+            td.pert = new pertenenceData();
+
+            int i = rule.IndexOf("-TASK");
+
+            if (rule[0] == '[')
+            {
+                td.hasPert = true;
+                td.pert = getPertData(rule.Substring(0, rule.IndexOf(']') + 1));
+            }
+            else
+            {
+                td.actor = getElemData(rule.Substring(0, i));
+            }
+            
+            i += 6;
+            while (rule[i] != ',' && rule[i] != ')') td.name += rule[i++];
+            if (rule[i] == ',')
+            {
+                i++;
+                string obj = "";
+                while (rule[i] != ')') obj += rule[i++];
+                td.assistanceObject = getElemData(obj);
+            }
+            i++;
+            if (i < rule.Length)
+            {
+                while (rule[i] != '=' && rule[i] != '¬' && rule[i] != '<' && rule[i] != '>') td.attribute += rule[i++];
+                td.op = rule[i++];
+                while (i < rule.Length) td.value += rule[i++];
+            }
+            td.usersFrecuecnies = new Dictionary<string, int>();
+            return td;
+        }
+
         private bool validateConstraint(object constraintData)
         {
             bool res = false;
@@ -195,9 +267,9 @@ namespace BehaviorScriptProcessor
             DBConnection cn = new DBConnection(studyCase);
             SQLManager sql = new SQLManager(cn);
 
-            if (constraintData is comparisonDataEl)
+            if (constraintData is comparisonData)
             {
-                comparisonDataEl c = (comparisonDataEl)constraintData;
+                comparisonData c = (comparisonData)constraintData;
                 query = String.Format(query, c.instance.meta.ToUpper(), c.instance.model, c.attribute, c.op, c.value);
                 if (c.instance.instances.Count > 0)
                 {
@@ -263,5 +335,32 @@ namespace BehaviorScriptProcessor
             return ed;
         }
 
+        private void showUsersFrecs()
+        {
+            Console.WriteLine("\n{0}:", this.scriptName);
+            foreach (taskData td in tasks)
+            {
+                Console.WriteLine("\t{0}:",td.def);
+                foreach (KeyValuePair<string, int> uf in td.usersFrecuecnies)
+                {
+                    Console.WriteLine("\t\t{0}: {1}", uf.Key, uf.Value);
+                }
+            }
+        }
+
+        private void addFrecuency(ref taskData td, taskData recievedTask)
+        {
+            foreach (string ac in recievedTask.actor.instances)
+            {
+                if (td.usersFrecuecnies.ContainsKey(ac))
+                {
+                    td.usersFrecuecnies[ac]++;
+                }
+                else
+                {
+                    td.usersFrecuecnies[ac] = 1;
+                }
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ El presente trabajo hace uso de un modelo conceptual para la representaci\'on de
 \begin{figure}[h!]
   \centering
     \includegraphics[scale=0.7]{images/MERMetamodel}
-  \caption{Meta modelo contextual \cite{montane2013context}}
+  \caption{Modelo Conceptual \cite{montane2013context}}
   \label{cmp:mmc}
 \end{figure}
 
@@ -19,7 +19,7 @@ El presente trabajo hace uso de un modelo conceptual para la representaci\'on de
 Con este modelo se puede describir el dominio de aplicaciones groupware definiendo cada uno de estos elementos a partir de interacciones, para hacer esto es necesario analizar el groupware y listar los elementos identificados as\'i como sus atributos, estos se 
 dar\'an de alta mediante una plataforma web para la definici\'on de dominio que instanciar\'a los datos a un modelo que representar\'a al sistema colaborativo y almacenar\'a las variables contextuales que este transmita a la arquitectura. Cabe mencionar que en este modelo conceptual los elementos cuentan con 3 atributos principales, un identificador del objeto, un nombre descriptivo, y una lista de atributos almacenados en formato JSON, lo que vuelve flexible la forma de registrar y dise\~nar casos de estudio.
 
-\section{Dise\~no de la arquitectura}
+\section{Arquitectura}
 
 Para esta arquitectura se tom\'o como modelo base el propuesto por \cite{montane2013context}, la propuesta mostrada en la Figura \ref{ARCH:propuesta}, cuenta con tres capas: recuperaci\'on de datos, gesti\'on de datos, y uso de contexto. Actualmente, en la arquitectura en la que se basa esta propuesta, se ha desarrollado ya la capa de recuperaci\'on de datos y la de gesti\'on, la actual propuesta se concentra principalmente en la tercera capa, la de uso de contexto, teniendo como objetivo implementar un mecanismo de inferencia habilitado para trabajar con el modelo contextual explicado en la secci\'on anterior. Para la primera capa se hace uso de servicios web encargados de recibir la informaci\'on de parte del groupware que despu\'es pasar\'ia a la fase de gesti\'on para ser almacenada; en la segunda capa adem\'as del gestor de datos y las bases de datos est\'a la plataforma web para la especificaci\'on de elementos de dominio y guiones de comportamiento. En la tercera capa se encuentran un motor de inferencia contextual y un in\'erprete de reglas de interacci\'on y servicios que regresan los resultados del motor cuando es necesario.
 
@@ -28,7 +28,7 @@ Para esta arquitectura se tom\'o como modelo base el propuesto por \cite{montane
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.70]{images/arquitecturav2}
-\caption{Arquitectura propuesta}
+\caption{Dise\~o conceptual de la arquitectura}
 \label{ARCH:propuesta}
 \end{figure}
 
@@ -38,20 +38,21 @@ Para esta arquitectura se tom\'o como modelo base el propuesto por \cite{montane
 \item \textbf{Recuperac\'on de datos}. Se captura informaci\'on contextual enviada por el groupware por medio de servicios web publicados para la comunicaci\'on entre la arquitectura y el sistema, estos servicios son generados a partir del modelo especificado en la plataforma web de la segunda capa, as\'i mismo se encuentra un servicio que captura las ejecuciones de tareas durante una actividad en el groupware, los datos son enviados en un formato espec\'ifico para que capas superiores puedan procesarla.
 
 \item \textbf{Gesti\'on}. Aunque es trivial en este caso, es necesario tener m\'etodos de actualizaci\'on y recuperai\'on de datos contextuales de las bases de datos, adem\'as a este nivel est\'a definido el modelo conceptual y la plataforma web mostrada en la Figura \ref{arch:wplatform}.
+
 \newpage
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.55]{images/attDef}
-\caption{Plataforma web para la Especificaci\'on de Dominio de Aplicaci\'on}
+\includegraphics[scale=0.50]{images/attDef}
+\caption{Plataforma web de Definici\'on de Dominio de Aplicaci\'on}
 \label{arch:wplatform}
 \end{figure}
 
-En esta platafaorma se encuentran formularios en los que se define cada elemento con un nombre y con una lista de atributos, adem\'as, de ser necesario, se pueden a\~nadir una relaciones de un elemento con otro, como es en el caso de las comunidades a las que se le agregan actores o las metas que est\'an relacionadas con los objetivos a cumplir, de esta forma se define el modelo de dominio de la aplicaci\'on, detallando los datos de cada elemento del dominio, despu\'es, en la misma plataforma web, se definen el conjunto de reglas para adaptar el groupware a la actividad de los usuarios, estas reglas ser\'an explicadas m\'as adelante. Con la definici\'on del modelo de dominio se dan de alta los servicios mencionados en el punto anterior. Este proceso de definici\'on de modelo de dominio se describe en la Figura \ref{arch:domdef}
+En esta platafaorma se encuentran formularios en los que se define cada elemento con un nombre y con una lista de atributos, de esta forma se define el modelo de dominio de la aplicaci\'on, detallando los datos de cada elemento del dominio, despu\'es, en la misma plataforma web, se definen el conjunto de reglas para adaptar el groupware a la actividad de los usuarios, estas reglas ser\'an explicadas m\'as adelante. Con la definici\'on del modelo de dominio se dan de alta los servicios mencionados en el punto anterior. Este proceso de definici\'on de modelo de dominio se describe en la Figura \ref{arch:domdef}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.70]{images/ModelDefinitionByWebPlatformProcess_ESP}
-\caption{Proceso de definici\'on de modelo de dominio y reglas de comportamiento.}
+\includegraphics[scale=0.7]{images/ModelDefinitionByWebPlatformProcess_ESP}
+\caption{Proceso para definir modelo de dominio y reglas de comportamiento.}
 \label{arch:domdef}
 \end{figure}
 
@@ -62,7 +63,11 @@ En esta platafaorma se encuentran formularios en los que se define cada elemento
 
 Despu\'es de definir el modelo en la plataforma, se especif\'ican los guiones, los cuales son un conjunto de reglas que describen las interacciones que se llevan a cabo dentro de el groupware y las caracter\'isticas de un actor de a cuerdo a patrones de comportamiento particulares, con estos guiones se vigila la actividad de los usuarios y dependiendo de las tareas y el estado de los usuarios se tomar\'an medidas, tambi\'en incluidas en las reglas, para hacer que el groupware responda a ese comportamiento, un ejemplo ser\'ia un guion para un sistema gu\'ia de turistas en el que se podr\'ia definir el comportamiento para una persona extraviada por la falta de conocimiento del lugar, definiendo reglas que verifiquen el n\'umero de consultas sobre ubicaci\'ones de lugares de inter\'es, la ubicaci\'on actual del turista en relaci\'on con estos lugares, la frecuencia con la que el turista llega con retardo a los eventos, etc. 
 
-La definici\'on de las reglas se valida con un lenguaje que implementa un aut\'omata de estado finito y expresiones regulares creadas para este prop\'osito, con ellas se describe la pertenencia o relaci\'on de alguno de los elementos o instancias al otro en el modelo, comparan valores con los de los atributos de los elementos para condicionar su estado actual, o permiten representar la ejecuci\'on de tareas realizadas por actores en las que se puede incluir un elemento de asistencia, adem\'as se puede revisar el estado de estas ejecuciones comparando alg\'un atributo de la tarea con un valor dado, por ejemplo el saber si una tarea fue exitosa o fallida. Estos tres tipos de reglas se definen como sigue.
+\section{Motor de inferencia contextual}
+
+Este trabajo en particular se centra en el dise\~o e implementaci\'on de la capa de uso de contexto mencionada en la secci\'on anterior, para eso se proponen tres m\'odulos principales: un int\'erprete para el lenguaje de reglas que se propone para describir el contexto de los usuarios durante una actividad colaborativa, un motor de reglas que apoy\'andose de las reglas definidas infiere las medidas a tomar para las situaciones descritas por las reglas y un servicio de entrega de resultados que se dispara cuando el motor de inferencia obtiene alg\'un resultado.
+
+El int\'erprete valida la definici\'on de las reglas con un lenguaje que implementa un aut\'omata de estado finito y expresiones regulares creadas para este prop\'osito, con ellas se describe la pertenencia o relaci\'on de alguno de los elementos o instancias al otro en el modelo, comparan valores con los de los atributos de los elementos para condicionar su estado actual, o permiten representar la ejecuci\'on de tareas realizadas por actores en las que se puede incluir un elemento de asistencia, adem\'as se puede revisar el estado de estas ejecuciones comparando alg\'un atributo de la tarea con un valor dado, por ejemplo el saber si una tarea fue exitosa o fallida. Estos tres tipos de reglas se definen como sigue.
 
 \begin{itemize}
 \item Pertenencia(P): $Elemento \rightarrow Elemento$ para validar que un elemento pertenezca a otro, o $Elemento \rightsquigarrow Elemento$ para validar que no pertenezca.
@@ -76,17 +81,19 @@ En donde $Elemento$ es un elemento del modelo descrito por un elemento conceptua
 
 Para escribir un gui\'on se usan varias reglas concatenadas que sirvan para describir el comportamiento de un usuario y una consecuencia que ser\'a el resultado que contiene ejecuciones de tareas que el groupware recibir\'a, interpretar\'a y adaptar\'a. Un gui\'on tiene la siguiente forma.
 
+
 \begin{table}
+\fontsize{9}{6}
 \label{guion:structure}
 \centering
-\begin{tabular}{|p{10cm}|l|l|}
+\begin{tabular}{|p{8cm}|l|l|}
 \hline \textbf{Regla} & \textbf{Tipo} & \textbf{Frecuencia} \\ 
-\hline $MetaEl1(DomElA\{*\})\rightarrow MetaEl2(DomElB)$ & pertenencia & no aplica \\ 
+\hline $Elem_1(DomEl_a\{*\})\rightarrow Elem_2(DomEl_b)$ & pertenencia & no aplica \\ 
 \hline \& 
-$MetaEl1(DomElA\{instancia1\}).Nombre=Ana$ & comparaci\'on & no aplica \\ 
-\hline \& $MetaElem1(DomElemA\{instancia1\})-Task(escribir, Objetos(lapiz)).tiempo=2segundos$ & ejecuci\'on & 5 \\ 
+$Elem_1(DomEl_a\{instancia_1\}).Nombre=Ana$ & comparaci\'on & no aplica \\ 
+\hline \& $Elem_1(DomElem_a\{instancia_1\})-Task(escribir, Objetos(lapiz)).tiempo=2segundos$ & ejecuci\'on & 5 \\ 
 \hline \multicolumn{3}{|c|}{$:=$} \\  
-\hline $ME(DE\{i1,i2,i3...in\})-Task(mostrarMensaje)$ & tarea resultante & no aplica \\ 
+\hline $ME(DE\{i_1,i_2,i_3,...,i_n\})-Task(mostrarMensaje)$ & tarea resultante & no aplica \\ 
 \hline 
 \end{tabular} 
 
@@ -94,11 +101,11 @@ $MetaEl1(DomElA\{instancia1\}).Nombre=Ana$ & comparaci\'on & no aplica \\
 
 En este gui\'on(Figura \ref{guion:structure}) se muestra un ejemplo de cada uno de los tipos de reglas descritos antes, cabe mencionar que el \'unico tipo de regla en el que se especifica una frecuencia es en la ejecuci\'on de tareas, ya que no tiene sentido hacerlo para las otras dos porque son comparaciones de estados de o propiedades de elementos.
 
-Los guiones son procesados por un motor de inferencia que proporciona informaci\'on de inter\'es para los usuarios o comandos de ejecuci\'on para la adaptaci\'on del sistema a la situaci\'on actual. Al motor lo asiste un aut\'omata que especifica el lenguaje que define la sintaxis de las reglas, dentro del motor se har\'a una instancia del modelo del groupware con los datos que env\'ie el sistema, as\'i se puede comparar su estado actual con los guiones, la arquitectura estar\'a recibiendo ejecuciones de tareas durante la actividad del groupware, estas tareas ser\'an comparadas con cada uno de los guiones y se llevar\'a un conteo de la frecuencia de cada una de ellas, cuando las ejecuciones lleguen a el n\'umero indicado, el guion se cumplir\'a y se mandar\'a otra tarea, tambi\'en incluida en el gui\'on, como resultado para que se ejecute en el groupware. Una vez que se cumple un guion, este se reinicia para continuar recibiendo las tareas desde el sistema. Con esto se pueden ofrecer resultados coherentes al tiempo en el que el sistema se ejecuta. Los resultados obtenidos son gestionados por un administrador de resultados que almacena los datos en una base de datos para mantener registro hist\'orico del comportamiento del groupware. Una vez obtenidos y almacenados los resultados un servicio de distribuci\'on de datos se encarga de enviar la informaci\'on al groupware con los resultados. Este proceso es iterativo, ya que vive por el tiempo en el que el groupware opera.  El proceso del motor se puede ver reflejado en la Figura \ref{arch:useofcontext}
+El motor de inferencia recupera los guiones y los usa como una lsta de verificaci\'on para proporcionar informaci\'on de inter\'es para los usuarios o comandos de ejecuci\'on para la adaptaci\'on del sistema a la situaci\'on actual. Dentro del motor se har\'a una instancia de los guiones recuperados del modelo de dominio, la arquitectura estar\'a recibiendo ejecuciones de tareas durante la actividad del groupware de manera constante cada cierto tiempo, estas tareas ser\'an comparadas con cada uno de los guiones y se llevar\'a un conteo de la frecuencia de cada una de ellas, cuando las ejecuciones lleguen al n\'umero indicado, el guion se cumple y se manda otra tarea, tambi\'en incluida en el gui\'on, como resultado para que ser\'a interpretada y ejecutada en el groupware. Una vez que se cumple un guion, este se reinicia para continuar recibiendo las tareas desde el sistema. Con esto se pueden ofrecer resultados coherentes al tiempo en el que el sistema se ejecuta. Los resultados obtenidos son gestionados por un administrador de resultados que almacena los datos en una base de datos para mantener registro hist\'orico del comportamiento del groupware. Una vez obtenidos y almacenados los resultados un servicio de distribuci\'on de datos se encarga de enviar la informaci\'on al groupware con los resultados. Este proceso es iterativo, ya que vive por el tiempo en el que el groupware opera.  El proceso del motor se puede ver reflejado en la Figura \ref{arch:useofcontext}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.90]{images/RunningProcess_ESP}
-\caption{Proceso para el uso de contexto}
+\includegraphics[scale=0.80]{images/RunningProcess_ESP}
+\caption{Proceso de inferencia}
 \label{arch:useofcontext}
 \end{figure}

@@ -37,7 +37,7 @@ namespace BehaviorScriptProcessor
                     {
                         Console.WriteLine("\t{0}",result);
                     }
-                    return true;
+                    //return true;
                 }
             }
             return false;

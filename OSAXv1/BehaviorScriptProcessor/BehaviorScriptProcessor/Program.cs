@@ -10,12 +10,12 @@ namespace BehaviorScriptProcessor
         static void Main(string[] args)
         {
             string task = "";
-            task = Console.ReadLine();
+            //task = Console.ReadLine();
             Evaluator e = new Evaluator("AssaultCube");
             while (task != "exit")
             {
-                e.eval(task);
                 task = Console.ReadLine();
+                e.eval(task);
             }
         }
     }
