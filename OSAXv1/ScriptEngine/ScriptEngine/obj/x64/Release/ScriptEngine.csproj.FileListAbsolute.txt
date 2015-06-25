@@ -1,0 +1,4 @@
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\bin\x64\Release\ScriptEngine.dll
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\bin\x64\Release\ScriptEngine.pdb
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\obj\x64\Release\ScriptEngine.dll
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\obj\x64\Release\ScriptEngine.pdb

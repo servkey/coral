@@ -1,0 +1,7 @@
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\obj\Debug\taskCatcher.csprojResolveAssemblyReference.cache
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\bin\taskCatcher.dll
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\bin\taskCatcher.pdb
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\bin\ScriptEngine.dll
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\obj\Debug\taskCatcher.dll
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\obj\Debug\taskCatcher.pdb
+C:\Users\santigm\Software\c#\taskCatcher\taskCatcher\bin\ScriptEngine.pdb

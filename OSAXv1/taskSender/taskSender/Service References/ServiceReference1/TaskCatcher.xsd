@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/taskCatcher.TaskModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/taskCatcher.TaskModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2258/Services/TaskCatcher.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Task">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="affecttedActors" nillable="true" type="tns:ArrayOfElement" />
+      <xs:element minOccurs="0" name="assign" type="tns:Task.assignemnet" />
+      <xs:element minOccurs="0" name="assistanceObject" nillable="true" type="tns:Element" />
+      <xs:element minOccurs="0" name="effective" type="tns:Task.effectiveness" />
+      <xs:element minOccurs="0" name="executorActor" nillable="true" type="tns:Element" />
+      <xs:element minOccurs="0" name="involve" type="tns:Task.involvement" />
+      <xs:element minOccurs="0" name="outcome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="taskName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Task" nillable="true" type="tns:Task" />
+  <xs:complexType name="ArrayOfElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Element" nillable="true" type="tns:Element" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfElement" nillable="true" type="tns:ArrayOfElement" />
+  <xs:complexType name="Element">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conceptualElement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="domainElement" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="instances" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Element" nillable="true" type="tns:Element" />
+  <xs:simpleType name="Task.assignemnet">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="unassigned" />
+      <xs:enumeration value="assigned" />
+      <xs:enumeration value="nill" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Task.assignemnet" nillable="true" type="tns:Task.assignemnet" />
+  <xs:simpleType name="Task.effectiveness">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="effective" />
+      <xs:enumeration value="uneffective" />
+      <xs:enumeration value="nill" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Task.effectiveness" nillable="true" type="tns:Task.effectiveness" />
+  <xs:simpleType name="Task.involvement">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="indirect" />
+      <xs:enumeration value="direct" />
+      <xs:enumeration value="nill" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Task.involvement" nillable="true" type="tns:Task.involvement" />
+</xs:schema>

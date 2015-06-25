@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="taskCatcher.Services.TaskCatcher" CodeBehind="TaskCatcher.svc.cs" %>

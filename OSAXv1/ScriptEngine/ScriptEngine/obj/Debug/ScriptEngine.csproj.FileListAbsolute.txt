@@ -1,0 +1,5 @@
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\bin\Debug\ScriptEngine.dll
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\bin\Debug\ScriptEngine.pdb
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\obj\Debug\ScriptEngine.dll
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\obj\Debug\ScriptEngine.pdb
+C:\Users\santigm\Software\c#\ScriptEngine\ScriptEngine\obj\Debug\ScriptEngine.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+C:\Users\santigm\Software\c#\taskSender\taskSender\bin\Debug\taskSender.exe
+C:\Users\santigm\Software\c#\taskSender\taskSender\bin\Debug\taskSender.pdb
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.exe
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.pdb
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.csprojResolveAssemblyReference.cache
+C:\Users\santigm\Software\c#\taskSender\taskSender\bin\Debug\taskSender.exe.config
+C:\Users\santigm\Software\c#\taskSender\taskSender\bin\Debug\MySql.Data.dll
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.views.ParsedTasks.resources
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.csproj.GenerateResource.Cache
+C:\Users\santigm\Software\c#\taskSender\taskSender\obj\x86\Debug\taskSender.views.ScriptMonitor.resources
